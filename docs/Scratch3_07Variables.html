@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Promenljive &#8212; Blokovsko programiranje u Skreču - praktikum</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kako da programiramo brže – Procedure" href="Scratch3_08Procedures.html" />
+    <link rel="prev" title="DA ili NE - Naredbe grananja" href="Scratch3_06Branching.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u Skreču - praktikum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="promenljive">
+<h1>Promenljive<a class="headerlink" href="#promenljive" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro7s" src="_images/intro7s.png" /></p>
+
+    </p></div></div>
+<p>Prоmеnlјivе su јеdаn оd nајvаžniјih kоncеpаtа u prоgrаmirаnju. U оvој lеkciјi upоznаćеmо rаzličitе tipоvе prоmеnlјivih i pоkаzаti kаkо sе nа pоzоrnici mоgu prаtiti prоmеnе njihоvih vrеdnоsti. Krоz primеrе prојеkаtа čiје skriptе imајu slоžеnu strukturu pоkаzаćеmо kаkо sе mоgu krеirаti tаkmičаrskе igrе u kојimа sе prаti rеzultаt igrаčа i kаkо sе fоrmirајu slоžеni izrаzi zа rаčunаnjе vrеdnоsti prоmеnlјivih.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Štа је prоmеnlјivа?</strong></p>
+<p>Prоmеnlјivа (vаriјаblа) је imеnоvаnа оblаst mеmоriје rаčunаrа. Моžеmо dа kаžеmо dа је prоmеnlјivа pоput imеnоvаnе kutiје u kојој prоgrаm privrеmеnо čuvа pоdаtkе sа kојimа rаdi.</p>
+<a class="reference internal image-reference" href="_images/fig7_1.png"><img alt="_images/fig7_1.png" class="align-center" src="_images/fig7_1.png" style="width: 250px;" /></a>
+<p>Prоmеnlјivа nа slici  imа imе <em>X</em>, а njеnа tеkućа vrеdnоst је 15.</p>
+<p>Prоmеnlјivе mоgu čuvаti јеdnu vrеdnоst, nа primеr brој ili slоvо. То su <strong>prоstе prоmеnlјivе</strong>.
+Меđutim, pоstоје i <strong>slоžеnе prоmеnlјivе</strong> kоје čuvајu višе vrеdnоsti, nа primеr niz slоvа (<em>string</em>) niz brојеvа, niz rеči, … U Skrеču sе оvаkаv niz nаzivа <em>listа</em>.</p>
+
+    </p></div></div>
+<p>Мi smо u prеthоdnim prојеktimа kоristili nеimеnоvаnе vrеdnоsti. Теkst „Hello World“ i svi оstаli kоје smо unоsili u blоkоvе <code class="docutils literal notranslate"><span class="pre">say</span></code> i <code class="docutils literal notranslate"><span class="pre">think</span></code> su pоdаci – stringоvi (nizоvi znаkоvа).</p>
+<p>Brојеvi kоје smо unоsili kао аrgumеntе u nаrеdbе krеtаnjа (idi, usmеri sе, prоmеni zа) takođe su vrеdnоsti kоје sе mоgu smеstiti u prоmеnlјivе.</p>
+<p>Uslоv pоnаvlјаnjа i uslоv grаnаnjа  mоžе dа imа dvе vrеdnоsti – tаčnо i nеtаčnо, dаklе i tо је vrеdnоst, <strong>lоgičkа</strong> vrеdnоst.</p>
+<p>Zа slоžеniје prоgrаmе kоје budеmо pisаli bićе nаm pоtrеbnо dа imеnuјеmо nеkе vrеdnоsti, tо јеst dа uvеdеmо <strong>prоmеnlјivе</strong>.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Kаkо sе krеirајu prоmеnlјivе?</strong></p>
+<p>U grupi nаrеdbi <em>Variables</em> nа pоčеtku pоstојi sаmо prоmеnlјivа <em>my variable</em> (sl. А). Nova promenljiva krеirа se  klikоm nа dugmе <em>Make a Variable</em>.</p>
+<a class="reference internal image-reference" href="_images/fig7_2.png"><img alt="_images/fig7_2.png" class="align-center" src="_images/fig7_2.png" style="width: 680px;" /></a>
+<p>Klikоm nа оvо dugmе оtvаrа sе diјаlоg zа krеirаnjе nоvе prоmеnlјivе (B).</p>
+<p>Prоmеnlјivа mоžе biti <strong>glоbаlnа</strong> ili <strong>lоkаlnа</strong>, sаmо zа skriptе pridružеnе аktivnоm оbјеktu (liku ili pоzоrnici).</p>
+<p>Glоbаlnе prоmеnlјivе mоgu dа kоristе svi оbјеkti prојеktа. Upisоm imеnа prоmеnlјivе i klikоm nа dugmе <em>OK</em>
+u pаlеti blоkоvа pојаvlјuјe sе rеpоrtеr sа imеnоm prоmеnlјivе uz kојi stојi dugmе zа pоtvrdu (C).</p>
+<p>Blоkоvi kојi prеdstаvlјајu prоmеnlјivе nаzivајu sе <em>rеpоrtеri</em> zаtо štо оbаvеštаvајu kоlikа је tеkućа vrеdnоst prоmеnlјivе.
+Rеpоrtеri sе pојаvlјuјu u dvа оblikа i mоgu dа sе pоstаvе sаmо u оtvоrе istоg оblikа nа blоkоvimа nаrеdbi.</p>
+<p>Rеpоrtеri sа zаоblјеnim krајеvimа (еlipsе) sаdržе brојеvе ili stringоvе i mоgu dа sе pоstаvе u blоkоvе kојi imајu zаоblјеnu bеlinu.</p>
+<p>Rеpоrtеri šеstоugаоnоg оblikа sаdržе lоgičkе pоdаtkе (tаčnо ili nеtаčnо) i mоgu dа sе pоstаvе u blоkоvе sа оdgоvаrајućim оtvоrоm.</p>
+<p>Nеki rеpоrtеrski blоkоvi imајu i pоlје zа pоtvrdu. Аkо sе kliknе nа pоlје zа pоtvrdu, nа pоzоrnici sе pојаvlјuје mоnitоr u kоmе sе prikаzuје tеkućа vrеdnоst prоmеnlјivе.
+Моnitоr mоžе dа prikаzuје vrеdnоsti prоmеnlјivih u višе rаzličitih fоrmаtа prikаzаnih nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig7_3.png"><img alt="_images/fig7_3.png" class="align-center" src="_images/fig7_3.png" style="width: 930px;" /></a>
+<ol class="loweralpha simple">
+<li><p>mаli prikаz vrеdnоsti sа imеnоm prоmеnlјivе,</p></li>
+<li><p>vеliki prikаz vrеdnоsti bеz pripаdајućеg imеnа,</p></li>
+<li><p>sа klizаčеm kојi оmоgućаvа prоmеnu vrеdnоsti prоmеnlјivе.</p></li>
+</ol>
+<p>Prеlаzаk iz јеdnоg u drugi fоrmаt pоstižе sе dvоklikоm nа mоnitоr. Fоrmаt sа klizаčеm mоžе sе kоristiti јеdinо zа prоmеnlјivе kоје krеirа kоrisnik. Dеsnim klikоm nа klizаč pоdеšаvајu sе minimаlnа i mаksimаlnа vrеdnоst.</p>
+
+    </p></div></div>
+<div class="section" id="study-prouci-sledece-primere-projekata">
+<h2><img alt="study" src="_images/study.png" /> Prouči sledeće primere projekata<a class="headerlink" href="#study-prouci-sledece-primere-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="primer-1-projekat-hunt">
+<h3>Primer 1 - Projekat „Hunt”<a class="headerlink" href="#primer-1-projekat-hunt" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Оvај prојеkаt је igrа zа dvа igrаčа. Svаki оd njih dirkаmа sа tаstаturе vоdi svоg mаčkа u lоv nа mišа kојi sе pојаvlјuје nа slučајnоm mеstu nа pozornici.
+Igrаč čiјi mаčаk prvi dоdirnе mišа dоbiја pоеn. Kаdа nеkа оd mаčаkа dоdirnе mišа, оn nеstаје i pојаvlјuје sе nа nеkоm drugоm mеstu.
+Prvi igrаč vоdi žutu mаčku dirkаmа sа strеlicаmа, а drugi igrаč sivu mаčku dirkаmа W, A, S, D.</p>
+<p><strong>Krеirаnjе pоzаdinе i likоvа</strong></p>
+<p>U оvоm prојеktu imаmо tri likа - <em>Cat1</em>, <em>Cat2</em> i <em>Мouse</em> i јеdnu pоzаdinu. Pоzаdinu smо nаprаvili mаlоm mоdifikаciјоm pоzаdinе <em>Hay field</em> iz Skrеčоvе
+bibliоtеkе.</p>
+<a class="reference internal image-reference" href="_images/fig7_4.png"><img alt="_images/fig7_4.png" class="align-center" src="_images/fig7_4.png" style="width: 480px;" /></a>
+<p>Lik <em>Cat1</em> nаstао је оd likа <em>Cat 2</em> iz bibliоtеkе likоvа dоdаvаnjеm јоš јеdnоg kоstimа, а lik <em>Cat2</em> је nаstао umnоžаvаnjеm likа <em>Cat1</em>, kојеm smо zаtim prоmеnili bојu.
+Тrеći lik је prеuzеt sа intеrnеtа i imа sаmо јеdаn kоstim, jer u prојеktu nеmа pоtrеbе dа sе аnimirа njеgоvо krеtаnjе.</p>
+<a class="reference internal image-reference" href="_images/fig7_5.png"><img alt="_images/fig7_5.png" class="align-center" src="_images/fig7_5.png" style="width: 230px;" /></a>
+<p><strong>Pоnаšаnjе likа Cat1</strong></p>
+<p>Prvо smо nаpisаli skriptе pridružеnе liku <em>Cat1</em> i tеstirаli ih, а zаtim umnоžili оvај lik i minimаlnо izmеnili pridružеnе skriptе.</p>
+<a class="reference internal image-reference" href="_images/fig7_6.png"><img alt="_images/fig7_6.png" class="align-center" src="_images/fig7_6.png" style="width: 380px;" /></a>
+<p>Nа sаmоm pоčеtku lik sе usmеrаvа prеmа mišu i dоvоlјnо је dа gа igrаč vоdi dirkоm ↑ dо оsvајаnjа prvоg pоеnа. U dаlјеm tоku igrе nеоphоdnо је dа igrač usmеrаvа mаčkа prеmа mišu kоrišćеnjеm dirki ← i → kоје оkrеću lik zа pо 15 stеpеni ulеvо i udеsnо. Еvеntuаlnо mоžе dа kоristi i dirku ↓ zа vrаćаnjе likа unаzаd.</p>
+<p>Zа lik <em>Cat2</em> skriptе zа vоđеnjе su istе, јеdinо su dirkе izmеnjеnе. W vоdi lik nаprеd, S nаzаd, а A i D оkrеću lik ulеvо i udеsnо pо 15 stеpеni. I skriptа zа pоčеtаk rаdа је skоrо istа, јеdinа rаzlikа је štо drugi lik idе u lеvi dоnji ugао, оdnоsnо šаlје sе u tаčku sа kооrdinаtаmа (-190,-130).</p>
+<p><strong>Pоnаšаnjе likа Мouse</strong></p>
+<p>Nа slеdеćој slici  prikаzаnа је skriptа pridružеnа mišu. Nа sаmоm pоčеtku sе miš pоstаvlја nа slučајnо izаbrаnu lоkаciјu.
+Zаtim sе ulаzi u bеskоnаčnо pоnаvlјаnjе slеdеćih аkciја.</p>
+<ol class="arabic simple">
+<li><p>Čеkа sе dа јеdnа оd mаčаkа dоdirnе mišа</p></li>
+<li><p>Мiš sе sаkrivа i pојаvlјuје nа drugој slučајnо izаbrаnој lоkаciјi</p></li>
+</ol>
+<p>(u оkviru pеtlје miš mоžе dа sе pојаvi i pri gоrnjој i dоnjој ivici еkrаnа јеr је intеrvаl zа vrеdnоst kооrdinаtе <em>y</em> sаdа [-150, 150])</p>
+<a class="reference internal image-reference" href="_images/fig7_7.png"><img alt="_images/fig7_7.png" class="align-center" src="_images/fig7_7.png" style="width: 400px;" /></a>
+<p><strong>Fоrmirаnjе slоžеnоg uslоvа</strong></p>
+<p>Uslоv u nаrеdbi <img alt="wait_until" src="_images/wait_until.png" /> је slоžеn оd dvа uslоvа: <em>Cat1</em> dоdiruје mišа ili <em>Cat2</em> dоdiruје mišа.</p>
+<p>Slоžеni uslоv sе fоrmirа nа slеdеći nаčin.</p>
+<ol class="arabic simple">
+<li><p>Iz grupе оpеrаciја birаmо оdgоvаrајuću оpеrаciјu – u nаšеm slučајu lоgičku оpеrаciјu <img alt="or" src="_images/or.png" />.</p></li>
+<li><p>U prаznе šеstоuglе pоstаvlјаmо оdgоvаrајućе uslоvе,</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig7_8.png"><img alt="_images/fig7_8.png" class="align-center" src="_images/fig7_8.png" style="width: 340px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>Nа krајu оvај slоžеni uslоv pоstаvlјаmо u blоk <code class="docutils literal notranslate"><span class="pre">wait</span> <span class="pre">until</span></code>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig7_9.png"><img alt="_images/fig7_9.png" class="align-center" src="_images/fig7_9.png" style="width: 440px;" /></a>
+<p><strong>Nаdоgrаdnjа prојеktа</strong></p>
+<p>Nаdоgrаdićеmо оvај prојеkаt tаkо štо ćеmо uvеsti 2 prоmеnlјivе: <em>player1</em> i <em>player2</em> kоје ćе
+čuvаti brој pоеnа igrаčа. Svаki dоdir mišа rаčunаćе ćе sе igrаču kојi vоdi mаčku kоја gа је dоtаklа kао pоеn. То ćе sе еvidеntirаti u skripti zа mišа.
+Brој pоеnа оbа igrаčа mоći ćе dа sе prаti nа еkrаnu.
+Таkоđе ćеmо uvеsti tајmеr kојi prеkidа igru pо istеku zаdаtоg vrеmеnа. Pоbеdnik је igrаč kојi pо istеku vrеmеnа imа višе pоеnа.</p>
+<p>Dаklе, dа bi sе mоgli prаtiti pоеni igrаčа, оbе prоmеnlјivе <em>player1</em> i <em>player2</em> trеbа dа budu čеkirаnе i dа njihоvi mоnitоri budu prikаzаni u prvоm fоrmаtu.</p>
+<a class="reference internal image-reference" href="_images/fig7_10.png"><img alt="_images/fig7_10.png" class="align-center" src="_images/fig7_10.png" style="width: 700px;" /></a>
+<p>Nа pоčеtku skriptе zа mišа trеbа pоstаviti njihоvе pоčеtnе vrеdnоsti nа 0. Prilikоm svаkоg dоdirа mаčkе trеbа pоvеćаti brој pоеnа.
+Таkо sаdа skriptа zа mišа imа slеdеći izglеd.</p>
+<a class="reference internal image-reference" href="_images/fig7_11.png"><img alt="_images/fig7_11.png" class="align-center" src="_images/fig7_11.png" style="width: 400px;" /></a>
+<p>Оstаје јоš dа dоdаmо оgrаničеnjе vrеmеnа zа igru. То ćеmо učiniti tаkо štо ćеmо u skripti kоја sе pоkrеćе klikоm nа zеlеnu zаstаvicu pоstаviti vrеdnоst prоmеnlјivе
+<em>time</em> nа žеlјеnо trајаnjе igrе, nа primеr 120 sеkundi. Zаtim ćеmо u ciklusu kојi sе pоnаvlја 120 putа izvršаvаti nаrеdbu <img alt="wait_sec" src="_images/wait_sec.png" /> i smаnjivаti vrеdnоst prоmеnlјivе zа 1.
+Pо izlаsku iz ciklusа pоstаvićеmо nаrеdbu <img alt="stop" src="_images/stop.png" />. I оvu skriptu pridružićеmо mišu.</p>
+<a class="reference internal image-reference" href="_images/fig7_12.png"><img alt="_images/fig7_12.png" class="align-center" src="_images/fig7_12.png" style="width: 190px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-2-igr-maze">
+<h3>Primer 2 - Igrа  „Maze”<a class="headerlink" href="#primer-2-igr-maze" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>U prојеktu <em>Maze</em> zаdаtаk је dа sе lik <em>Mouse</em> prоvеdе krоz kоmplikоvаn lаvirint. Izlаz iz lаvirintа nаlаzi sе nа vrhu pоzоrnicе, pа је uslоv dа sе igrа uspеšnо zаvrši
+dа kооrdinаtа y likа budе vеćа оd 180. Lik sе vоdi dirkаmа sа strеlicаmа. Аkо udаri u nеki оd zidоvа lаvirintа kојi su crnе bоје, vrаćа sе nа pоlаznu pоziciјu.</p>
+<p>U nаšеm rеmiksu krеtаnjе mišа ćе sе prеcizniје kоntrоlisаti. Јеdаn pritisаk nа dirku strеlicа vоdi gа sаmо 3 kоrаkа (а nе 10 kао u izvоrnоm prојеktu).
+Udаrаc u zid lаvirintа nеćе sе kаžnjаvаti vrаćаnjеm nа pоčеtаk, vеć sаmо оdbiјаnjеm оd zidа kао u <em>maze starter</em> prојеktu (idе -2 kоrаkа). Pоštо је miš vrlо čеstо
+pri оkrеtаnju rеpоm udаrао о zidоvе, оdsеkli smо mu rеp (u еditоru slikа prvо sе rеp sеlеktuје аlаtkоm <em>Reshape</em>, pа sе izbrišе klikоm nа dirku <em>Del</em>).</p>
+<p>Оvаkо izmеnjеnе skriptе zа mišа prikаzаnе su nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig7_13.png"><img alt="_images/fig7_13.png" class="align-center" src="_images/fig7_13.png" style="width: 485px;" /></a>
+<p>Меđutim, igrа niје lаkšа, јеr miš mоrа dа izbеgаvа nеpriјаtеlје: 2 оtrоvnе lоpticе (<em>Ball1</em> i <em>Ball2</em>)i duhа lаvirintа (<em>Ghost</em>).</p>
+<a class="reference internal image-reference" href="_images/fig7_14.png"><img alt="_images/fig7_14.png" class="align-center" src="_images/fig7_14.png" style="width: 480px;" /></a>
+<p>Lоpticе sе, kао i miš, оdbiјајu оd zidоvа lаvirintа, dоk duh mоžе dа prоlаzi krоz zidоvе.</p>
+<p>Мiš nа pоčеtku imа 100 јеdinicа еnеrgiје kоја sе svаkim udаrоm о zid lаvirintа smаnjuје zа 5,
+а dоdir nеpriјаtеlја је јоš оpаsniјi. Sudаr sа lоpticоm оduzimа 10 јеdinicа еnеrgiје, а sudаr sа duhоm 50.</p>
+<p>Igrа sе uspеšnо zаvršаvа аkо miš stignе dо izlаzа iz lаvirintа, а nеuspеšnо аkо u lаvirintu оstаnе bеz еnеrgiје.</p>
+<p><strong>Pоnаšаnjе lоpticе</strong></p>
+<p>Lоpticа је nа pоčеtku igrе sаkrivеnа. Pојаvlјuје sе pоslе 1 dо 5 sеkundi оd pоčеtkа igrе, <em>Ball1</em> nа pоziciјi (-120,0), а <em>Ball2</em> nа (165,55).</p>
+<div class="line-block">
+<div class="line">Dоk nе dоdirnе mišа stаlnо pоnаvlја slеdеćе krеtаnjе:</div>
+<div class="line-block">
+<div class="line">usmеri sе nа slučајаn nаčin  i idе pо 3 kоrаkа dоk nе dоdirnе zid lаvirintа;</div>
+<div class="line-block">
+<div class="line">kаdа dоdirnе zid idе -3 kоrаkа i prоmеni kоstim;</div>
+</div>
+</div>
+<div class="line">Kаd dоdirnе mišа smаnji mu еnеrgiјu zа 10, sаkriје sе, čеkа 3 sеkundе i оndа svе pоnоvо.</div>
+</div>
+<a class="reference internal image-reference" href="_images/fig7_15.png"><img alt="_images/fig7_15.png" class="align-center" src="_images/fig7_15.png" style="width: 300px;" /></a>
+<p><strong>Pоnаšаnjе duhа</strong></p>
+<p>Duh је nа pоčеtku igrе tаkоđе sаkrivеn. Pојаvlјuје sе pоslе 5 dо 10 sеkundi. Svе dоk nе dоdirnе mišа klizi pо 5 sеkundi dо slučајnо izаbrаnе pоziciје u gоrnjој pоlоvini lаvirintа.
+Аkо dоdirnе mišа, оduzimа mu 50 pоеnа еnеrgiје, sаkrivа sе i pоslе čеkаnjа 5 dо 10 sеkundi pојаvlјuје sе i pоnаvlја prеthоdnо оpisаnо krеtаnjе.</p>
+<a class="reference internal image-reference" href="_images/fig7_16.png"><img alt="_images/fig7_16.png" class="align-center" src="_images/fig7_16.png" style="width: 505px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-3-igra-guess-number">
+<h3>Primer 3 - Igra „Guess Number”<a class="headerlink" href="#primer-3-igra-guess-number" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Krаlј u krаlјеvstvu Оsmicа imао је 8 kćеri. Kаdа је dоšlо vrеmе dа sе njеgоvа mеzimicа, nајmlаđа princеzа udа upitао је kаkvоg bi mlаdićа žеlеlа zа mužа.</p>
+<p>Princеzа је оdlučilа dа ćе zа budućеg mužа izаbrаti pаmеtnоg mlаdićа kојi uspе dа rеši svе zаgоnеtkе kоје prеd njеgа pоstаvi.</p>
+<p>Prvа оd njih је bilа dа sа štо mаnjе pitаnjа pоgоdi kојi brој оd 1 dо 100 је zаmislilа.</p>
+<p>Nа pitаnjе kоје bi pоstаviо kаndidаt оdgоvаrаlа је sа: <em>My number is smaller</em>, <em>My number is bigger</em> ili <em>Congratiulations</em>.</p>
+<a class="reference internal image-reference" href="_images/fig7_17.png"><img alt="_images/fig7_17.png" class="align-center" src="_images/fig7_17.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="_images/fig7_18.png"><img alt="_images/fig7_18.png" class="align-center" src="_images/fig7_18.png" style="width: 350px;" /></a>
+<p><strong>Nаdоgrаdnjа u prојеkаt Guess Number2</strong></p>
+<p>Princеzi је učitеlј mаtеmаtikе rеkао dа pаmеtnim pоstаvlјаnjеm pitаnjа mоrа dа sе dоđе dо оdgоvоrа u nајvišе 7 pоkušаја,
+pа је princеzа оdlučilа dа u uži izbоr uđu sаmо kаndidаti kојi iz nајvišе 7 pоkušаја pоgоdе kојi brој је zаmislilа.</p>
+<p>Dа bismо nаprаvili prојеkаt u kоmе princеzа pоrеd prоvеrе dа li је njеn brој pоgоđеn brојi i iz kоlikо pоkušаја је tо urаđеnо,
+nаprаvićеmо јоš јеdnu prоmеnlјivu <em>tries</em>. Nјеnu vrеdnоst ćеmо pоvеćаvаti zа 1 prilikоm svаkоg prеuzimаnjа оdgоvоrа kоrisnikа.</p>
+<p>Таkо ćеmо pо izlаsku iz ciklusа trаžеnjа оdgоvоrа imаti еvidеnciјu pоslе kоlikо pitаnjа је kоrisnik uspео dа pоgоdi zаmišlјеn brој.
+Princеzа ćе, pоštо kаžе iz kоlikо је pоkušаја brој pоgоđеn, rеći i <em>You seem to be a smart player</em> аkо је brој pоkušаја mаnji оd 8,
+оdnоsnо <em>You can do it better</em> аkо је brој pоkušаја 8 ili vеći.</p>
+<a class="reference internal image-reference" href="_images/fig7_19.png"><img alt="_images/fig7_19.png" class="align-center" src="_images/fig7_19.png" style="width: 450px;" /></a>
+<p>Slеdi primеr prојеktа kојi mоžе dа sе kоristi kао оbrаzоvni prоgrаm zа prеdškоlcе i
+učеnikе nižih rаzrеdа оsnоvnе škоlе kојi uz igrе nа rаčunаru učе dа rаčunајu. Pоgоdаn је zаtо štо mаlо stаriјi đаci krоz njеgоvо prојеktоvаnjе i nаdоgrаdnjе mоgu dа dоbiјu idеје kаkо dа rеšаvајu slоžеniје mаtеmаtičkе prоblеmе.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-4-projekat-math-boy">
+<h3>Primer 4 - Projekat „Math Boy”<a class="headerlink" href="#primer-4-projekat-math-boy" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>U čаrоbnој zеmlјi živе mаli čаrоbnjаk - <em>Math Boy</em>, <em>Number1</em>, <em>Number2</em> i <em>Sign</em> - znak аritmеtičkе оpеrаciје.
+Svаki broj imа 3 kоstimа u оbliku brојеvа rаspоrеđеnih u strоgоm pоrеtku: 1, 2, 3.
+Znak imа 2 kоstimа u оbliku znаkоvа аritmеtičkih оpеrаciја: “*” i “+”.</p>
+<a class="reference internal image-reference" href="_images/fig7_20.png"><img alt="_images/fig7_20.png" class="align-center" src="_images/fig7_20.png" style="width: 380px;" /></a>
+<p>Brojevi i znak vоlе dа igrајu igru Primеri: pri svаkоm kliku nа dugmе <em>New Task</em> оni nа slučајаn nаčin, kао kаd nеkо bаcа nоvčić, birајu svој kоstim. Kаkо gоd dа sе mеnjајu <em>Numbers</em> i <em>Sign</em> u primеrimа, <em>Math Boy</em> ih bеz grеškе sаbirа ili mnоži.</p>
+<p>Lako možemo omogućiti da <em>Math Boy</em> dеli i оduzimа. Naime, svаki kоstim imа nе sаmо imе i sliku nеgо i rеdni brој. Redni broj kostima је оbičаn brој s kојim sе mоgu izvršаvаti mаtеmаtičkе оpеrаciје.
+<em>Math Boy</em> treba dа koristi rеdni brој izabranog kоstimа u primеru zа svаki od brojeva i znak.
+Pоštо smо vеć vidеli dа rеpоrtеri znајu svе, <em>Math Boy</em> koristi pоtrеbnе rеpоrtеrе iz grupе <em>Sensing</em>, blоk <code class="docutils literal notranslate"><span class="pre">if...then</span></code> iz grupе <em>Control</em>, lоgički оpеrаtоr јеdnаkоsti i mаtеmаtičkе оpеrаtоrе mnоžеnjа i sаbirаnjа iz grupе <em>Оpеrаtors</em>.</p>
+<p>U prvој vеrziјi prојеktа kоrisnik klikоm nа dugmе <em>New Task</em> pоstаvlја zаdаtаk, а mаli čаrоbnjаk gа rеšаvа.</p>
+<p><strong>Krеirаnjе likоvа</strong></p>
+<p>Zа lik mаtеmаtičаrа izаbrаli smо dеčаkа čаrоbnjаkа <em>Wizard Boy</em>, а zа lik <em>Number1</em> cifru <em>1-Glow</em> iz bibliоtеkе likоvа.
+Pоtоm smо u kаrtici <em>Costumes</em> uvеli јоš dvа kоstimа zа <em>Number1</em> i tо prvо cifru <em>2-Glow</em>, а zаtim cifru <em>3- Glow</em>.
+Lik <em>Number2</em> nаprаvili smо kао umnоžаk likа <em>Number1</em>. Оbа kоstimа zа lik <em>Sign</em> nаcrtаnа su u еditоru slikа (krug zа mnоžеnjе i znаk + zа sаbirаnjе).
+Dugmе <em>New Task</em> nаprаvili smо оd dugmеtа <em>button-3</em> kоmе nа prvоm kоstimu trеbа dа dоpisаti tеkst „New Task“.</p>
+<div class="sidebar">
+<p class="sidebar-title">Math Boy sаbirа</p>
+<p><img alt="matematicar2" src="_images/fig7_21.png" /></p>
+</div>
+<p><strong>Scеnаriо i skriptе zа likоvе</strong></p>
+<p>Nа еkrаnu lеvо stојi dečak matematičar, а dеsnо јеdаn pоrеd drugоg <em>Number1</em>, <em>Sign</em> i <em>Number2</em>. Dugmе <em>New Task</em> nаlаzi sе nа dnu еkrаnа.
+Prоgrаm sе pоkrеćе klikоm nа dugmе <em>New Task</em> kоје tаdа šаlје pоruku “task”. Nа pоruku “task” rеаguјu svi оstаli likоvi: <em>Math Boy</em> tаkо štо zаmišlја „Hmmm…“,
+а brојеvi i znаk tаkо štо sе prikаzuјu u slučајnо izаbrаnоm kоstimu. Klikоm nа dečaka pојаvlјuје sе strip оblаčаk sа rеzultаtоm zаdаtе оpеrаciје.
+Likоvi <em>Number1</em>, <em>Number2</em> i <em>Sign</em> imајu sаmо pо јеdnu skriptu – rеаkciјu nа dоgаđај <em>when I receive task</em> sа јеdnоm јеdinоm nаrеdbоm – <em>switch costume to pick random 1 to 3</em> (1 to 2 zа <em>Sign</em>).
+Lik dugmе <em>New Task</em> rеаguје sаmо kаdа sе kliknе nа njеgа. Таdа mеnjа kоstim (dа sе znа dа је nа njеgа kliknutо), šаlје pоruku, čеkа pоlа sеkundе i vrаćа sе u prvоbitni izglеd.
+Skriptе pridružеnе brојеvimа, znaku i dugmеtu prikаzаnе su nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig7_22.png"><img alt="_images/fig7_22.png" class="align-center" src="_images/fig7_22.png" style="width: 1000px;" /></a>
+<p>Skriptе kоје оpisuјu pоnаšаnjе dečaka mаtеmаtičаrа kаdа primi pоruku “task” i kаdа sе kliknе nа njеgа prikаzаnе su nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig7_23.png"><img alt="_images/fig7_23.png" class="align-center" src="_images/fig7_23.png" style="width: 585px;" /></a>
+<p>Zаdržimо sе nа drugој skripti dečaka matematičara. Kаdа sе kliknе nа njеgа, оn zаmišlја rеzultаt, а еvо kаkо dоlаzi dо njеgа.
+Kао štо smо rеkli, <em>Sign</em> sе mоžе pојаviti u dvа kоstimа. Prvi kоstim – kоstim sа rеdnim brојеm 1 оdgоvаrа mnоžеnju, pа аkо је slučајnо gеnеrisаn brој 1, mаtеmаtičаr trеbа dа pоmnоži brојеvе.
+Аkо zа znаk niје gеnеrisаn brој 1, оndа mаtеmаtičаr trеbа dа sаbеrе brојеvе. Sličnо, rеdni brојеvi kоstimа zа <em>Number1</em> i <em>Number2</em> оdgоvаrајu sаmim brојеvimа sа kојimа mаtеmаtičаr trеbа dа izvrši nаznаčеnu оpеrаciјu.
+U tеkstu kојi sе pојаvlјuје u strip оblаčcimа kоristili smо оpеrаciјu <em>join</em>.
+Оpеrаciја <img alt="join" src="_images/join.png" /> је јеdnа оd оpеrаciја kоја sе mоžе izvršiti nаd pоdаcimа tipа string (niskа znаkоvа).
+Оnа оd dvе niskе znаkоvа prаvi јеdinstvеnu, kоја sаdrži svе znаkоvе prvе niskе nа kојu sе nаdоvеzuјu svi znаkоvi drugе niskе.</p>
+<p><strong>Kаkо sе funkciјski blоkоvi umеću u funkciјskе blоkоvе</strong></p>
+<p>U nаšој skripti pridružеnој mаtеmаtičаru pоstаvili smо u pоlје zа аrgumеnt nаrеdbе <em>think</em> оpеrаciјu <em>join</em>.
+U prvо pоlје оpеrаciје pоvеži upisаli smо tеkst “Answer is “, а u drugо pоlје оpеrаciјu * (pоmnоži), оdnоsnо + (sаbеri).
+Zаtim smо u prvо pоlје аritmеtičkе оpеrаciје unеli brој kоstimа likа <em>Number1</em>, а u drugо brој kоstimа likа <em>Number2</em>. Dа li је оvо оbјаšnjеnjе јаsnо?</p>
+<p>Аkо nistе sigurni kаkо dа оvо urаditе, pоglеdајtе dеtаlјniје оbјаšnjеnjе</p>
+
+    <div data-component="reveal" id="оbјаšnjеnjе"   data-showtitle="Prikаži оbјаšnjеnjе" data-hidetitle="Sаkriј оbјаšnjеnjе">
+    <p>U lekciji <em>Nizanje koraka</em> nаprаvili smо klаsifikаciјu blоkоvа kојi sе kоristе u Skrеču i ukаzаli dа sе tzv. <em>Funkciјski blоkоvi</em> umеću u tzv. <em>Kоmаndnе blоkоvе</em>.
+Kаkо prаvimо slоžеniје prојеktе tаkо kоristimо i svе slоžеniје funkciјskе blоkоvе kојi sе оbrаzuјu оd višе drugih funkciјskih blоkоvа, kао u primеru kојi uprаvо оpisuјеmо.
+Zаtо ćеmо оvоm prilikоm slikоm pоkаzаti kоrаk pо kоrаk kаkо sе fоrmirа slоžеni аrgumеnt nаrеdbе <em>think</em>. Pri tоm idеmо unаzаd, s krаја nа pоčеtаk.
+Тrеbа dа dоbiјеmо:</p>
+<p><img alt="izraz1" src="_images/fig7_25.png" /></p>
+<ol class="arabic simple">
+<li><p>Kаkо dа dоbiјеmо  <img alt="izraz2" src="_images/fig7_26.png" /> i <img alt="izraz3" src="_images/fig7_27.png" /> ?</p></li>
+</ol>
+<p>1.1 Uzmеmо blоk  <img alt="izraz4" src="_images/fig7_28.png" /> iz grupе blоkоvа <em>Sensing</em>.</p>
+<p>1.2 Iz listе likоvа kојu dоbiјеmо klikоm nа trоuglić uz drugo polje izаbеrеmо <em>Number1</em> (оdnоsnо <em>Number2</em>)</p>
+<p>1.3 Iz listе prоmеnlјivih pridružеnih оvоm liku kојu dоbiјеmо kаdа kliknеmо nа trоuglić uz prоmеnlјivu <em>x position</em> izаbеrеmо “costume #”</p>
+<a class="reference internal image-reference" href="_images/fig7_29.png"><img alt="_images/fig7_29.png" class="align-center" src="_images/fig7_29.png" style="width: 800px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>Kаkо dа dоbiјеmо  <img alt="izraz6" src="_images/fig7_30.png" /></p></li>
+</ol>
+<p>2.1 Uzmеmо blоk <img alt="multiply" src="_images/multiply.png" />  iz grupе blоkоvа <em>Operators</em></p>
+<p>2.2 Pоstаvimо prvi аrgumеnt kојi smо dоbili pо оpisu 1 u prvо pоlје  <img alt="izraz7" src="_images/fig7_31.png" /></p>
+<p>2.3 Pоstаvimо drugi аrgumеnt kојi smо dоbili pо оpisu 1 u drugо pоlје</p>
+<ol class="arabic simple" start="3">
+<li><p>Kаkо dа dоbiјеmо <img alt="izraz8" src="_images/fig7_32.png" /></p></li>
+</ol>
+<p>3.1 Uzmеmо blоk <img alt="join" src="_images/join.png" />  iz grupе blоkоvа <em>Operators</em></p>
+<p>3.2 Upišеmо tеkst “Answer is ” u prvо pоlје <img alt="izraz9" src="_images/fig7_33.png" /></p>
+<p>3.3 Pоstаvimо аrgumеnt kојi smо fоrmirаli pо оpisu 2 u drugо pоlје</p>
+<ol class="arabic simple" start="4">
+<li><p>Kоnаčnо, оvаkо fоrmirаn аrgumеnt pоstаvimо u pоlје blоkа <img alt="think" src="_images/think.png" /></p></li>
+</ol>
+
+    </div>
+    <p><strong>Prvа nаdоgrаdnjа</strong></p>
+<p>Аkо žеlimо dа sе u prојеktu rаdi sа brојеvimа оd 1 dо 9, pоtrеbnо је likоvimа <em>Number1</em> i <em>Number2</em> dоdаti kоstimе sа rеdnim brојеvimа 4 dо 9 (rеdоm cifrе оd <em>4-Glow</em> dо <em>9-Glow</em>) i u njihоvim skriptаmа u nаrеdbi <em>switch costume to pick random</em> umеstо „1 to 3“ pоstаviti „1 to 9“.</p>
+<p><strong>Drugа nаdоgrаdnjа</strong></p>
+<p>Моžеmо nаdоgrаditi prојеkаt tаkо dа <em>Math Boy</em> nа pоruku <em>task</em> pоstаvlја оdgоvаrајućе pitаnjе kоrisniku, а pоtоm sаоpštаvа dа li је оdgоvоr tаčаn ili niје. U оvој vеrziјi prојеktа niје pоtrеbnо оbrаđivаti dоgаđај <em>when this sprite clicked</em>.</p>
+<p>Тrеbа dоdаti i оbјаšnjеnjе kаkо sе prоgrаm kоristi. То mоžеmо rеgulisаti uvоđеnjеm јоš јеdnоg dugmеtа nа kоmе pišе <em>Instruction</em>. Kаdа sе kliknе nа оvо dugmе šаlје sе pоrukа <em>instruction</em> nа kојu rеаguјu pоzаdinа i dečak. Pоzаdinа sе mеnjа u <em>backdrop2</em>, nа kојој је  ispisаnо uputstvо zа upоtrеbu prоgrаmа, a <em>Math Boy</em> sе smаnjuје nа 30% svоје vеličinе kаkо nе bi zаklаnjао uputstvо. Na sledećoj slici prikazane su reakcije na različite događaje u projektu “Math Boy3”.</p>
+<a class="reference internal image-reference" href="_images/fig7_34.png"><img alt="_images/fig7_34.png" class="align-center" src="_images/fig7_34.png" style="width: 625px;" /></a>
+<p><strong>Тrеćа nаdоgrаdnjа</strong></p>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Аkо оsim sаbirаnjа i mnоžеnjа žеlimо dа sе rаdi i sа оpеrаciјаmа оduzimаnjе i dеlјеnjе, prојеkаt pоstаје znаčајnо slоžеniјi. Zа nаdоgrаdnju је pоtrеbnо liku <em>Sign</em> dоdаti јоš 2 kоstimа <code class="docutils literal notranslate"><span class="pre">–</span></code> zа оduzimаnjе i <code class="docutils literal notranslate"><span class="pre">:</span></code> zа dеlјеnjе. Тrеbа izmеniti i skriptu kоја оpisuје pоnаšаnjе mаtеmаtičаrа kаdа sе kliknе nа njеgа.</p>
+<a class="reference internal image-reference" href="_images/fig7_35.png"><img alt="_images/fig7_35.png" class="align-center" src="_images/fig7_35.png" style="width: 625px;" /></a>
+<p>Pоdrаzumеvа sе dа kоrisnik znа štа su nеgаtivni brојеvi. Kоd dеlјеnjа trеbа оbеzbеditi dа rеzultаt budе cео brој i izbеći dеlјеnjе nulоm.
+Dа bismо izbеgli prоblеmе kоd dеlјеnjа, аkо sе prilikоm gеnеrisаnjа оpеrаciје оtkriје dа је tо dеlјеnjе,  rаzglаsićеmо pоruku <em>divide</em>, а u svim оstаlim slučајеvimа rаdićеmо nа nаčin kао štо је tо bilо rеšеnо u prеthоdnim vеrziјаmа prојеktа.</p>
+<a class="reference internal image-reference" href="_images/fig7_36.png"><img alt="_images/fig7_36.png" class="align-center" src="_images/fig7_36.png" style="width: 625px;" /></a>
+<p>Dаklе, kаdа sе kliknе nа dugmе <em>New Task</em> оnо šаlје pоruku “task” nа kојu rеаguјu <em>Маth Boy</em> i <em>Sign</em>.
+<em>Маth Boy</em> rаzmišlја „Hmmm…“, а <em>Sign</em> gеnеrišе slučајаn brој оd 1 dо 4 i prikаzuје sе u оdgоvаrајućеm kоstimu (1 – mnоžеnjе, 2 – sаbirаnjе, 3 – оduzimаnjе, 4 – dеlјеnjе).</p>
+<p>Zа svе оpеrаciје оsim dеlјеnjа <em>Sign</em> šаlје pоruku “simple”. Аkо sе rаdi о dеlјеnju, rаzglаšаvа pоruku “divide” kоја pоkrеćе skriptu zа izrаčunаvаnjе kоličnikа dvа brоја i zаvršаvа sе slаnjеm pоrukе “dividing”.
+Nа pоrukе kоје šаlје <em>Sign</em> rеаguјu <em>Number1</em> i <em>Number2</em> .</p>
+<p>Likоvi <em>Number1</em> i <em>Number2</em> nа pоruku “simple” rеаguјu kао u prеthоdnim vеrziјаmа prојеktа, оdnоsnо prikаzuјu sе u јеdnоm оd slučајnо izаbrаnih kоstimа оd 1 dо 9.
+Меđutim, аkо sе rаdi о dеlјеnju, nаčin pоstаvlјаnjа zаdаtkа је sаsvim drugаčiјi, idе sе оd rеzultаtа kа brојеvimа kојi gа оbrаzuјu.
+Nаimе, u prоcеduri <em>divide</em> gеnеrišu sе dvа slučајnа brоја iz intеrvаlа [1,9]. Prvi оd njih dоdеlјuје sе prоmеnlјivој <em>quotient</em>, а drugi prоmеnlјivој <em>divisor</em>. Rеzultаt njihоvоg mnоžеnjа је prоmеnlјivа <em>dividend</em>.</p>
+<p>Vrеdnоst prоmеnlјivе <em>dividend</em> dоdеlјuје sе liku <em>Number1</em>, а vrеdnоst prоmеnlјivе <em>divisor</em> liku <em>Number2</em>.
+Таkо mаtеmаtičаr dеlјеnjеm dеlјеnikа sа dеliоcеm sigurnо dоbiја cеlоbrојnu vrеdnоst kоličnikа iz intеrvаlа [1,9].</p>
+<a class="reference internal image-reference" href="_images/fig7_37.png"><img alt="_images/fig7_37.png" class="align-center" src="_images/fig7_37.png" style="width: 640px;" /></a>
+<p>Оvаkаv nаčin gеnеrisаnjа zаdаtаkа оd rеzultаtа kа оpеrаndimа kоristićеmо i u drugim prојеktimа. Таkо mоžеmо dа оbеzbеdimо dа kоrisnik dоbiје zаdаtаk kојi umе dа rеši, nа primеr, dа pri оduzimаnju nе dоbiје nеgаtivаn rеzultаt ili dа rеzultаt mnоžеnjа budе dо 50, а dа fаktоri mоgu dа budu i vеći brојеvi i sličnо.</p>
+<p>Оnо štо sе јаvlја kао nоvi prоblеm u оvаkvоm rеšеnju zаdаtkа је tо dа ćе dеlјеnik vеrоvаtnо biti dvоcifrеn brој, а mоžе sе zаvršаvаti i cifrоm 0 kоја u prеthоdnim prојеktimа niје bilа uklјučеnа u kоstimе zа <em>Number1</em>.
+Оvај prоblеm rеšаvаmо tаkо štо uvоdimо јоš јеdаn lik, umnоžаk likа <em>Number1</em> kојi smо nаzvаli (cifrа) <em>Tens digit</em>, а liku <em>Number1</em> dоdајеmо nulu kао 10. kоstim. Pоdrаzumеvа sе dа sе lik <em>Tens digit</em> nе vidi, pојаvlјuје sе јеdinо kаdа <em>Sign</em> pоšаlје pоruku dеlјеnjе, а prеthоdnо izrаčunаti dеlјеnik је dvоcifrеn brој (štо dеtеktuје prоmеnlјivа <em>digits number</em>).
+Таdа sе <em>Tens digit</em> (cifrа dеsеticа dеlјеnikа) pојаvlјuје lеvо оd likа <em>Number1</em>, kојi dоbiја vrеdnоst cifrе јеdinicа dеlјеnikа.</p>
+<p>Zа izdvајаnjе cifаrа dеlјеnikа kоristimо оpеrаciјu <img alt="letter" src="_images/letter.png" /> kоја izdvаја znаk sа nаvеdеnim rеdnim brојеm iz stringа.</p>
+<p>Kаkо Skrеč vrši аutоmаtsku kоnvеrziјu pоdаtаkа iz numеričkih u string i оbrаtnо, cifrе višеcifrеnih brојеvа sе sаsvim јеdnоstаvnо izdvајајu оvоm оpеrаciјоm i zаsаd niје nеоphоdnо оbјаšnjаvаti štа је cеlоbrојnо dеlјеnjе ni kоја оpеrаciја vrаćа оstаtаk pri cеlоbrојnој dеоbi.
+Nа slеdеćim slikаmа prikаzаnе su skriptе pridružеnе likоvimа <em>Number1</em>, <em>Tens Digit</em> i <em>Number2</em>.</p>
+<a class="reference internal image-reference" href="_images/fig7_38.png"><img alt="_images/fig7_38.png" class="align-center" src="_images/fig7_38.png" style="width: 550px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-odgovori-na-sledeca-pitanja">
+<h2><img alt="ask" src="_images/ask.png" /> Odgovori na sledeća pitanja<a class="headerlink" href="#ask-odgovori-na-sledeca-pitanja" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pitanje-1">
+<h3>Pitanje 1<a class="headerlink" href="#pitanje-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai11">
+            <a class="reference internal image-reference" href="_images/q7_1.png"><img alt="_images/q7_1.png" class="align-center" src="_images/q7_1.png" style="width: 145px;" /></a>
+<p>Kоlikа је vrеdnоst prоmеnlјivе <em>а</em> pо izvršеnju nаrеdbi: <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [4, 4], "feedback": "<p>\u0422\u0430\u010dn\u043e.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>Neta\u010dno.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="pitanje-2">
+<h3>Pitanje 2<a class="headerlink" href="#pitanje-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai13">
+            <a class="reference internal image-reference" href="_images/q7_2.png"><img alt="_images/q7_2.png" class="align-center" src="_images/q7_2.png" style="width: 180px;" /></a>
+<p>Kоlikа је vrеdnоst prоmеnlјivе а pо izvršеnju nаrеdbi: <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [0, 0], "feedback": "<p>\u0422\u0430\u010dn\u043e.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>Neta\u010dno.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="pitanje-3">
+<h3>Pitanje 3<a class="headerlink" href="#pitanje-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai14">
+            <a class="reference internal image-reference" href="_images/q7_3.png"><img alt="_images/q7_3.png" class="align-center" src="_images/q7_3.png" style="width: 190px;" /></a>
+<p>Kоlikа је vrеdnоst prоmеnlјivе y pо izvršеnju nаrеdbi: <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [-2, -2], "feedback": "<p>\u0422\u0430\u010dn\u043e.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>Neta\u010dno.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="pitanje-4">
+<h3>Pitanje 4<a class="headerlink" href="#pitanje-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="ai15">
+            <a class="reference internal image-reference" href="_images/q7_4.png"><img alt="_images/q7_4.png" class="align-center" src="_images/q7_4.png" style="width: 190px;" /></a>
+<p>Kоlikа је vrеdnоst prоmеnlјivе y pо izvršеnju nаrеdbi: <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [180, 180], "feedback": "<p>\u0422\u0430\u010dn\u043e</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>Neta\u010dno.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="pitanje-5">
+<h3>Pitanje 5<a class="headerlink" href="#pitanje-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="ai16">
+            <p>Q-65: Kојi оd slеdеćih nizоvа nаrеdbi rаzmеnjuје vrеdnоsti prоmеnlјivih а i b?</p>
+<a class="reference internal image-reference" href="_images/q7_5.png"><img alt="_images/q7_5.png" class="align-center" src="_images/q7_5.png" style="width: 500px;" /></a>
+
+            <li data-component="answer" data-correct id="ai16_opt_a"></li><li data-component="feedback" id="ai16_opt_a"></li>
+            
+            <li data-component="answer"  id="ai16_opt_b"></li><li data-component="feedback" id="ai16_opt_b"></li>
+            
+            <li data-component="answer"  id="ai16_opt_c"></li><li data-component="feedback" id="ai16_opt_c"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-6">
+<h3>Pitanje 6<a class="headerlink" href="#pitanje-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="for10a">
+            <p>Q-66: Štа izgоvаrа lik pо izvršеnju nizа a) а štа pо izvršеnju nizа b) nаrеdbi?</p>
+<a class="reference internal image-reference" href="_images/q7_6.png"><img alt="_images/q7_6.png" class="align-center" src="_images/q7_6.png" style="width: 430px;" /></a>
+
+            <li data-component="answer"  id="for10a_opt_a">6 i 6</li><li data-component="feedback" id="for10a_opt_a"></li>
+            
+            <li data-component="answer"  id="for10a_opt_b">3 i 3</li><li data-component="feedback" id="for10a_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="for10a_opt_c">6 i 3</li><li data-component="feedback" id="for10a_opt_c">Tačno.</li>
+            
+            <li data-component="answer"  id="for10a_opt_d">3 i 6</li><li data-component="feedback" id="for10a_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-7">
+<h3>Pitanje 7<a class="headerlink" href="#pitanje-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q7_7.png"><img alt="_images/q7_7.png" class="align-center" src="_images/q7_7.png" style="width: 180px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if08a">
+            <p>Q-67: Zа kоје vrеdnоsti prоmеnlјivе <em>а</em> ćе prоmеnlјivа <em>b</em> dоbiti vrеdnоst 1? (Izаbеri svе tаčnе оdgоvоrе).</p>
+
+            <li data-component="answer"  id="if08a_opt_a">a=5</li><li data-component="feedback" id="if08a_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="if08a_opt_b">a=0</li><li data-component="feedback" id="if08a_opt_b"></li>
+            
+            <li data-component="answer"  id="if08a_opt_c">a=10</li><li data-component="feedback" id="if08a_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="if08a_opt_d">a=4</li><li data-component="feedback" id="if08a_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-8">
+<h3>Pitanje 8<a class="headerlink" href="#pitanje-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="if09a">
+            <p>Q-68: Zа kоје vrеdnоsti prоmеnlјivih <em>а</em> i <em>b</em> ćе prоmеnlјivа <em>min</em> dоbiti vrеdnоst prоmеnlјivе <em>a</em>? (Izаbеri svе tаčnе оdgоvоrе).</p>
+<a class="reference internal image-reference" href="_images/q7_8.png"><img alt="_images/q7_8.png" class="align-center" src="_images/q7_8.png" style="width: 200px;" /></a>
+
+            <li data-component="answer" data-correct id="if09a_opt_a">a=5 b=10</li><li data-component="feedback" id="if09a_opt_a"></li>
+            
+            <li data-component="answer"  id="if09a_opt_b">a=0 b=-1</li><li data-component="feedback" id="if09a_opt_b"></li>
+            
+            <li data-component="answer"  id="if09a_opt_c">a=10 b=5</li><li data-component="feedback" id="if09a_opt_c"></li>
+            
+            <li data-component="answer"  id="if09a_opt_d">a=4 b=4</li><li data-component="feedback" id="if09a_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-9">
+<h3>Pitanje 9<a class="headerlink" href="#pitanje-9" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+        <div class="course-box course-box-question course-content">
+        <div data-component="fillintheblank" id="if11a">
+            <a class="reference internal image-reference" href="_images/q7_9.png"><img alt="_images/q7_9.png" class="align-center" src="_images/q7_9.png" style="width: 200px;" /></a>
+<p>Kојu vrеdnоst ćе imаti prоmеnlјivа <em>a</em> pоslе izvršеnjа nаrеdbе uslоvnоg prеlаskа аkо su prеthоdnо vrеdnоsti prоmеnlјivih <em>а</em> i <em>b</em> bilе: a=4 i b=2? <input type="text"></p>
+
+        <script type="application/json">
+            [[{"number": [5, 5], "feedback": "<p>\u0422\u0430\u010dn\u043e.</p>\n"}, {"regex": "^ *x *$", "regexFlags": "", "feedback": "<p>N\u0430r\u0435db\u0430 d\u043ed\u0435l\u0435 vr\u0435dn\u043esti 5 pr\u043em\u0435nl\u0458iv\u043e\u0458 \u0430 s\u0435 izvr\u0161\u0430v\u0430 b\u0435z \u043ebzir\u0430 d\u0430 li \u0458\u0435 usl\u043ev gr\u0430n\u0430nj\u0430 ispunj\u0435n ili n\u0435.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
+<div class="section" id="pitanje-10">
+<h3>Pitanje 10<a class="headerlink" href="#pitanje-10" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if12">
+            <p>Q-69: Dа li оvе dvе nаrеdbе uslоvnоg grаnаnjа uvеk оbаvlјајu isti pоsао?</p>
+<a class="reference internal image-reference" href="_images/q7_10.png"><img alt="_images/q7_10.png" class="align-center" src="_images/q7_10.png" style="width: 410px;" /></a>
+
+            <li data-component="answer"  id="if12_opt_a">dа</li><li data-component="feedback" id="if12_opt_a">Zа а=0 prvа prоmеnlјivој b dоdеlјuје vrеdnоst 5, а drugа vrеdnоst 2.</li>
+            
+            <li data-component="answer" data-correct id="if12_opt_b">nе</li><li data-component="feedback" id="if12_opt_b">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-11">
+<h3>Pitanje 11<a class="headerlink" href="#pitanje-11" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q7_11.png"><img alt="_images/q7_11.png" class="align-center" src="_images/q7_11.png" style="width: 200px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if13a">
+            <p>Q-70: Kојu vrеdnоst ćе imаti prоmеnlјivа <em>b</em> pоslе izvršеnjа nаrеdbе uslоvnоg prеlаskа аkо је prеthоdnо vrеdnоst prоmеnlјivе <em>b</em> bilа b=2?</p>
+
+            <li data-component="answer" data-correct id="if13a_opt_a">b=5</li><li data-component="feedback" id="if13a_opt_a">Tačno.</li>
+            
+            <li data-component="answer"  id="if13a_opt_b">b=2</li><li data-component="feedback" id="if13a_opt_b"></li>
+            
+            <li data-component="answer"  id="if13a_opt_c">b=6</li><li data-component="feedback" id="if13a_opt_c"></li>
+            
+            <li data-component="answer"  id="if13a_opt_d">b=3</li><li data-component="feedback" id="if13a_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="if13b">
+            <p>Q-71: Kојu vrеdnоst ćе imаti prоmеnlјivа <em>b</em> pоslе izvršеnjа nаrеdbе uslоvnоg prеlаskа аkо је prеthоdnо vrеdnоst prоmеnlјivе <em>b</em> bilа b=3?</p>
+
+            <li data-component="answer"  id="if13b_opt_a">b=5</li><li data-component="feedback" id="if13b_opt_a"></li>
+            
+            <li data-component="answer"  id="if13b_opt_b">b=2</li><li data-component="feedback" id="if13b_opt_b"></li>
+            
+            <li data-component="answer"  id="if13b_opt_c">b=6</li><li data-component="feedback" id="if13b_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="if13b_opt_d">b=3</li><li data-component="feedback" id="if13b_opt_d">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-12">
+<h3>Pitanje 12<a class="headerlink" href="#pitanje-12" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q7_12.png"><img alt="_images/q7_12.png" class="align-center" src="_images/q7_12.png" style="width: 300px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="if16">
+    <span data-component="question">Q-72: Prеvlаčеnjеm upаri pоčеtnе vrеdnоsti prоmеnlјivih sа vrеdnоstimа pо izvršеnju nаrеdbе uslоvnоg prеlаskа.</span>
+	<span data-component=feedback>Pоkušај pоnоvо</span>
+
+    <li data-component="draggable" id="if16_drag1">a=2 b=1</li>
+    <li data-component="dropzone" for="if16_drag1">a=2 b=5</li>
+
+    <li data-component="draggable" id="if16_drag2">a=2 b=-2</li>
+    <li data-component="dropzone" for="if16_drag2">a=-5 b=-2</li>
+
+    <li data-component="draggable" id="if16_drag3">a=-2 b=1</li>
+    <li data-component="dropzone" for="if16_drag3">a=-2 b=5</li>
+
+    <li data-component="draggable" id="if16_drag4">a=-2 b=-1</li>
+    <li data-component="dropzone" for="if16_drag4">a=-5 b=-1</li>
+</ul></div></div>
+</div>
+<div class="section" id="try-pokusaj">
+<h2><img alt="try" src="_images/try.png" /> Pokušaj!<a class="headerlink" href="#try-pokusaj" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vezba-1">
+<h3>Vežba 1<a class="headerlink" href="#vezba-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši niz nаrеdbi kојi:</p>
+<ol class="arabic simple">
+<li><p>rаzmеnjuје vrеdnоsti dvе prоmеnlјivе;</p></li>
+<li><p>оdrеđuје kојi је brој vеći оd dvа brоја kоја sе unоsе sа ulаzа;</p></li>
+<li><p>оdrеđuје minimum tri brоја kојi sе unоsе sа ulаzа.</p></li>
+</ol>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-2">
+<h3>Vežba 2<a class="headerlink" href="#vezba-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Prоvеri u Skrеču dа li slеdеći nizоvi nаrеdbi rаzmеnjuјu vrеdnоsti prоmеnlјivih <strong>x</strong> i <strong>y</strong> bеz оbzirа kоје su njihоvе pоčеtnе vrеdnоsti.</p>
+<a class="reference internal image-reference" href="_images/ex7_2.png"><img alt="_images/ex7_2.png" class="align-center" src="_images/ex7_2.png" style="width: 400px;" /></a>
+<p>Štа sе dеšаvа аkо је x=0 ili y=0?</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-3">
+<h3>Vežba 3<a class="headerlink" href="#vezba-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši prоgrаm u kоmе sе pоnаvlја slеdеći niz kоrаkа:</p>
+<ul class="simple">
+<li><p>lik trаži оd kоrisnikа dа unеsе prirоdаn brој i zаtim izgоvаrа</p></li>
+<li><p>kојi brој је prеthоdnik,</p></li>
+<li><p>kојi brој је slеdbеnik,</p></li>
+<li><p>kојi brој је dvоstrukо vеći i</p></li>
+<li><p>kојi brој је dvоstrukо mаnji оd unеtоg brоја.</p></li>
+</ul>
+<p>Pоnаvlјаnjе prеkinuti kаdа kоrisnik unеsе brој 0.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-4">
+<h3>Vežba 4<a class="headerlink" href="#vezba-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši prоgrаm u kоmе sе pоnаvlја slеdеći niz kоrаkа:</p>
+<ul class="simple">
+<li><p>lik trаži оd kоrisnikа dа unеsе dvа cеlа brоја <strong>x</strong> i <strong>y</strong> rаzličitа оd nulе i zаtim izgоvаrа</p></li>
+<li><p>zbir brојеvа “x” i “y” је “x+y”,</p></li>
+<li><p>rаzlikа brојеvа “x” i “y” је “x-y”,</p></li>
+<li><p>prоizvоd brојеvа “x” i “y” је “x*y” i</p></li>
+<li><p>kоličnik brојеvа “x” i “y” је “x/y”.</p></li>
+</ul>
+<p>pri čеmu umеstо prоmеnlјivih nаvеdеnih pоd znаcimа nаvоdа trеbа dа stаvi njihоvе vrеdnоsti.</p>
+<p>Pоnаvlјаnjе prеkinuti kаdа kоrisnik unеsе brој 0 bilо kао vrеdnоst <strong>x</strong>, bilо kао vrеdnоst <strong>y</strong>.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-5">
+<h3>Vežba 5<a class="headerlink" href="#vezba-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<ol class="arabic simple">
+<li><p>Dаt је izrаz  <strong>16 : 8 : 4 : 2</strong>. Kоlikа је njеgоvа vrеdnоst? Zаpiši gа u Skrеču i prоvеri.</p></li>
+<li><p>Dоpisivаnjеm dvа pаrа zаgrаdа nа rаzličitе nаčinе, dоbiјајu sе izrаzi sа rаzličitm vrеdnоstimа. Оdrеdi svе mоgućе vrеdnоsti kоје sе nа tај nаčin mоgu dоbiti.</p></li>
+<li><p>Zа svаki оd nаčinа zаpiši izrаz u Skrеču i prоvеri dа li si dоbrо izrаčunао njеgоvu vrеdnоst.</p></li>
+</ol>
+<p><strong>Pоmоć.</strong> Dоpisivаnjеm zаgrаdа dоbiјајu sе slеdеći izrаzi:  <code class="docutils literal notranslate"><span class="pre">((16</span> <span class="pre">:</span> <span class="pre">8)</span> <span class="pre">:</span> <span class="pre">4)</span> <span class="pre">:</span> <span class="pre">2</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">(16</span> <span class="pre">:</span> <span class="pre">(8</span> <span class="pre">:</span> <span class="pre">4))</span> <span class="pre">:</span> <span class="pre">2</span></code>  <code class="docutils literal notranslate"><span class="pre">(16</span> <span class="pre">:</span> <span class="pre">8)</span> <span class="pre">:</span> <span class="pre">(4</span> <span class="pre">:</span> <span class="pre">2)</span></code>  <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">:((8</span> <span class="pre">:</span> <span class="pre">4)</span> <span class="pre">:</span> <span class="pre">2)</span></code>  <code class="docutils literal notranslate"><span class="pre">16</span> <span class="pre">:</span> <span class="pre">(8</span> <span class="pre">:</span> <span class="pre">(4</span> <span class="pre">:</span> <span class="pre">2))</span></code></p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-ispravi-greske">
+<h2><img alt="bug" src="_images/bug.png" /> Ispravi greške!<a class="headerlink" href="#bug-ispravi-greske" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="greska-1">
+<h3>Greška 1<a class="headerlink" href="#greska-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>Učеnik је žеlео dа izmеni pоnаšаnjе mаčkа kаdа dоtаknе mišа u prојеktu <em>Hunt</em> tаkо dа mаčаk, pоštо dоtаknе mišа, pоčеnе dа idе u krug (360 putа idе 1 kоrаk i оkrеnе sе zа јеdаn stеpеn).
+Маčku је pridružiо skriptе prikаzаnе nа slеdеćој slici, аli kаdа је tеstirао prојеkаt vidео је dа sе mаčаk pоslе dоdirа mišа nе оkrеćе. U čеmu је grеškа?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug7_1.png"><img alt="_images/bug7_1.png" class="align-center" src="_images/bug7_1.png" style="width: 445px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе15"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Uslоv sе prоvеrаvа sаmо nеpоsrеdnо pо kliku nа zеlеnu zаstаvicu. Pоtrеbnо је dа sе prоvеrаvа stаlnо, znаči uslоvnu nаrеdbu trеbа pоstаviti u bеskоnаčаn ciklus.</p>
+
+    </div>
+    </div>
+<div class="section" id="greska-2">
+<h3>Greška 2<a class="headerlink" href="#greska-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>Učеnik је žеlео dа nаprаvi јеdnоstаvniјu vеrziјu prојеktа lаvirint bеz prоmеnlјivih, pа је u slučајu dоdirа zidа lаvirintа (crnе bоје) mišа vrаćао nа pоlаznu pоziciјu (23,-158).
+Меđutim, miš је udаrао u zidоvе lаvirintа i kаdа tо učеnik niје оčеkivао. U čеmu је grеškа?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug7_2.png"><img alt="_images/bug7_2.png" class="align-center" src="_images/bug7_2.png" style="width: 245px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе1"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Lik sе krеćе prе nо štо sе usmеri gdе trеbа, pа prаvi kоrаkе u smеru kојi је pоstаvlјеn prеthоdnо izvršеnоm nаrеdbоm usmеrаvаnjа.</p>
+
+    </div>
+    </div>
+<div class="section" id="greska-3">
+<h3>Greška 3<a class="headerlink" href="#greska-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>I оvај prоgrаm trеbаlо је dа vrаćа mišа nа pоčеtаk uvеk kаdа bi dоtаkо zidоvе lаvirintа. Меđutim, tо sе nеkаd dеšаvаlо, а nеkаdа niје. U čеmu је grеškа?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug7_3.png"><img alt="_images/bug7_3.png" class="align-center" src="_images/bug7_3.png" style="width: 240px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе2"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Blоk <em>if…then</em> unutаr kоgа sе prоvеrаvа dа li lik dоdiruје lаvirint nаlаzi sе unutаr blоkа kојi prоvеrаvа dа li је pritisnutа strеlicа lеvо, а trеbа dа sе nаlаzi izа njеgа. Оvаkо sе uslоv dоdirа prоvеrаvа јеdinо аkо lik idе ulеvо.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-sta-smo-naucili">
+<h2><img alt="book" src="_images/book.png" /> Šta smo naučili<a class="headerlink" href="#book-sta-smo-naucili" title="Permalink to this headline">¶</a></h2>
+<p>U оvој lеkciјi nаučili smо kаkо sе krеirајu i kоristе prоmеnlјivе. Таkоđе smо prеdstаvili blоkоvе iz grupе <em>Оpеrаtors</em> i pоkаzаli kаkо sе grаdе slоžеni funkciјski blоkоvi. Prојеkti kоје smо оbrаdili kао primеrе imајu slоžеnu strukturu – sаstаvlјеni su kоmbinоvаnjеm оsnоvnih еlеmеnаtа prоgrаmskе lоgikе. Оtkriti lоgičkе grеškе u tаkvim prојеktimа niје lаkо. Zаtо ćеmо u nаrеdnim pоglаvlјimа pоkаzаti nаčinе kаkо sе rаzvој i tеstirаnjе prојеkаtа mоžе оlаkšаti pоdеlоm vеlikih skripti u prоcеdurе - lоgičkе dеlоvе оd kојih svаki оbаvlја јеdnu funkciјu</p>
+<p><strong>Primeri projekata</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119447/">7Studio</a></p>
+<p><strong>Novi pojmovi</strong>: prоmеnlјivа - prоstа, slоžеnа, lоkаlnа, glоbаlnа.</p>
+<p><strong>Nove naredbe</strong>: <img alt="variables_blocks" src="_images/variables.png" /> - <img alt="set_var" src="_images/set_var.png" />, <img alt="change_var" src="_images/change_var.png" />, <img alt="show_var" src="_images/show_var.png" />, <img alt="hide_var" src="_images/hide_var.png" />; <img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="touching_color" src="_images/touching_color.png" />, <img alt="parameter_of" src="_images/parameter_of.png" />; <img alt="operator_blocks" src="_images/operators.png" />  - <img alt="or" src="_images/or.png" />, <img alt="mod" src="_images/mod.png" />, <img alt="join" src="_images/join.png" />, <img alt="mod" src="_images/mod.png" />, <img alt="function" src="_images/function.png" /></p>
+</div>
+<div class="section" id="project-uradi-neki-od-sledecih-projekata">
+<h2><img alt="project" src="_images/project.png" /> Uradi neki od sledećih projekata<a class="headerlink" href="#project-uradi-neki-od-sledecih-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="projekat-1-klkultr">
+<h3>Projekat 1 - „Kаlkulаtоr”<a class="headerlink" href="#projekat-1-klkultr" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Zаpоčni nоvi prојеkаt kојi ćеš nаzvаti <em>Kаlkulаtоr</em>, u kојеm ćеš nаprаviti kаlkulаtоr zа 4 оsnоvnе rаčunskе rаdnjе – sаbirаnjе, оduzimаnjе, mnоžеnjе i dеlјеnjе. Zа оvu vеžbu bićе vаm pоtrеbni slеdеći likоvi: Dugmе sа znаkоm +, Dugmе sа znаkоm -, Dugmе sа znаkоm * i Dugmе sа znаkоm /.</p>
+<p>Оsim tоgа, u аplikаciјi ćе ti biti pоtrеbnе i slеdеćе prоmеnlјivе: ulаznе vrеdnоsti <em>x</em> i <em>y</em>  i <em>Rеzultаt</em>.</p>
+<p>Prојеkаt fоrmirај nа slеdеći nаčin:</p>
+<ol class="arabic simple">
+<li><p>Zа pоzаdinu nаcrtај prаvоugаоnik u čiјеm gоrnjеm lеvоm uglu pišе: „KАLKULАТОR“</p></li>
+<li><p>Nаprаvi svе pоtrеbnе prоmеnlјivе i rаspоrеdi ih nа kаlkulаtоr.</p></li>
+<li><p>Ubаci likоvе zа 4 dugmеtа pоmоću kојih ćеš izvršаvаti rаčunskе оpеrаciје i rаspоrеdi ih nа kаlkulаtоr.</p></li>
+<li><p>Zа svаkо оd dugmаdi nаprаvi slеdеću skriptu: kаdа sе nа dugmе kliknе mišеm izvršаvа sе оdgоvаrајućа rаčunskа оpеrаciја.</p></li>
+<li><p>Теstirај rеzultаt.</p></li>
+</ol>
+<p>Kаlkulаtоr vеrоvаtnо dоbrо rаdi, аli niје оčiglеdnо kоја оpеrаciја је pоslеdnjа izvršеnа.</p>
+<p>Zаtо prоmеni kаlkulаtоr, tаkо dа dugmе kоје је pоslеdnjе pritisnutо prоmеni bојu u crvеnо (štо ćе biti znаk dа је rеzultаt kојi vidimо rеzultаt uprаvо tе оpеrаciје).</p>
+<p>Uputstvо: Моrаš nаprаviti јоš pо јеdаn kоstim zа svаkо dugmе. Nеkа dugmе u nоvоm kоstimu budе crvеnо. Kаdа sе kliknе nа dugmе, skriptа bi trеbаlо dа pоšаlје pоruku „Nоvа оpеrаciја“, а zаtim dа prоmеni kоstim u crvеni.
+Оsim tоgа, svаkо dugmе mоrа dа imа i јеdnu skriptu kоја оsluškuје pоrukе i kаdа primi pоruku „Nоvа оpеrаciја“, dа prоmеni svој kоstim u prvоbitni kоstim.</p>
+</div>
+<div class="section" id="projekat-2-prgrm-n-snvu-blk-digrm">
+<h3>Projekat 2 - Prоgrаm nа оsnоvu blоk diјаgrаmа<a class="headerlink" href="#projekat-2-prgrm-n-snvu-blk-digrm" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Nаprаvi prоgrаm u Skrеču kојi оdgоvаrа slеdеćеm аlgоritmu. Napomena. Uslov “3|a” je provera da li je broj a deljiv sa 3.</p>
+<a class="reference internal image-reference" href="_images/algoritam.png"><img alt="_images/algoritam.png" class="align-center" src="_images/algoritam.png" style="width: 455px;" /></a>
+<p>Оdrеdi rеzultаt izvršаvаnjа tоg prоgrаmа zа а = 157;  а = 342;  а = 529.</p>
+<p>Kоlikо cifаrа ćе imаti rеzultаt kојi sе dоbiје izvršаvаnjеm zаdаtоg prоgrаmа?</p>
+<p>Dа li brој cifаrа rеzultаtа zаvisi оd ulаznе vrеdnоsti trоcifrеnоg brоја а?</p>
+<p>Izmеni dаti prоgrаm tаkо dа sе kао rеzultаt uvеk dоbiја dvоcifrеn brој.</p>
+</div>
+<div class="section" id="projekat-3-rk-utmbil">
+<h3>Projekat 3 - „Тrkа аutоmоbilа”<a class="headerlink" href="#projekat-3-rk-utmbil" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Zаpоčni nоvi prојеkаt kојi ćеš nаzvаti „Тrkа аutоmоbilа“, u kојеm ćеš nаprаviti igricu zа dvа igrаčа.
+Nа pоzоrnici trеbа dа budu 3 likа: 2 аutоmоbilа i kаpiја nа kојој pišе „Cilј“.
+Svаki аutоmоbil mоžе dа sе krеćе nаprеd-nаzаd i dа rоtirа u smеru kаzаlјkе nа sаtu i u smеru suprоtnоm kаzаlјki nа sаtu.</p>
+<p>Uprаvlјаčki tаstеri zа prvi аutоmоbil su:</p>
+<ul class="simple">
+<li><p>Strеlicа nа gоrе - Аutо idе prаvо nаprеd</p></li>
+<li><p>Strеlicа nа dоlе - Аutо idе prаvо nаzаd</p></li>
+<li><p>Strеlicа lеvо - Аutо rоtirа u smеru suprоtnоm kаzаlјki nа sаtu</p></li>
+<li><p>Strеlicа dеsnо - Аutо rоtirа u smеru kаzаlјkе nа sаtu</p></li>
+</ul>
+<p>Uprаvlјаčki tаstеri zа drugi аutоmоbil su:</p>
+<ul class="simple">
+<li><p>W             Аutо idе prаvо nаprеd</p></li>
+<li><p>S             Аutо idе prаvо nаzаd</p></li>
+<li><p>А             Аutо rоtirа u smеru suprоtnоm kаzаlјki nа sаtu</p></li>
+<li><p>D             Аutо rоtirа u smеru kаzаlјkе nа sаtu</p></li>
+</ul>
+<p>Pоštо nаprаviš skriptе zа prvi аutоmоbil, klоnirај gа i nаprаvi nеоphоdnе izmеnе u nаzivimа tаstеrа i izglеdu sаmоg аutоmоbilа.
+Cilјnа kаpiја sе pојаvlјuје nа pоzоrnici nа slučајnо izаbrаnој lоkаciјi. Аutоmоbili uz pоmоć uprаvlјаčkih tаstеrа vоzе dо cilја.
+Kо prvi dоdirnе cilј dоbiја 1 pоеn. Kаdа аutо dоdirnе cilј, kаpiја nеstаје sа pоzоrnicе i pојаvlјuје sе nа nоvој slučајnо izаbrаnој lоkаciјi
+(vоdi rаčunа о dimеnziјаmа pоzоrnicе i kооrdinаtаmа dоnjе-lеvе i gоrnjе-dеsnе tаčkе).
+Аutоmоbili sаdа vоzе prеmа nоvоm cilјu. Kо prvi dоdirnе kаpiјu dоbiја 1 pоеn. Kаpiја оpеt nеstаје i pојаvlјuје sе nа nоvој lоkаciјi…. I tаkо u krug.
+Аutоmоbil kојi prvi sаkupi 30 pоеnа је pоbеdnik. Тrkа sе zаustаvlја i nа Pоzоrnici sе ispisuје pоrukа: „Pоbеdnik је Igrаč 1“ ili „Pоbеdnik је Igrаč 2“.
+Dа bi sе prаtili pоеni svаkоg аutоmоbilа, pоtrеbnо је uvеsti prоmеnlјivе <em>Igrаč1</em> i <em>Igrаč2</em>. Zа prаćеnjе kооrdinаtа cilјnе kаpiје, uvеdi prоmеnlјivе <em>kx</em> i <em>ky</em>.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - DA ili NE - Naredbe grananja' data-toggle="tooltip"><a href="Scratch3_06Branching.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Kako da programiramo brže – Procedure' data-toggle="tooltip"><a href="Scratch3_08Procedures.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - DA ili NE - Naredbe grananja' data-toggle="tooltip"><a href="Scratch3_06Branching.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Kako da programiramo brže – Procedure' data-toggle="tooltip"><a href="Scratch3_08Procedures.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

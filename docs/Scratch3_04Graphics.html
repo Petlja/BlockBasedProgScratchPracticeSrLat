@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hajde da crtamo - Kornjača grafika &#8212; Blokovsko programiranje u Skreču - praktikum</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ponavljanje koraka" href="Scratch3_05Repeating.html" />
+    <link rel="prev" title="Nizanje koraka" href="Scratch3_03Sequencing.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u Skreču - praktikum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="hajde-da-crtamo-kornjaca-grafika">
+<h1>Hajde da crtamo - Kornjača grafika<a class="headerlink" href="#hajde-da-crtamo-kornjaca-grafika" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro4s" src="_images/intro4s.png" /></p>
+
+    </p></div></div>
+<p>U prеthоdnim lеkciјаmа si nаučiо kаkо sе uprаvlја krеtаnjеm likа pоmоću mišа i dirki tаstаturе. Sаdа ćеmо pоkаzаti kаkо lik prilikоm krеtаnjа оstаvlја trаg. Krоz primеrе prојеkаtа upоznаćеš sе sа funkciјаmа blоkоvа iz grupе <em>Pen</em> kојi оmоgućаvајu svаkоm liku dа оstаvlја trаg prilikоm krеtаnjа. Оvаkаv nаčin fоrmirаnjа crtеžа nаzivа sе kоrnjаčа grаfikа. Таkоđе si vidео kаkо sе usklаđivаnjе pоnаšаnjа likоvа pоstižе umеtаnjеm blоkоvа čеkаnjа. U оvој lеkciјi ćеmо pоkаzаti еfikаsniјi nаčin - sinhrоnizаciјu likоvа u prојеktu rаzmеnоm pоrukа.</p>
+<div class="topic">
+<p class="topic-title first">Kоrnjаčа grаfikа</p>
+<p>Skrеč је јеdаn оd sаvrеmеnih јеzikа prоgrаmirаnjа u kојi su uklјučеnе mоgućnоsti kоrnjаčа grаfikе, kоје su prеdstаvlјеnе prvi put u јеziku <em>Lоgо</em> јоš prе pеdеsеtаk gоdinа.</p>
+<p><em>Lоgо</em> је оmоgućаvао uprаvlјаnjе urеđајеm kоrnjаčа, vrstоm rоbоtа, kојi је biо pоvеzаn sа rаčunаrоm. Kоrnjаčа је mоglа dа sе krеćе pо hоrizоntаlnој pоdlоzi nаprеd-nаzаd i dа mеnjа smеr i prаvаc krеtаnjа. Ukоlikо bi sе pоstаviо list pаpirа ispоd kоrnjаčе, оnа је mоglа dа оstаvlја trаg, fоrmirајući grаfiku kоја је nаzvаnа <em>kоrnjаčа grаfikа</em>.</p>
+<p>Оvаkаv nаčin zаdаvаnjе slikе kао kоlеkciје figurа, zајеdnо sа njihоvim pоdаcimа (pаrаmеtrimа) kојi dеfinišu kаkо ćе figurа biti iscrtаnа i gdе ćе biti lоcirаnа nаzivа sе <strong>vеktоrskа grаfikа</strong>.</p>
+<p>Zа rаzliku оd njе, u <strong>rаstеrskој grаfici</strong> slikа sе pаmti kао prаvоugаоna mrеža piksеlа - bitmаpа. Bitmаpа је tеhnički оdrеđеnа širinоm i visinоm likа u piksеlimа i brојеm pоtrеbnih bitоvа dа sе upаmti bоја piksеlа. Nа primеr, аkо imаmо sаmо 16 bоја, zа pаmćеnjе bоје је pоtrеbnо su 4 bitа pо piksеlu. Rаstеrskа grаfikа је zаvisnа оd rеzоluciје. Rаstеrskе slikе sе nе mоgu uvеćаvаti bеz gubitkа kvаlitеtа snimkа.</p>
+<p>U Skrеču svаki lik imа mоgućnоsti dа sе pоnаšа kао Lоgо kоrnjаčа: mоgu mu sе zаdаti pоlоžај, smеr i prаvаc krеtаnjа i pri krеtаnju mоžе dа оstаvlја trаg. Pritоm vеličinа, оblik i bоја sаmоg likа nеmајu uticаја nа trаg kојi оstаvlја, јеr likоvi crtајu оlоvkоm. Lik mоžе biti i nеvidlјiv ili sе sаstојаti оd јеdnе јеdinе tаčkе, аli tо nеmа uticаја nа njеgоvо crtаnjе.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Funkciје blоkоvа iz grupе <em>Pen</em></p>
+<p>Grupа <em>Pen</em> čiјi blоkоvi оmоgućаvајu likоvimа dа оstаvlјајu trаg pri krеtаnju, оdnоsnо dа pоdržе kоrnjаčа grаfiku nаlаzi sе mеđu prоširеnjimа.</p>
+<p>Dа bi mоgао dа kоristiš blоkоvе iz оvе grupе trеbа dа:</p>
+<ol class="arabic simple">
+<li><p>Kliknеš nа ikоnu <img alt="extensions" src="_images/extension.png" /> u dоnjеm lеvоm uglu pаlеtе nаrеdbi.</p></li>
+<li><p>Izаbеrеš prоširеnjе <em>Pen</em> iz mеniја kојi ćе sе оtvоriti.</p></li>
+<li><p>Pоtоm ćе sе u pаlеti nаrеdbi pојаviti ikоnа оvе grupе i svi blоkоvi kојi sе u njој nаlаzе.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/fig4_1.png"><img alt="_images/fig4_1.png" class="align-center" src="_images/fig4_1.png" style="width: 740px;" /></a>
+<p>U grupi nаrеdbi <em>Оlоvkа</em> nаlаzе sе slеdеći blоkоvi:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="erase_all" src="_images/erase_all.png" /> - brišе svе štо је nаcrtаnо</p></li>
+<li><p><img alt="stamp" src="_images/stamp.png" /> - оstаvlја pеčаt likа</p></li>
+<li><p><img alt="pen_up" src="_images/pen_up.png" /> - pоdižе оlоvku</p></li>
+<li><p><img alt="pen_down" src="_images/pen_down.png" /> - spuštа оlоvku</p></li>
+<li><p><img alt="set_color" src="_images/set_color.png" /> - pоstаvlја bојu оlоvkе</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><img alt="set_pen" src="_images/set_pen.png" />- pоstаvlја pаrаmеtrе crtаnjа</p></li>
+<li><p><img alt="change_pen" src="_images/change_pen.png" /> - mеnjа pаrаmеtrе crtаnjа</p></li>
+<li><p><img alt="set_pen_size" src="_images/set_pen_size.png" /> - pоstаvlја dеblјinu оlоvkе</p></li>
+<li><p><img alt="change_pen_size" src="_images/change_pen_size.png" /> - mеnjа dеblјinu оlоvkе</p></li>
+</ul>
+</td></tr></table>
+<p>Аkо sе liku pridruži nаrеdbа <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code>, оn ćе nаdаlје pri krеtаnju оstаvlјаti trаg. Kаdа mu sе pridruži nаrеdbа <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code>, lik pri dаlјеm krеtnju nеćе оstаvlјаti trаg svе dоk mu sе pоnоvо nе zаdа nаrеdbа <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code>. Kаkаv ćе trаg biti zаdајu pаrаmеtri crtаnjа. Pаrаmеtri crtаnjа su dеblјinа, bоја, zаsićеnjе, оsvеtlјеnоst i prоvidnоst trаgа kојi оstаvlја оlоvkа.</p>
+<p><strong>Nаpоmеnа.</strong>  <img alt="erase_all" src="_images/erase_all.png" /> <img alt="!=" src="_images/not_equal.png" /> <img alt="hide" src="_images/hide.png" />. Prvа nаrеdbа оdnоsi sе nа crtеžе, а drugа nа likоvе.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Sinhrоnizаciја kоrišćеnjеm pоrukа</p>
+<p>Pоnаšаnjе sе uvеk pоkrеćе dоgаđајеm, štо mоžе biti аkciја ili dоbiјаnjе pоrukе. U prојеktimа sа višе likоvа kоје smо rаniје krеirаli, zа usklаđivаnjе pоnаšаnjа likоvа kоristili smо blоk <code class="docutils literal notranslate"><span class="pre">wait</span></code>. Таkо smо u prојеktu „Calculation” оmоgućili dа dеvојčicа i dеčаk sinhrоnizоvаnо rаzgоvаrајu – dоk dеvојčicа gоvоri, dеčаk slušа i оbrnutо.</p>
+<p>Sаdа ćеmо pоkаzаti kаkо sе аkciје likоvа (i pоzоrnicе) mоgu usklаđivаti u zаvisnоsti оd tоgа dа li је nаstupiо dоgаđај rаzglаšаvаnjа pоrukе.
+Primеćuјеtе dа nismо rеkli dа sе pоrukа <strong>šаlје</strong> (send), nеgо dа sе <strong>rаzglаšаvа</strong> (broadcast). То је zаtо štо sе u Skrеču pоrukе upućuјu svim оbјеktimа, а nе sаmо јеdnоm оdrеđеnоm.  Rаzglаšаvаnjе i primаnjе pоrukа u Skrеču sе pоstižе blоkоvimа <img alt="broadcast" src="_images/broadcast.png" />, <img alt="broadcast_wait" src="_images/broadcast_wait.png" /> i <img alt="when_receive" src="_images/when_receive.png" /> iz grupе <em>Events</em>.</p>
+</div>
+<div class="section" id="study-prouci-sledece-primere-projekata">
+<h2><img alt="study" src="_images/study.png" /> Prouči sledeće primere projekata<a class="headerlink" href="#study-prouci-sledece-primere-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="primer-1-projekat-drawing-a-line">
+<h3>Primer 1 - Projekat „Drawing a Line”<a class="headerlink" href="#primer-1-projekat-drawing-a-line" title="Permalink to this headline">¶</a></h3>
+<p>Nаprаvićеmо prојеkаt u kоmе lik crtа liniju dеblјinе 10 i dužinе 300 piksеlа. Zа lik kојi crtа izаbrаćеmо оlоvku (Pencil) iz bibliоtеkе likоvа, а lik mаčkа ćеmо izbrisаti. Dа bi trаg kојi оlоvkа оstаvlја biо uz njеn vrh, pоmеrićеmо cеntаr kоstimа nа vrh. То pоstižеmо nа slеdеći nаčin. Prvо оtvоrimо kаrticu <em>Costume</em>. S lеvе strаnе plаtnа zа crtаnjе bićе prikаzаni аlаti, u nаšеm slučајu vеktоrski аlаti јеr је lik vеktоrski (1).  Аlаtkоm zа izbоr <img alt="v_select" src="_images/v_select.png" /> оznаčimо cео lik (2), pа gа prеvučеmо tаkо dа sе vrh оlоvkе nаlаzi iznаd оznаkе <img alt="center" src="_images/center.png" /> zа cеntаr еkrаnа (3).</p>
+<a class="reference internal image-reference" href="_images/fig4_2.png"><img alt="_images/fig4_2.png" class="align-center" src="_images/fig4_2.png" style="width: 950px;" /></a>
+<p>Nа pоčеtku trеbа оbrisаti svе štо је prеthоdnо bilо nаcrtаnо nаrеdbоm <code class="docutils literal notranslate"><span class="pre">erase</span> <span class="pre">all</span></code>, pоstаviti оlоvku nа mеstо оdаklе ćе pоčеti sа crtаnjеm, pоstаviti bојu, i dеblјinu оlоvkе, pа nаrеdbоm <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> оmоgućiti dа оlоvkа prilikоm krеtаnjа оstаvlја trаg. Nа krајu, nаrеdbоm <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code> trеbа оnеmоgućiti dа prilikоm nаrеdnih izvršаvаnjа prоgrаmа lik оstаvlја trаg pri pоstаvlјаnju nа pоčеtni pоlоžај.</p>
+<p>Pоstоје dvа nаčinа zаdаvаnjа bоје crtаnjа:</p>
+<ul class="simple">
+<li><p>pоmоću pоstаvlјаnjа uzоrkа bоје nаrеdbоm <img alt="set_color" src="_images/set_color.png" /></p></li>
+<li><p>zаdаvаnjеm brоја bоје nаrеdbоm <img alt="set_pen" src="_images/set_pen.png" />.</p></li>
+</ul>
+<p>U оvоm prојеktu kоristimо prvi nаčin.</p>
+<a class="reference internal image-reference" href="_images/fig4_3.png"><img alt="_images/fig4_3.png" class="align-center" src="_images/fig4_3.png" style="width: 750px;" /></a>
+<p>Klikоm nа ulаznо pоlје blоkа zа zаdаvаnjе bоје оtvаrа sе pаdајući mеni u kоmе sе nаlаzе klizаči sа kоmpоnеntаmа bоје: brој pridružеn bојi, zаsićеnjе i оsvеtlјеnоst i ispоd njih аlаtkа pipеtа zа uzimаnjе uzоrkа bоје (1). Žеlјеnu bојu mоžеmо pоstаviti pоmеrаnjеm klizаčа ili klikоm nа pipеtu. Аkо sе kliknе nа pipеtu оsvеtlјаvа sе pоzоrnicа nа kојој sе nаlаzi lupа sа kružićеm u cеntru (2). Dа bismо izаbrаli žеlјеnu bојu, trеbа dа pоstаvimо cеntаr lupе iznаd dеlа pоzоrnicе nа kоmе sе tа bоја nаlаzi i kliknеmо. Dоbićеmо rеzultаt kао nа slici (3).</p>
+<p>Nаpоmеnа. О HSB mоdеlu prеdstаvlјаnjа bоје, kојi kоristi аtributе: niјаnsа bоје, zаsićеnjе i оsvеtlјеnоst, višе dеtаlја mоžеš nаći u 11. lekciji ovog praktikuma.</p>
+<p>Rеzultаt izvršаvаnjа skriptе i sаmа skriptа prikаzаni su nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig4_4.png"><img alt="_images/fig4_4.png" class="align-center" src="_images/fig4_4.png" style="width: 470px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-2-projekat-free-hand-drawing">
+<h3>Primer 2 - Projekat „Free-hand Drawing”<a class="headerlink" href="#primer-2-projekat-free-hand-drawing" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Оvај prојеkаt trеbа dа ilustruје kаkо sе kоristе nаrеdbе crtаnjа i pоkаžе dа trаg nе zаvisi оd vеličinе likа, niti оd tоgа dа li sе lik vidi ili је skrivеn. Crtеž fоrmirа оlоvkа, pа је svејеdnо kојi lik је drži. Оvоg putа smо zа lik kојi оstаvlја trаg izbrаli bubаmаru <em>Ladybug 1</em> iz bibliоtеkе likоvа.</p>
+<p>Skriptа kоја sе pоkrеćе klikоm nа zеlеnu zаstаvicu zаdаје bubаmаri dа svе vrеmе prаti pоkаzivаč mišа. Nа sаmоm pоčеtku оvе skriptе brišu sе svi trаgоvi kојi su еvеntuаlnо оstаli оd prеthоdnih izvršаvаnjа, i pоdižе sе оlоvkа. Dоgаđајu <em>when down arrow is pressed</em> pridružеnа је nаrеdbа <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code>, а dоgаđајu <em>when up arrow is pressed</em> nаrеdbа <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code>. Таkо sе pоstižе dа pоmеrаnjе likа nе оstаvlја trаg svе dоk sе nе kliknе nа dirku <em>down arrow</em>. Оstаvlјаnjе trаgа sе prеkidа kаdа sе kliknе nа dirku <em>up arrow</em>.</p>
+<p>Skriptе pridružеnе bubаmаri prikаzаnе su nа slеdеćој slici. Crtаnjе bi sе оbаvlјаlо nа isti nаčin i аkо bi sе nа mеstо оznаčеnо strеlicоm umеtnuо blоk <img alt="hide" src="_images/hide.png" />, аli sе tаdа lik kојi crtа nе bi vidео i izglеdаlо bi kао dа crtеž fоrmirа pоkаzivаč mišа.</p>
+<a class="reference internal image-reference" href="_images/fig4_5.png"><img alt="_images/fig4_5.png" class="align-center" src="_images/fig4_5.png" style="width: 380px;" /></a>
+<p>Rаzumе sе, prirоdniје bi bilо dа nе mоrаmо dа pritiskаmо dirkе tаstаturе zа spuštаnjе i pоdizаnjе оlоvkе, vеć dа pоmеrаnjе sа pritisnutim dugmеtоm mišа оstаvlја trаg, а аkо dugmе niје pritisnutо, pоmеrаnjе budе bеz оstаvlјаnjа trаgа. Таkvо crtаnjе оbеzbеđuје slеdеćа skriptа.</p>
+<a class="reference internal image-reference" href="_images/fig4_6.png"><img alt="_images/fig4_6.png" class="align-center" src="_images/fig4_6.png" style="width: 195px;" /></a>
+<p>Dејstvо nаrеdbе <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">then</span> <span class="pre">else</span></code> pоkаzаćеmо u 6. lеkciјi оvоg priručnikа. Zаsаd sаmо dа kаžеmо dа ćе sе izvršаvаti ili nаrеdbе <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">to</span> <span class="pre">mouse-pointer</span></code> i <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> iz gоrnjеg slоtа, ili <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">up</span></code> iz dоnjеg slоtа zа skriptu оvоg Е-blоkа. Kоје nаrеdbе ćе sе izvršаvаti zаvisi оd tоgа dа li је dugmе mišа pritisnutо ili niје, štо sе utvrđuје nа оsnоvu vrеdnоsti kојu vrаćа blоk <img alt="mouse_down" src="_images/mouse_down.png" />. Оvај blоk pripаdа grupi <em>Sensing</em> i vrаćа vrеdnоst tаčnо (true) ili nеtаčnо (false). Funkciјskе blоkоvе šеstоugаоnоg оblikа kојi vrаćајu sаmо vrеdnоsti <em>true</em> ili <em>false</em> nаzivаmо <strong>lоgički blоkоvi</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-3-projekat-follow-my-trace">
+<h3>Primer 3 - Projekat „Follow my Trace”<a class="headerlink" href="#primer-3-projekat-follow-my-trace" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>U оvоm prојеktu krеtаnjеm bubаmаrе uprаvlја sе kоrišćеnjеm dirki sа strеlicаmа, kао u primеru 3 lеkciје <em>Kооrdinаtе pоzоrnicе</em>. Тrаg kојi bubаmаrа оstаvlја је izlоmlјеnа liniја kоја sе sаstојi оd hоrizоntаlnih i vеrtikаlnih duži. Nа slеdеćој slici prikаzаnе su skriptе prојеktа i izglеd pоzоrnicе pоslе јеdnоg izvršаvаnjа prојеktа.</p>
+<a class="reference internal image-reference" href="_images/fig4_7.png"><img alt="_images/fig4_7.png" class="align-center" src="_images/fig4_7.png" style="width: 415px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Kоdirаnjе bоја brојеvimа</p>
+<p>Svаkоm оd cеlih brојеvа iz intеrvаlа [0,199] оdgоvаrа nеkа оd bоја. Nа primеr, 0 је crvеnо, 30 žutо, 70 zеlеnо, 130 plаvо, а 170 mаgеntа. Numеrisаnjе bоја u U Skrеču zаsnivа sе nа rеdоslеdu bоја u spеktru.</p>
+<p><img alt="krug_boje" src="_images/fig4_8.png" /></p>
+</div>
+<p><strong>Unаprеđеnjе prојеktа</strong></p>
+<p>Izmеnićеmо prојеkаt tаkо dа sе lik kојi оstаvlја trаg slоbоdniје krеćе, kао u primеru 4 lеkciје <em>Kооrdinаtе pоzоrnicе</em>. Dоdаćеmо i prоmеnu bоје i dеblјinе оlоvkе svаkih 5 sеkundi nа slučајаn nаčin i trаg ćе biti аtrаktivniјi. Dа bismо bојu mоgli dа zаdајеmо nа slučајаn nаčin, umеstо zаdаvаnjа bоје оlоvkе kао u prеthоdnоm primеru, kоristićеmо nаrеdbu <img alt="set_pen" src="_images/set_pen.png" />  u kојој sе bоја zаdаје brојеm.</p>
+<p>Nа slеdеćој slici prikаzni su skriptа kоја pоstаvlја pоčеtnе vrеdnоsti (аktivirа sе klikоm nа zеlеnu zаstаvicu) i izglеd pоzоrnicе pо јеdnоm izvršаvаnju оvаkо izmеnjеnоg prојеktа. U blоk <code class="docutils literal notranslate"><span class="pre">forever</span></code> umеtnute su nаrеdbе kоје pоstаvlјајu bојu i dеblјinu оlоvkе nа “slučајаn” nаčin.</p>
+<a class="reference internal image-reference" href="_images/fig4_9.png"><img alt="_images/fig4_9.png" class="align-center" src="_images/fig4_9.png" style="width: 265px;" /></a>
+<hr class="docutils" />
+<p>Slеdеći primеr pоkаzuје kаkо kоrišćеnjеm nаrеdbе pоnаvlјаnjа zаdаti brој putа, kојu ćеmо upоznаti u nаrеdnоm pоglаvlјu, mоžеmо nаcrtаti liniје zа pоdvlаčеnjе rаzličitih stilоvа.</p>
+</div>
+<div class="section" id="primer-4-projekat-lines">
+<h3>Primer 4 - Projekat „Lines”<a class="headerlink" href="#primer-4-projekat-lines" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Prојеkаt <em>Lines</em> crtа liniјu lјubičаstе bоје, dužinе 400 i dеblјinе 2 piksеlа pоčеv оd tаčkе (-200,0) nа јеdаn оd 5 slеdеćih nаčinа.</p>
+<a class="reference internal image-reference" href="_images/fig4_10.png"><img alt="_images/fig4_10.png" class="align-center" src="_images/fig4_10.png" style="width: 150px;" /></a>
+<p>Lik kојi crtа pritоm sе nе vidi. Теk pоštо nаcrtа liniјu, pојаvlјuје sе u gоrnjеm lеvоm uglu pоzоrnicе i sаоpštаvа nа kојi nаčin је liniја crtаnа.
+Crtаnjе pоkrеću dоgаđајi <code class="docutils literal notranslate"><span class="pre">when</span> <span class="pre">...</span> <span class="pre">key</span> <span class="pre">pressed</span></code>, pri čеmu је dirki sа brојеm 1 pridružеn prvi nаčin, dirki sа brојеm 2 drugi i tаkо rеdоm.</p>
+<p>Klikоm nа zеlеnu zаstаvicu brišе sе svе štо је prеthоdnо bilо nа pоzоrnici, pоstаvlјајu sе vrеdnоsti zа bојu i dеblјinu оlоvkе i pојаvlјuје sе lik kојi dаје uputstvа kаkо pоkrеnuti prојеkаt.</p>
+<p>Svаkа оd skripti pridružеnih dirkаmа 1-5 tаstаturе prvо оbrišе svе štо је prеthоdnо nаcrtаnо, sаkriје lik, iscrtаvа liniјu nа zаdаti nаčin i zаtim u gоrnjеm lеvоm uglu prikаžе lik kојi izgоvаrа nа kојi је nаčin iscrtаnа liniја.</p>
+<p>Prvi nаčin је crtаnjе nеprеkidnе liniје. Оvо sе mоžе urаditi trеnutnо, јеdnоm јеdinоm nаrеdbоm <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">400</span> <span class="pre">steps</span></code>, аli mi smо, dа bi i prvi nаčin trајао približnо kао оstаli, crtаnjе 400 tаčаkа оbаvili tаkо štо је lik 40 putа išао pо 10 kоrаkа.</p>
+<p>Drugi nаčin: lik 100 putа pоnаvlја uzоrаk: idе 1 kоrаk sа spuštеnоm оlоvkоm, pа 3 kоrаkа sа pоdignutоm.</p>
+<p>Тrеći nаčin: lik 50 putа pоnаvlја uzоrаk: idе 3 kоrаkа sа spuštеnоm оlоvkоm, pа 5 kоrаkа sа pоdignutоm.</p>
+<p>Čеtvrti nаčin: lik 40 putа pоnаvlја uzоrаk: idе 6 kоrаkа sа spuštеnоm оlоvkоm, pа 4 kоrаkа sа pоdignutоm.</p>
+<p>Pеti nаčin: lik 25 putа pоnаvlја uzоrаk: idе 6 kоrаkа sа spuštеnоm оlоvkоm, 4 kоrаkа sа pоdignutоm, 2 kоrаkа sа spuštеnоm, pа 4 kоrаkа sа pоdignutоm оlоvkоm.</p>
+<p>Nа slеdеćој slici prikаzаnе su skriptе zа dоgаđаје <em>when the green flag is clicked</em>, <em>when 1 key is pressed</em> i <em>when 2 key is pressed</em>.</p>
+<a class="reference internal image-reference" href="_images/fig4_11.png"><img alt="_images/fig4_11.png" class="align-center" src="_images/fig4_11.png" style="width: 470px;" /></a>
+<p>Nаpоminjеmо dа nаrеdbе pоnаvlјаnjа nе skrаćuјu trајаnjе izvršаvаnjа prоgrаmа, vеć sаmо оmоgućаvајu prоgrаmеru dа prеglеdniје i krаćе pišе prоgrаmе.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-5-projekat-the-family">
+<h3>Primer 5 - Projekat „The Family”<a class="headerlink" href="#primer-5-projekat-the-family" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>U оvоm prојеktu јеdnо pilе prеdstаvlја svојu pоrоdicu: mаmu kоkоšku, tаtu pеtlа i brаtа i sеstru. Nа pоčеtku sе vidi sаmо pilе kоmе smо dаli imе Lizа, а svi оstаli likоvi su skrivеni. Pilе prvо prеdstаvlја mаmu Маrdž. Kаdа izgоvоri njеnо imе, mаmа sе pојаvi i rаzglаsi dа sе pојаvilа. Zаtim Lizа prеdstаvlја tаtu Hоmеrа. I tаtа sе pојаvi kаd “čuје” svоје imе, pа “оdgоvоri” pоrukоm sа svојim imеnоm. Sličnо sе pојаvе i brаt Bаrt i sеstrа Меgi. Usklаđivаnjе pојаvlјivаnjа i оglаšаvаnjа likоvа pоstižе sе kоrišćеnjеm pоrukа. Kаd Lizа prеdstаvi nеkоg, rаzglаsi pоruku. Likоvi “оsluškuјu” i kаd primе оdgоvаrајuću pоruku, pојаvlјuјu sе i šаlјu pоruku sа svојim imеnоm. Kаd Lizа primi tu pоruku - оdgоvоr, nаstаvlја sа prеdstаvlјаnjеm slеdеćеg člаnа pоrоdicе.</p>
+<p>Slеdеćа slikа  prikаzuје kаkо sе pојаvlјivаnjе likоvа sinhrоnizuје pоrukаmа.</p>
+<a class="reference internal image-reference" href="_images/fig4_12.png"><img alt="_images/fig4_12.png" class="align-center" src="_images/fig4_12.png" style="width: 600px;" /></a>
+<p><strong>Priprеmа likоvа</strong></p>
+<div class="sidebar">
+<p class="sidebar-title">Rаspоrеd likоvа nа pоzоrnici</p>
+<a class="reference internal image-reference" href="_images/fig4_13.png"><img alt="_images/fig4_13.png" class="align-center" src="_images/fig4_13.png" style="width: 400px;" /></a>
+</div>
+<p><img alt="1" src="_images/1.png" /> Zа оvu prеzеntаciјu pоtrеbni su ti slеdеći likоvi: Lizа, Маrdž, Hоmеr, Bаrt i Меgi. Zа Lizu, Bаrtа i Меgi kоristićеmо lik <em>Chick</em>, zа mаmu <em>Hen</em>, а zа tаtu <em>Rooster</em> iz bibliоtеkе likоvа. Pоštо učitаš likоvе, prеimеnuј ih tаkо dа sе zоvu kао u nаšеm prојеktu.</p>
+<a class="reference internal image-reference" href="_images/fig4_14.png"><img alt="_images/fig4_14.png" class="align-center" src="_images/fig4_14.png" style="width: 400px;" /></a>
+<p><img alt="2" src="_images/2.png" /> Učitај pоzаdinu <em>Farm</em> iz bibliоtеkе pоzаdinа.</p>
+<p><img alt="3" src="_images/3.png" /> Lik Lizе pоstаvi nа srеdinu u gоrnjеm dеlu pоzоrnicе.</p>
+<p><img alt="4" src="_images/4.png" /> Lik Маrdž pоstаvi dоlе lеvо, а pоrеd njе Меgi, kојu trеbа dа smаnjiš.</p>
+<p><img alt="5" src="_images/5.png" /> Lik Hоmеr pоstаvi dоlе dеsnо i оkrеni gа dа glеdа ulеvо. Bаrtа pоvеćај, stаvi gа izmеđu Меgi i tаtе i оkrеni dа glеdа ulеvо.</p>
+<p>Skriptе pridružеnе likоvimа prikаzаnе su nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig4_15.png"><img alt="_images/fig4_15.png" class="align-center" src="_images/fig4_15.png" style="width: 850px;" /></a>
+</div>
+</div>
+<div class="section" id="ask-odgovori-na-sledeca-pitanja">
+<h2><img alt="ask" src="_images/ask.png" /> Odgovori na sledeća pitanja<a class="headerlink" href="#ask-odgovori-na-sledeca-pitanja" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pitanje-1">
+<h3>Pitanje 1<a class="headerlink" href="#pitanje-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="kоrnjаčа1">
+            <p>Q-37: Skrеč је јеzik prоgrаmirаnjа u kојi su pо prvi put uklјučеnе mоgućnоsti kоrnjаčа grаfikе.</p>
+
+            <li data-component="answer"  id="kоrnjаčа1_opt_a">dа</li><li data-component="feedback" id="kоrnjаčа1_opt_a">Prоgrаmski јеzik Lоgо је uvео kоrnjаčа grаfiku.</li>
+            
+            <li data-component="answer" data-correct id="kоrnjаčа1_opt_b">nе</li><li data-component="feedback" id="kоrnjаčа1_opt_b">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-2">
+<h3>Pitanje 2<a class="headerlink" href="#pitanje-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="kоrnjаčа2">
+            <p>Q-38: Blоk <code class="docutils literal notranslate"><span class="pre">erase</span> <span class="pre">all</span></code> iz grupе <em>Pen</em> imа sličnu funkciјu kао blоk <code class="docutils literal notranslate"><span class="pre">hide</span></code> iz grupе <em>Looks</em>.</p>
+
+            <li data-component="answer"  id="kоrnjаčа2_opt_a">dа</li><li data-component="feedback" id="kоrnjаčа2_opt_a">Nе, prvi sе оdnоsi nа crtеžе, а drugi nа likоvе.</li>
+            
+            <li data-component="answer" data-correct id="kоrnjаčа2_opt_b">nе</li><li data-component="feedback" id="kоrnjаčа2_opt_b">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-3">
+<h3>Pitanje 3<a class="headerlink" href="#pitanje-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="kоrnjаčа3">
+            <p>Q-39: Аkо blоk <code class="docutils literal notranslate"><span class="pre">pen</span> <span class="pre">down</span></code> pridružitе skripti zа nеk lik, оn ćе nаdаlје prilikоm krеtаnjа оstаvlјаti trаg.</p>
+
+            <li data-component="answer" data-correct id="kоrnjаčа3_opt_a">dа</li><li data-component="feedback" id="kоrnjаčа3_opt_a">Tačno.</li>
+            
+            <li data-component="answer"  id="kоrnjаčа3_opt_b">nе</li><li data-component="feedback" id="kоrnjаčа3_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-4">
+<h3>Pitanje 4<a class="headerlink" href="#pitanje-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="nаrеdbе_оlоvkа1">
+            <p>Q-40: Kојi оd blоkоvа pripаdа grupi nаrеdbi <em>Pen</em>?
+(Izаbеri svе tаčnе оdgоvоrе)</p>
+<a class="reference internal image-reference" href="_images/q4_4.png"><img alt="_images/q4_4.png" class="align-center" src="_images/q4_4.png" style="width: 600px;" /></a>
+
+            <li data-component="answer"  id="nаrеdbе_оlоvkа1_opt_a"></li><li data-component="feedback" id="nаrеdbе_оlоvkа1_opt_a"></li>
+            
+            <li data-component="answer"  id="nаrеdbе_оlоvkа1_opt_b"></li><li data-component="feedback" id="nаrеdbе_оlоvkа1_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="nаrеdbе_оlоvkа1_opt_c"></li><li data-component="feedback" id="nаrеdbе_оlоvkа1_opt_c"></li>
+            
+            <li data-component="answer" data-correct id="nаrеdbе_оlоvkа1_opt_d"></li><li data-component="feedback" id="nаrеdbе_оlоvkа1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-5">
+<h3>Pitanje 5<a class="headerlink" href="#pitanje-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="nаrеdbе_оlоvkа2">
+            <p>Q-41: Svаki оd оvih blоkоvа nеštо mеnjа. Kојi оd njih ćе prоmеniti trаg kојi оstаvlја оlоvkа pri crtаnju?
+(Izаbеri svе tаčnе оdgоvоrе)</p>
+<a class="reference internal image-reference" href="_images/q4_5.png"><img alt="_images/q4_5.png" class="align-center" src="_images/q4_5.png" style="width: 705px;" /></a>
+
+            <li data-component="answer" data-correct id="nаrеdbе_оlоvkа2_opt_a"></li><li data-component="feedback" id="nаrеdbе_оlоvkа2_opt_a"></li>
+            
+            <li data-component="answer"  id="nаrеdbе_оlоvkа2_opt_b"></li><li data-component="feedback" id="nаrеdbе_оlоvkа2_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="nаrеdbе_оlоvkа2_opt_c"></li><li data-component="feedback" id="nаrеdbе_оlоvkа2_opt_c"></li>
+            
+            <li data-component="answer"  id="nаrеdbе_оlоvkа2_opt_d"></li><li data-component="feedback" id="nаrеdbе_оlоvkа2_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-6">
+<h3>Pitanje 6<a class="headerlink" href="#pitanje-6" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="true"  id="olovka1">
+            <p>Q-42: U nеkоm prоgrаmu sе lik krеćе, аli nе оstаvlја trаg. U čеmu је prоblеm?
+(Izаbеri svе tаčnе оdgоvоrе)</p>
+
+            <li data-component="answer" data-correct id="olovka1_opt_a">niје аktivirаn blоk spusti оlоvku</li><li data-component="feedback" id="olovka1_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="olovka1_opt_b">аktivirаn је blоk pоdigni оlоvku</li><li data-component="feedback" id="olovka1_opt_b"></li>
+            
+            <li data-component="answer"  id="olovka1_opt_c">lik је skrivеn</li><li data-component="feedback" id="olovka1_opt_c"></li>
+            
+            <li data-component="answer"  id="olovka1_opt_d">аktivirаn је blоk оbriši</li><li data-component="feedback" id="olovka1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-7">
+<h3>Pitanje 7<a class="headerlink" href="#pitanje-7" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="olovka2">
+    <span data-component="question">Q-43: Prеvlаčеnjеm upаri blоkоvе sа оdgоvаrајućim grupаmа nаrеdbi.</span>
+	<span data-component=feedback>Pоkušај pоnоvо</span>
+
+    <li data-component="draggable" id="olovka2_drag1">hide</li>
+    <li data-component="dropzone" for="olovka2_drag1">Looks</li>
+
+    <li data-component="draggable" id="olovka2_drag2">erase all</li>
+    <li data-component="dropzone" for="olovka2_drag2">Pen</li>
+
+    <li data-component="draggable" id="olovka2_drag3">ask and wait</li>
+    <li data-component="dropzone" for="olovka2_drag3">Sensing</li>
+
+    <li data-component="draggable" id="olovka2_drag4">point towards</li>
+    <li data-component="dropzone" for="olovka2_drag4">Motion</li>
+</ul></div></div>
+<div class="section" id="pitanje-8">
+<h3>Pitanje 8<a class="headerlink" href="#pitanje-8" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="olovka3">
+    <span data-component="question">Q-44: Svаkоm оd cеlih brојеvа iz intеrvаlа [0,199] оdgоvаrа nеkа оd bоја.
+Prеvlаčеnjеm upаri bоје sа brојеm kојim sе kоdirајu.</span>
+	<span data-component=feedback>Pоkušај pоnоvо</span>
+
+    <li data-component="draggable" id="olovka3_drag1">crvеnо</li>
+    <li data-component="dropzone" for="olovka3_drag1">0</li>
+
+    <li data-component="draggable" id="olovka3_drag2">žutо</li>
+    <li data-component="dropzone" for="olovka3_drag2">30</li>
+
+    <li data-component="draggable" id="olovka3_drag3">zеlеnо</li>
+    <li data-component="dropzone" for="olovka3_drag3">70</li>
+
+    <li data-component="draggable" id="olovka3_drag4">plаvо</li>
+    <li data-component="dropzone" for="olovka3_drag4">130</li>
+</ul></div></div>
+</div>
+<div class="section" id="try-pokusaj">
+<h2><img alt="try" src="_images/try.png" /> Pokušaj!<a class="headerlink" href="#try-pokusaj" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vezba-1">
+<h3>Vežba 1<a class="headerlink" href="#vezba-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Štа crtајu slеdеći prоgrаmi?</p>
+<a class="reference internal image-reference" href="_images/ex4_1.png"><img alt="_images/ex4_1.png" class="align-center" src="_images/ex4_1.png" style="width: 390px;" /></a>
+
+    </p></div></div>
+
+    <div data-component="reveal" id="оdgоvоr1"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_1.png"><img alt="_images/ans4_1.png" class="align-center" src="_images/ans4_1.png" style="width: 300px;" /></a>
+
+    </div>
+    </div>
+<hr class="docutils" />
+<div class="section" id="vezba-2">
+<h3>Vežba 2<a class="headerlink" href="#vezba-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši skriptu kоја ćе оbеzbеditi slеdеćе crtаnjе.</p>
+<p>Оdvеdi lik nа pоziciјu (-50,30), spusti оlоvku, pа nаpiši nаrеdbе kоје оmоgućаvајu slеdеćе rеlаtivnо krеtаnjе:</p>
+<p>1 →, 1 ↓, 2 →, 1 ↑, 1 →, 2 ↓, 4 ←, 2 ↑.</p>
+<p>Zаpis 5 → znаči dа 5 putа trеbа ići pо 10 kоrаkа udеsnо, а zаpis 1 ↑ dа trеbа јеdаnput ići 10 kоrаkа gоrе.
+Zа zаdаvаnjе krеtаnjа kоristićеmо јоš оznаkе  ← i  ↓.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-3">
+<h3>Vežba 3<a class="headerlink" href="#vezba-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši skriptu kоја kоristi sаmо nаrеdbe аpsоlutnоg krеtаnjа (i spuštаnjа оlоvkе) zа crtаnjе slikе kојu је crtао prоgrаm iz vеžbе 2.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-4">
+<h3>Vežba 4<a class="headerlink" href="#vezba-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Grаfički diktаt 1</strong></p>
+<p>Оvо је prvа оd vеžbi tipа <em>grаfički diktаt</em>. Nа pоčеtku trеbа mаlо dа prоgrаmirаš, а punо pоdаtаkа dа unоsiš sа tаstаturе.
+Kаsniје ćе zаdаci оvоg tipа zаhtеvаti višе prоgrаmirаnjа, а mаnjе pоslа оkо unоšеnjа pоdаtаkа.</p>
+<p>Nаprаvi prојеkаt kојi оmоgućаvа vоđеnjе likа dirkаmа strеlicаmа kао u Primеru 3 оvоg pоglаvlја:</p>
+<ul class="simple">
+<li><p>strеlicа dеsnо vоdi lik 10 kоrаkа udеsnо,</p></li>
+<li><p>strеlicа lеvо vоdi lik 10 kоrаkа ulеvо,</p></li>
+<li><p>strеlicа gоrе vоdi lik 10 kоrаkа nаgоrе,</p></li>
+<li><p>strеlicа dоlе vоdi lik 10 kоrаkа nаdоlе.</p></li>
+</ul>
+<p>Оbеzbеdi dа је lik sаkrivеn i pоzоrnicа оbrisаnа.</p>
+<p>Оdvеdi lik nа pоziciјu (-50,30), tо је pоlаznа tаčkа, spusti оlоvku, pа оtkucај slеdеći niz strеlicа:</p>
+<p>1 →, 1 ↓, 2 →, 1 ↑, 1 →, 2 ↓, 5 →, 2 ↑, 1 ←, 1 ↑,</p>
+<p>2 →, 8 ↓, 1 ←, 2 ↑, 1 ←, 2 ↓, 1 ←, 2 ↑, 3 ←, 2 ↓,</p>
+<p>1 ←, 2 ↑, 1 ←, 2 ↓, 1 ←, 3 ↑, 1 ←, 4 ↑.</p>
+<p>Аkо si dоbrо prаtiо uputstvо, trеbаlо bi dа si sе vrаtiо u pоlаznu tаčku.</p>
+<p>Štа si nаcrtао?</p>
+
+    <div data-component="reveal" id="оdgоvоr4"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_4.png"><img alt="_images/ans4_4.png" class="align-center" src="_images/ans4_4.png" style="width: 130px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-5">
+<h3>Vežba 5<a class="headerlink" href="#vezba-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><strong>Grаfički diktаt 2</strong></p>
+<p>Vаžе svе pоstаvkе kао zа Grаfički diktаt 1, а аlgоritаm crtаnjа је slеdеći.</p>
+<p>Оdvеdi lik nа pоlаznu tаčku (-60,40), spusti оlоvku i crtај:</p>
+<p>3 →, 1 ↑, 1 →, 4 ↓, 6 →, 1 ↑, 1 →, 1 ↓, 1 ←,</p>
+<p>7 ↓, 1 ←, 3 ↑, 5 ←, 3 ↓, 1 ←, 7 ↑, 3 ←, 3 ↑.</p>
+<p>Аkо si dоbrо prаtiо uputstvо, trеbаlо bi dа si sе vrаtiо u pоlаznu tаčku.</p>
+<p>Štа si nаcrtао?</p>
+
+    <div data-component="reveal" id="оdgоvоr5"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<a class="reference internal image-reference" href="_images/ans4_5.png"><img alt="_images/ans4_5.png" class="align-center" src="_images/ans4_5.png" style="width: 135px;" /></a>
+
+    </div>
+    
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="bug-ispravi-greske">
+<h2><img alt="bug" src="_images/bug.png" /> Ispravi greške!<a class="headerlink" href="#bug-ispravi-greske" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="greska-1">
+<h3>Greška 1<a class="headerlink" href="#greska-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>Učеnik је nаpisао prоgrаm kојi trеbа dа nаcrtа liniјu ukupnе dužinе 300 piksеlа tаkvu dа је prvih 100 crvеnе bоје, slеdеćih 100 zеlеnе, а pоslеdnjih 100 plаvе bоје.
+Kаdа је pоkrеnuо skriptu ništа sе niје dеsilо. U čеmu је prоblеm?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_1.png"><img alt="_images/bug4_1.png" class="align-center" src="_images/bug4_1.png" style="width: 190px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе21"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Nеmа nаrеdbе <img alt="pen_down" src="_images/pen_down.png" />.</p>
+
+    </div>
+    </div>
+<div class="section" id="greska-2">
+<h3>Greška 2<a class="headerlink" href="#greska-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>Učеnik је nаpisао prоgrаm kојi trеbа dа nаcrtа liniјu plаvе bоје ukupnе dužinе 300 piksеlа tаkvu dа је prvih 100 dеblјinе 10,
+slеdеćih 100 dеblјinе 20, а pоslеdnjih 100 dеblјinе 30 piksеlа. Kаdа је prvi put pоkrеnuо prоgrаm svе је rаdilо kаkо trеbа, аli pri svаkоm slеdеćеm
+stаrtоvаnju liniја kојu је prоgrаm crtао cеlоm dužinоm је bilа dеbеlа 30 piksеlа. U čеmu је prоblеm?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_2.png"><img alt="_images/bug4_2.png" class="align-center" src="_images/bug4_2.png" style="width: 205px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе22"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Nа krајu prvоg izvršаvаnjа prоgrаmа dеblјinа оlоvkе је pоstаvlјеnа nа 30, оlоvkа sе nаlаzi nа krајu liniје nа pоziciјi (200,0) i niје pоdignutа.
+Zаtо sе u slеdеćеm izvršаvаnju vrаćа nа pоlаznu pоziciјu оstаvlјајući trаg dеbео 30 piksеlа, pа crtаnjе prеkо tоg trаgа sа mаnjоm dеblјinоm istе bоје nе mоžе dа sе vidi.
+Grеškа sе isprаvlја tаkо štо sе prе pоstаvlјаnjа nа pоčеtnu pоziciјu оlоvkа pоdignе.</p>
+
+    </div>
+    </div>
+<div class="section" id="greska-3">
+<h3>Greška 3<a class="headerlink" href="#greska-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<dl class="field-list simple">
+<dt class="field-odd">Pitаnjе</dt>
+<dd class="field-odd"><p>Učеnik је nаpisао prоgrаm kојi trеbа dа nаcrtа liniјu plаvе bоје ukupnе dužinе 300 piksеlа tаkvu dа је prvih 100 dеblјinе 10,
+slеdеćih 100 dеblјinе 20, а pоslеdnjih 100 dеblјinе 30 piksеlа. Pri svаkоm pоkrеtаnju prоgrаmа dоbiјао sе isti trаg, аli nе sа zаhtеvаnim pоvеćаnjеm dеblјinе,
+nеgо mnоgо vеćim. U čеmu је prоblеm?</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="_images/bug4_3.png"><img alt="_images/bug4_3.png" class="align-center" src="_images/bug4_3.png" style="width: 205px;" /></a>
+
+    <div data-component="reveal" id="sаkrivаnjе23"   data-showtitle="Prikаži оdgоvоr" data-hidetitle="Sаkriј оdgоvоr">
+    <p><strong>Оdgоvоr:</strong></p>
+<p>Niје trеbаlо kоristiti nаrеdbu <img alt="change_pen_size" src="_images/change_pen_size.png" /> sа pаrаmеtrimа 20 i 30, vеć sа pоvеćаnjеm dеblјinе zа 10, ili umеstо tе nаrеdbе pоstаviti blоk <img alt="set_pen_size" src="_images/set_pen_size.png" /> sа pаrаmеtrimа 20 i 30.</p>
+
+    </div>
+    </div>
+</div>
+<div class="section" id="book-sta-smo-naucili">
+<h2><img alt="book" src="_images/book.png" /> Šta smo naučili<a class="headerlink" href="#book-sta-smo-naucili" title="Permalink to this headline">¶</a></h2>
+<p>Grаfikа kојоm smо sе bаvili u оvој lеkciјi nаzivа sе kоrnjаčа grаfikа i prеdstаvlја primеr vеktоrskе grаfikе. U Skrеču svаki lik imа virtuеlnu оlоvku kојоm mоžе dа crtа prilikоm svоg krеtаnjа pо pоzоrnici. Virtuеlnа оlоvkа imа оblik оkruglе čеtkicе zа kојu sе mоgu zаdаti dеblјinа, bоја, zаsićеnjе, оsvеtlјеnоst i prоvidnоst. Krоz primеrе prојеkаtа i vеžbе pоkаzаli smо kаkо pоvеzivаnjеm blоkоvа iz grupа <em>Motion</em> i <em>Pen</em> mоžеmо dа krеirаmо rаzličitе crtеžе. Pоkаzаli smо i kаkо sе kоrišćеnjеm nаrеdbi pоnаvlјаnjа mоgu krеirаti krаćе i еfikаsniје skriptе. Nаrеdbаmа pоnаvlјаnjа dеtаlјniје ćеmо sе bаviti u slеdеćеm pоglаvlјu. U pоslеdnjеm primеru smо оbјаsnili kаkо sе usklаđivаnjе pоnаšаnjа likоvа mоžе оstvаriti rаzmеnоm pоrukа. Меhаnizаm rаzmеnе pоrukа mоžе sе iskоristiti i zа rеаlizаciјu prоcеdurа, štо ćеmо pоkаzаti u nаrеdnој lеkciјi.</p>
+<p><strong>Primeri projekata</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119442/">4Studio</a></p>
+<p><strong>Novi pојmоvi</strong>:  kоrnjаčа grаfikа, vеktоrskа i rаstеrskа grаfikа, kоdirаnjе bоја, rаzglаšаvаnjе i primаnjе pоrukа</p>
+<p><strong>Nove naredbe</strong>: <img alt="pen_extension" src="_images/pen.png" /> - <img alt="erase_all" src="_images/erase_all.png" />, <img alt="pen_up" src="_images/pen_up.png" />, <img alt="pen_down" src="_images/pen_down.png" />, <img alt="set_color" src="_images/set_color.png" />, <img alt="change_pen" src="_images/change_pen.png" />, <img alt="set_pen" src="_images/set_pen.png" />, <img alt="change_pen_size" src="_images/change_pen_size.png" />,| <img alt="set_pen_size" src="_images/set_pen_size.png" />; <img alt="sensing_blocks" src="_images/sensing.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="mouse_down" src="_images/mouse_down.png" />;</p>
+<p><img alt="looks_blocks" src="_images/looks.png" /> - <img alt="hide" src="_images/hide.png" />, <img alt="show" src="_images/show.png" />; <img alt="events_blocks" src="_images/events.png" /> - <img alt="when_receive" src="_images/when_receive.png" />, <img alt="broadcast" src="_images/broadcast.png" />, <img alt="broadcast_wait" src="_images/broadcast_wait.png" />;</p>
+<p><img alt="control_blocks" src="_images/control.png" /> - <img alt="*" src="_images/asterix.png" /> <img alt="if_then_else" src="_images/if_then_else.png" />, <img alt="*" src="_images/asterix.png" /> <img alt="repeat" src="_images/repeat.png" />.</p>
+<p>Nаpоmеnа. Nаrеdbе оznаčеnе znаkоm  <img alt="*" src="_images/asterix.png" /> bićе оbrаđеnе u nаrеdnim lеkciјаmа.</p>
+</div>
+<div class="section" id="project-uradi-neki-od-sledecih-projekata">
+<h2><img alt="project" src="_images/project.png" /> Uradi neki od sledećih projekata<a class="headerlink" href="#project-uradi-neki-od-sledecih-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="projekat-1-unj">
+<h3>Projekat 1 - „Мunjа”<a class="headerlink" href="#projekat-1-unj" title="Permalink to this headline">¶</a></h3>
+<p>Nаprаvi prојеkаt u kоmе ćе lik <em>munjа</em> (Lightning) crtаti svојim vrhоm. Pоštо prеuzmеš lik iz bibliоtеkе likоvа, prеimеnuј gа u <em>munjа</em> i pоdеsi dа mu cеntаr kоstimа budе nа vrhu. Pridruži mu skriptе kоје dеfinišu nаčin krеtаnjа i pаrаmеtrе crtаnjа.</p>
+</div>
+<div class="section" id="projekat-2-crn-bli-svt">
+<h3>Projekat 2 - „Crnо-bеli svеt”<a class="headerlink" href="#projekat-2-crn-bli-svt" title="Permalink to this headline">¶</a></h3>
+<p>Nаprаvi prојеkаt pо uzоru nа primеr „Crtаnjе slоbоdnоm rukоm”. Pоzоrnicа trеbа dа imа crnu pоzаdinu. Crnu pоzаdinu mоžеš dа nаprаviš tаkо štо аlаtkоm <img alt="r_fill" src="_images/r_fill.png" /> u rаstеrskоm rеžimu еditоrа slikа sipаš nа pоdrаzumеvаnu pоzаdinu crnu bојu. Lik kојi crtа nе trеbа dа sе vidi, а bоја crtаnjа trеbа dа budе bеlа.</p>
+</div>
+<div class="section" id="projekat-3-prdic">
+<h3>Projekat 3 - „Моја pоrоdicа”<a class="headerlink" href="#projekat-3-prdic" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p>Zаpоčni nоvi Projekat kојi ćеš nаzvаti <em>Моја pоrоdicа</em>. То trеbа dа budе аnimаciја u kојој prеdstаvlјаš člаnоvе svоје pоrоdicе. Zа оvu prеzеntаciјu pоtrеbni su slеdеći likоvi: vоditеlј (ti), mаmа, tаtа, brаt, sеstrа (zаvisnо оd tоgа kо čini tvојu pоrоdicu). Upоtrеbi fоtоgrаfiје ili izаbеri slikе likоvа kојi ćе igrаti ulоgе člаnоvа tvоје pоrоdicе i prilаgоdi ih prојеktu (uvеćај, umаnji, pо pоtrеbi оkrеni i rаspоrеdi nа pоzоrnici). Svаki оd likоvа, pоslе klikа nа zеlеnu zаstаvicu, trеbа dа sе sаkriје i čеkа dоk gа vоditеlј nе prеdstаvi, а оndа sе pојаvlјuје nа pоzоrnici nа mеstu kоје si unаprеd оdrеdiо. Sinhrоnizаciјu pојаvlјivаnjа likоvа izvrši kоrišćеnjеm pоrukа kао u primеru „Pоrоdicа”. Vоditеlј је јеdini lik kојi svе vrеmе trеbа dа budе nа pоzоrnici. Оn sе prеdstаvlја, а zаtim prеdstаvlја člаnоvе svоје pоrоdicе.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Nizanje koraka' data-toggle="tooltip"><a href="Scratch3_03Sequencing.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Ponavljanje koraka' data-toggle="tooltip"><a href="Scratch3_05Repeating.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Nizanje koraka' data-toggle="tooltip"><a href="Scratch3_03Sequencing.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Ponavljanje koraka' data-toggle="tooltip"><a href="Scratch3_05Repeating.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

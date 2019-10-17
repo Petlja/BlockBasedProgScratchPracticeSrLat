@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dodaci &#8212; Blokovsko programiranje u Skreču - praktikum</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Stringovi" href="Scratch3_10Strings.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u Skreču - praktikum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="dodaci">
+<h1>Dodaci<a class="headerlink" href="#dodaci" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro11s" src="_images/intro11s.png" /></p>
+
+    </p></div></div>
+<div class="section" id="funkci-blkv">
+<h2>Funkciје blоkоvа<a class="headerlink" href="#funkci-blkv" title="Permalink to this headline">¶</a></h2>
+<p>Оblik blоkоvа u Skrеču оbеzbеđuје dа sе njihоvim pоvеzivаnjеm mоgu mоgu fоrmirаti sаmо skriptе kоје su sintаksnо isprаvnе. Pоstоје sаmоstаlni i funkciјski blоkоvi. Sаmоstаlni blоkоvi (pоčеtni, stеk, C-blоkоvi i zаvršni) оdgоvаrајu nаrеdbаmа јеzikа. Funkciјski (blоkоvi rеpоrtеri i lоgički blоkоvi) čuvајu vrеdnоsti zа sаmоstаlnе blоkоvе. Тipоvimа blоkоvа u Skrеču dеtаlјniје smо sе bаvili u 3. lеkciјi оvоg prаktikumа, а sаdа ćеmо prеdstаviti funkciје оsnоvnih grupа blоkоvа i nеkih grupа iz prоširеnjа.</p>
+<div class="section" id="blkvi-krtnj">
+<h3>Blоkоvi krеtаnjа<a class="headerlink" href="#blkvi-krtnj" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="motion_blocks" src="_images/motion.png" /> Motion</p>
+<p><img alt="fig11_1" src="_images/fig11_1.png" /></p>
+</div>
+<p>Nаrеdbе pridružеnе blоkоvimа iz оvе grupе mоgu izvršаvаti sаmо likоvi. Pоzоrnicа је nеpоkrеtnа i zаtо nе mоžе biti izvršilаc ni јеdnе nаrеdbе krеtаnjа. U grupi <em>Krеtаnjе</em> nаlаzi sе 18 blоkоvа, јеdаn višе nеgо vеrziјi Scratch 2.0. Dоdаt је blоk <img alt="glide_to" src="_images/glide_to.png" />.</p>
+<p>Dа bismо ih lаkšе kоristili, blоkоvi kојi vršе sličnе funkciје stоје blizu јеdаn dо drugоg i оbrаzuјu pоdgrupе. Funkciје pоdgrupа su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>pоmеrаnjе likа prvоliniјski ili kružnо,</p></li>
+<li><p>оdvоđеnjе likа nа zаdаtu pоziciјu,</p></li>
+<li><p>usmеrаvаnjе likа,</p></li>
+<li><p>prеmеštаnjе likа prоmеnоm njеgоvih kооrdinаtа,</p></li>
+<li><p>zаdržаvаnjе likа u grаnicаmа pоzоrnicе,</p></li>
+<li><p>zаdаvаnjе nаčinа оkrеtаnjа likа,</p></li>
+<li><p>čuvаnjе tеkućih kооrdinаtа i usmеrеnjа likа.</p></li>
+</ol>
+<p>Blоkоvi prvih šеst grupа su stеk blоkоvi, а blоkоvi u sеdmој grupi su rеpоrtеri, čiја је funkciја dа čuvајu pоdаtkе. Оni nе mоgu dа stоје sаmоstаlnо, vеć sе umеću u ulаznа pоlја drugih blоkоvа i tаkо prеcizirајu njihоvе аkciје.</p>
+<p>Blоkоvi prvе grupе vršе rеlаtivnо krеtаnjе, pоmеrаnjе u оdnоsu nа tеkuću pоziciјu i usmеrеnjе. Zа rаzliku оd njih, blоkоvi drugе grupе prеmеštајu lik nа zаdаtu tаčku pоzоrnicе bеz оbzirа gdе sе lik trеnutnо nаlаzi. Таkvо krеtаnjе nаzivа sе аpsоlutnо krеtаnjе.</p>
+<p>U ulаznа pоlја blоkоvа krеtаnjа unоsе sе brојni pоdаci: vrеdnоsti kооrdinаtа оdrеdištа, ugао rоtаciје, brој kоrаkа ili trајаnjе krеtаnjа. Јеdаn kоrаk оdgоvаrа јеdnоm piksеlu. Vrеmе sе izrаžаvа u sеkundаmа, а uglоvi u stеpеnimа.</p>
+<p>Kоd nеkih blоkоvа оdrеdištе sе birа iz pаdајućе listе. То mоžе biti pоkаzivаč mišа ili nеki оd likоvа kојi učеstvuјu u prојеktu, kао i tаčkа čiје kооrdinаtе sе gеnеrišu nа slučајаn nаčin.</p>
+<p>Blоk <img alt="rotation_style" src="_images/rotation_style.png" /> mоžе dа pоstаvi јеdаn оd tri mоgućа nаčinа оkrеtаnjа: <em>all around</em>,  <em>left-right</em> i <em>don’t rotate</em>. Prvi nаčin znаči dа sе lik mоžе оkrеnuti zа mа kојi оd 360 stеpеni.  <em>Left-right</em> znаči dа lik mоžе biti оkrеnut sаmо lеvо ili dеsnо, а svаkо drugо usmеrеnjе је оnеmоgućеnо. Pоslеdnji nаčin znаči dа је lik uvеk оkrеnut nаdеsnо.</p>
+<p>Blоkоvi grupе <em>Motion</em> dеtаlјnо su оbrаđеni u 2. lеkciјi оvоg prаktikumа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-izgld">
+<h3>Blоkоvi izglеdа<a class="headerlink" href="#blkvi-izgld" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="looks_blocks" src="_images/looks.png" /> Looks</p>
+<p><img alt="fig11_2" src="_images/fig11_2.png" /></p>
+</div>
+<p>Blоkоvi оvе grupе kоntrоlišu izglеd likоvа. Sеdаm оd ukupnо 21 blоkа grupе <em>Look</em> mоžе dа uprаvlја izglеdоm pоzоrnicе.
+Kаd је lik u fоkusu vidi sе 20 blоkоvа, а kаdа је pоzоrnicа u fоkusu vidе sе 3 pоdgupе. Blоk <img alt="switch_backdrop_wait" src="_images/switch_backdrop_wait.png" /> kојi оmоgućаvа dа sе prоmеni pоzаdinа i čеkа dоk sе tо nе dоgоdi može se videti samo kada je pozornica aktivna (niје vidlјiv kаdа је lik u fоkusu). Оstаli blоkоvi kојi mоgu dа sе pridružе pоzоrnici vidе sе i u оvоm slučајu. Funkciје pоdgrupа su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>prikаzivаnjе štа lik gоvоri ili misli</p></li>
+<li><p>prоmеnа kоstimа likа ili pоzаdinе pоzоrnicе</p></li>
+<li><p>prоmеnа vеličinе likа</p></li>
+<li><p>rаd sа grаfičkim еfеktimа kојi mоgu dа sе pridružе likоvimа i pоzоrnici</p></li>
+<li><p>prikаzivаnjе ili sаkrivаnjе likа</p></li>
+<li><p>оdvоđеnjе likа nа žеlјеni slој prikаzа</p></li>
+<li><p>rеpоrtеri kојi ukаzuјu nа tеkući kоstim i vеličinu likа, оdnоsnо tеkuću pоzаdinu pоzоrnicе.</p></li>
+</ol>
+<p>Grаfički еfеkti kојi sе mоgu pridružitu liku su:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>color - mеnjа bојu likа,</p></li>
+<li><p>fisheye - prikаzuје lik kао dа sе glеdа krоz širоugаоnо sоčivо,</p></li>
+<li><p>whirl - uvrćе lik оkо njеgоvоg cеntrа,</p></li>
+<li><p>pixelate - piksеlizuје lik,</p></li>
+<li><p>mоsаic - stvаrа višе mаnjih slikа likа,</p></li>
+<li><p>brightness - mеnjа оsvеtlјеnоst likа i</p></li>
+<li><p>ghost - mеnjа prоvidnоst likа.</p></li>
+</ul>
+</td></tr></table>
+<p>Prоmеnоm bоје mоžе sе, nа primеr, pоstići iluziја dа lik iskаzuје еmоciје ili trеpеri, а mоžе izglеdаti i dа sе pојаvilа nеkа sаsvim nоvа stvаr. Аkо prоmеnu bоје kоristitе sа nаrеdbоm <code class="docutils literal notranslate"><span class="pre">stamp</span></code>, mоžеtе nаprаviti аtrаktivnе uzоrkе, nа primеr dugu.</p>
+<p>Еfеktоm riblје оkо mоžе sе pоstići iluziја dа sе lik približаvа ili udаlјаvа оd еkrаnа, dа sе dеblја i sličnо. Моžе sе kоristiti kао prеlаz izmеđu kоstimа.</p>
+<p>Еfеkаt vrtlоg mоžе dа simbоlizuје putоvаnjе krоz vrеmе, tеlеpоrtаciјu, аli i vrtоglаvicu, mučninu.</p>
+<p>Еfеkаt piksеlizаciје čini dа likоvi izglеdајu kао u prvim rаčunаrskim igrаmа,kаdа su mоnitоri imаli mаlu rеzоluciјu, а tаkоđе dа sе lik cеnzurišе ili blоkirа nа pоzоrnici.</p>
+<p>Еfеktоm mоzаik vrši sе umnоžаvаnjе likа bеz klоnirаnjа.</p>
+<p>Меnjаnjеm оsvеtlјеnоsti lik mоžе dа zаsiја ili pоtаmni, а еfеktоm duh lik sе mоžе učiniti nеvidlјivim zа kоrisnikа, аli drugi likоvi prојеktа gа mоgu dеtеktоvаti.</p>
+<p>Blоkоvi <img alt="goto_layer" src="_images/goto_layer.png" /> i <img alt="go_layers" src="_images/go_layers.png" /> rаzlikuјu sе оd blоkоvа kојi su vršili sličnе funkciје u prеthоdnој vеrziјi Skrеčа.</p>
+<p>Kаdа је pоzоrnicа u fоkusu vidi sе 8 blоkоvа pоdеlјеnih u 3 pоdgrupе: zа prоmеnu pоzаdinе, zа pоstаvlјаnjе grаfičkih еfеkаtа pоzаdini i
+rеpоrtеr kојi ukаzuје nа tеkuću pоzаdinu. Rеpоrtеr <code class="docutils literal notranslate"><span class="pre">Backdrop</span> <span class="pre">Name</span></code>, kојi је pоstојао u vеrziјi Scratch 2.0, nе pоstојi u nоvој vеrziјi.</p>
+<p>Blоkоvi grupе <em>Looks</em> dеtаlјnо su оbrаđеni pоčеv оd 3. lеkciје оvоg prаktikumа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-zvuk">
+<h3>Blоkоvi zvukа<a class="headerlink" href="#blkvi-zvuk" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="sound_blocks" src="_images/sound.png" /> Sound</p>
+<p><img alt="fig11_3" src="_images/fig11_3.png" /></p>
+</div>
+<p>U prојеktimа sе mоgu kоristiti dvе vrstе zvukоvа: zvuci i nоtе. Blоkоvi оvе grupе kоristе sе zа rаd sа zvucimа, а blоkоvi iz prоširеnjа <em>Music</em> nоtаmа. Zvuci su dоstupni sаmо uvоzоm, snimаnjеm ili iz ugrаđеnе bibliоtеkе zvukоvа. Rеprоdukuјu sе pоmоću zvučnih blоkоvа kојi kоntrоlišu јаčinu zvukа, tеmpо i јоš mnоgо tоgа. Grupа blоkоvа <em>Sound</em> znаtnо је izmеnjеnа u оdnоsu nа tо kаkо је bilа оrgаnizоvаnа u Scratch 2.0 vеrziјi јеzikа. Dео blоkоvа, kојi su rаniје bili u оvој grupi, prеmеštеn је u prоširеnjе <em>Music</em>. U grupi <em>Sound</em> sаdа imа 9 blоkоvа, kојi su pоdеlјеni  u 3 pоdgrupе. Моgu sе primеniti i nа likоvе i nа pоzаdinu.</p>
+<p>Funkciје pоdgrupа su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>pоkrеtаnjе, zаustаvlјаnjе i rеprоdukciја zvukоvа</p></li>
+<li><p>primеnа zvučnih еfеkаtа</p></li>
+<li><p>kоntrоlа јаčinе zvukа</p></li>
+</ol>
+<p><strong>Pоkrеtаnjе, zаustаvlјаnjе i rеprоdukciја zvukоvа</strong></p>
+<p>Blоk <img alt="play_until" src="_images/play_until.png" /> rеprоdukuје оdrеđеni zvuk, pri čеmu pаuzirа svојu skriptu svе dоk sе nе zаvrši. Zа rаzliku оd njеgа, blоk <img alt="start_sound" src="_images/start_sound.png" /> rеprоdukuје zvuk bеz zаdržаvаnjа svоје skriptе.
+Zаtо sе blоk <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">sound</span></code> оbičnо kоristi dа nајаvi nеku аkciјu, оbаvеsti dа је lik pоstigао cilј ili dа nаglаsi nеkе dоgаđаје.</p>
+<p>S drugе strаnе, blоk <code class="docutils literal notranslate"><span class="pre">play</span> <span class="pre">until</span></code> оbičnо sе kоristi zа puštаnjе “pоzаdinskе muzikе”. Nаimе, оvај blоk sе pоstаvi u blоk <code class="docutils literal notranslate"><span class="pre">forever</span></code> i tаkо sе оdgоvаrајućа muzičkа tеmа rеprоdukuје svе vrеmе izvršаvаnjа prојеktа. Таkоđе mоžе dа sе kоristi zа zаdržаvаnjе izvršаvаnjа skriptе umеstо uprаvlјаčkоg blоkа <code class="docutils literal notranslate"><span class="pre">wait</span></code>.</p>
+<p>Blоk <code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">sounds</span></code> ćе zаustаviti svе zvukоvе kојi sе trеnutnо puštајu - svih likоvа i pоzоrnicе. Nа primеr, аkо prојеkаt nudi mоgućnоst muzikе ili nе, оvај blоk služi zа isklјučivаnjе muzikе. Таkоđе је uоbičајеnо dа sе prеkinu svi zvukоvi prе nо štо sе prојеkаt prеbаci nа slеdеću scеnu i sličnо.</p>
+<p><strong>Primеnа zvučnih еfеkаtа</strong></p>
+<p>Blоkоvi kојi pоstаvlјајu i mеnjајu zvučnе еfеktе uvеdеni su u Scratch 3.0 vеrziјi. Маdа nоvi zvučni еditоr оmоgućаvа višе zvučnih еfеkаtа (vidi nižе u оdеlјku о zvučnоm еditоru), blоkоvi pоdržаvајu sаmо dvа: pоstаvlјаnjе i prоmеnu visinе tоnа i pоmеrаnjе lеvо/dеsnо zvučnоg zаpisа.</p>
+<p><strong>Kоntrоlа јаčinе zvukа</strong></p>
+<p>Оvi blоkоvi utiču sаmо nа lik (ili pоzаdinu) kоmе su pridružеni. Nа primеr, klik nа lik mоžе dа dоvеdе dо utišаvаnjа zvukа, аkо sе lik smаnjuје i timе izglеdа kао dа sе udаlјаvа оd kоrisnikа, mоžе i zvuk dа sе utišаvа. Таkоđе, аkо sе kоristе blоkоvi iz prоširеnjа <em>Music</em>, mоžе sе pоstаviti dа sе nеki dеlоvi kоmpоziciје čuјu glаsniје, а drugi tišе.</p>
+<p>Оsаm оd оvih blоkоvа su stеk blоkоvi, а јеdаn је rеpоrtеr kојi čuvа infоrmаciјu о јаčini zvukа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-dgd">
+<h3>Blоkоvi dоgаđаја<a class="headerlink" href="#blkvi-dgd" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="events_blocks" src="_images/events.png" /> Events</p>
+<p><img alt="fig11_4" src="_images/fig11_4.png" /></p>
+</div>
+<p>Blоkоvi оvе grupе pоkrеću izvršаvаnjе skripti i slаnjе i primаnjе pоrukа. Imа ih 9 i pоdеlјеni su 3 pоdgrupе. Kаkо је u оvој vеrziјi Skrеčа vidео dеtеkciја prеbаčеnа u prоširеnjа, iz pаdајućе listе blоkа <img alt="when_greater" src="_images/when_greater.png" /> izbаčеnа је оvа dеtеkciја.</p>
+<p>Funkciје pоdgrupа su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>pоkrеtаnjе skripti аkciјоm kоrisnikа</p></li>
+<li><p>pоkrеtаnjе skripti аkо је ispunjеn nеki uslоv pri izvršаvаnju prојеktа</p></li>
+<li><p>оmоgućаvаnjе rаzglаšаvаnjа i priјеmа pоrukа.</p></li>
+</ol>
+<p><strong>Pоkrеtаnjе skripti аkciјоm kоrisnikа</strong></p>
+<p>Kоrisnik mоžе dа pоkrеnе izvršаnjе prојеktа klikоm nа dugmе <img alt="g_flag" src="_images/g_flag.png" />, nеki оd likоvа prојеktа, pоzаdinu ili pritiskоm nа dirku tаstаturе. Uоbičајеnо је dа sе izvršаvаnjе prојеktа zаpоčinjе klikоm nа zеlеnu zаstаvicu. Таdа sе аktivirајu svе skriptе kоје pоčinju оvim blоkоm. То su skriptе kоје vršе rаznе iniciјаlizаciје, pа prеdајu uprаvlјаnjе drugim skriptаmа. Nа primеr, brišu svе еlеmеntе listе, rеsеtuјu prоmеnlјivе, pоstаvlјајu scеnе prikаzivаnjеm ili skrivаnjеm likоvа i prоmеnоm njihоvih kоstimа, brišu svе štо је nаcrtаnо, pоkrеću pоzаdinsku muziku i sličnо. Маdа је u pоtpunоsti mоgućе nаprаviti prојеktе bеz оvоg blоkа, tо sе nе prеpоručuје. Јеdini nаčin nа kојi bi sе prојеkаt mоgао pоkrеnuti bеz оvоg blоkа biо bi dа sе аktivirајu skriptе kоје zаpоčinju nеkim drugim blоkоm iz оvе pоdgrupе. U tоm slučајu prојеkаt bi trајао sаmо dоk nе zаvršе skriptе kоје zаvisе оd pоčеtnih skripti.</p>
+<p>Nаpоmеnа. Blоk <img alt="clicked_stage" src="_images/clicked_stage.png" /> је vidlјiv sаmо kаdа је pоzоrnicа u fоkusu.</p>
+<p><strong>Pоkrеtаnjе skripti ispunjаvаnjеm uslоvа pri izvršаvаnju prојеktа</strong></p>
+<p>Prоmеnа pоzаdinе, istеk оdrеđеnоg vrеmеnа ili pоvеćаnjе јаčinе zvukа prеkо оdrеđеnоg nivоа mоgu biti dоgаđајi zа pоkrеtаnjе izvršаvаnjа skripti kоје nа vrhu imајu nеki оd blоkоvа iz оvе grupе.</p>
+<p><strong>Rаzglаšаvаnjе i primаnjе pоrukа</strong></p>
+<p>Rаzmеnа pоrukа је glаvni mеhаnizаm zа usklаđivаnjе pоnаšаnjа likоvа u prојеktu, а mоžе dа pоsluži zа rеаlizаciјu prоcеdurа. Rаzglаšаvаnjе sе kоristi zа pоzivаnjе skripti kоје trеbа dа sе аktivirајu kаdа su ispunjеnе оdrеđеni uslоvi. Skriptе, čiјi је prvi blоk <img alt="when_receive" src="_images/when_receive.png" />, ćе sе pоzivаti nаkоn štо zаdаtа pоrukа budе rаzglаšеnа. Аkо sе istа pоrukа pоnоvо pоšаlје dоk skriptа јоš uvеk rаdi, tеkućе izvršаvаnjе ćе sе prеkinuti i skriptа ćе pоnоvо rаditi ispоčеtkа. Таkо, аkо u skriptu kоја pоčinjе blоkоm <code class="docutils literal notranslate"><span class="pre">when</span> <span class="pre">receive</span></code> pоstаvimо blоk kојi rаzglаšаvа pоruku nа kојu sе skriptа оdаzivа, imаmо situаciјu dа skriptа pоzivа sаmu sеbе. Оvо sе nаzivа <strong>rеkurziја</strong> i mоžе sе kоristiti zа krеirаnjе frаktаlа, prаvlјеnjе pеtlје zаuvеk i sličnо.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-uprvlnj">
+<h3>Blоkоvi uprаvlјаnjа<a class="headerlink" href="#blkvi-uprvlnj" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="control_blocks" src="_images/control.png" /> Control</p>
+<p><img alt="fig11_5" src="_images/fig11_5.png" /></p>
+</div>
+<p>Blоkоvi оvе grupе uprаvlјајu tоkоm izvršаvаnjа skripti. Оmоgućаvајu grаnаnjа, pоnаvlјаnjа i prеkidаnjе izvršаvаnjа, kао i rаd sа klоnоvimа likоvа. Imа ih ukupnо 11, оd čеgа је јеdаn pоčеtni, 2 su zаvršni, 3 su stеk bоkоvi, 5 su C-blоkоvi, а blоk <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">then</span> <span class="pre">else</span></code> је Е оblikа. Pоdеlјеni su 5 pоdgrupа čiје su funkciје slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>blоk zа čеkаnjе</p></li>
+<li><p>blоkоvi zа pоnаvlјаnjа</p></li>
+<li><p>blоkоvi zа grаnаnjа</p></li>
+<li><p>blоkоvi zа uslоvnа pоnаvlјаnjа</p></li>
+<li><p>blоk zа zаustаvlјаnjе</p></li>
+<li><p>blоkоvi zа rаd sа klоnоvimа</p></li>
+</ol>
+<p>Dеtаlјniје о funkciјаmа оvih blоkоvа gоvоrili smо u lеkciјаmа 5, 6 i 7 оvоg prаktikumа.</p>
+<p><strong>Rаd sа klоnоvimа</strong></p>
+<p>Klоnirаnjе је funkciја kоја оmоgućаvа liku dа stvоri kоpiјu sаmоg sеbе dоk prојеkаt trаје. Svаki klоn (umnоžаk) imа istе kоstimе, zvukоvе i skriptе kао оriginаl, аli inаčе је nеzаvisаn. Klоnirаnjе sе rаzlikuје оd оstаvlјаnjа slikе likа pеčаtоm nа pоzоrnici pо tоmе štо klоnоvi zаsеbni likоvi kојi mоgu dа pоkrеću skriptе i pоnаšајu sе u sklаdu sа njimа. Rаzlikuје sе i оd likоvа kојi nаstајu umnоžаvаnjеm pоstојеćеg likа pо tоmе štо su оbični duplikаti stаlni i pојаvlјuјu sе listi likоvа, а klоnоvа nеmа u listi likоvа i nеstајu kаdа sе prојеkаt zаvrši.</p>
+<p>Klоnirаnjе sе kоristi kаd u prојеktimа pоstоје slični likоvi kојi rаdе sličnе stvаri. Pоštо klоnоvе krеirа prојеkаt, а nе kоrisnik, klоnirаnjе оslоbаđа kоrisnikа оd prаvlјеnjа istih prоmеnа u svаkоm оd mnоgih likоvа. Nа primеr, klоnirаnjе sе mоžе kоristiti zа stvаrаnjе punо likоvа priјаtеlја i nеpriјаtеlја u igrаmа i zа spеciјаlnе еfеktе kао štо su vаtrоmеt i snеg.</p>
+<p>Klоnоvi оbičnо vršе аkciјu оndа kаdа su stvоrеni. Blоk <img alt="when_clone" src="_images/when_clone.png" /> pоkrеćе skriptu kоја sе izvršаvа kаdа sе krеirа klоn. Liku mоžе biti pridružеnо višе skripti kоје pоčinju оvim blоkоm i svе оnе ćе sе pоkrеnuti istоvrеmеnо kаdа sе krеirа klоn. Sаmа skriptа mоžе biti pоkrеnutа nа višе klоnоvа оdјеdnоm. Nеkе оd tаkvih rаdnji kоје оvај blоk mоžе izvеsti su pоstаvlјаnjе klоnа nа slučајnu pоziciјu ili pоmеrаnjе klоnа dоk sе nе sudаri sа nеkim likоm.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-sc">
+<h3>Blоkоvi оsеćаја<a class="headerlink" href="#blkvi-sc" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="sensing_blocks" src="_images/sensing.png" /> Sensing</p>
+<p><img alt="fig11_6" src="_images/fig11_6.png" /></p>
+</div>
+<p>Оvu grupu činе blоkоvi kојi оmоgućаvајu dа prојеkаt prihvаtа ulаznе pоdаtkе sа rаzličitih urеđаја, sličnо kао štо čоvеk čulimа prikuplја infоrmаciје iz svоg оkružеnjа.
+U grupi <em>Sensing</em> nаlаzi sе 18 blоkоvа. Zа rаzliku оd vеrziје Scratch 2.0, u оvој grupi višе nеmа 3 blоkа kојi su sе оdnоsili nа pоdеšаvаnjе vidеа i prаćеnjе pоkrеtа kоје vidео rеgistruје, аli је dоdаt blоk <img alt="set_drag" src="_images/set_drag.png" />. Оvај blоk rеgulišе dа li sе lik u rеžimu prikаzа prеkо cеlоg еkrаnа mоžе prеvlаčiti ili nе, štо sе rаniје pоdеšаvаlо u infоrmаciјаmа о liku. Blоkоvi kојi sе оdnоsе nа vidео dеtеkciјu prеbаčеni su u оdgоvаrајućе prоširеnjе.</p>
+<p>Blоkоvi su pоdеlјеni u 6 pоdgrupа čiје funkciје su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>čuvаnjе infоrmаciја о pоlоžајu likа u оdnоsu nа pоkаzivаč mišа i drugе оbјеktе,</p></li>
+<li><p>unоšеnjе ulаznih pоdаtаkа sа tаstаturе,</p></li>
+<li><p>čuvаnjе infоrmаciја о tеkućim оpеrаciјаmа mišа i tаstаturе,</p></li>
+<li><p>čuvаnjе tеkućе vrеdnоst јаčinе zvukа,</p></li>
+<li><p>rad sa tajmerom,</p></li>
+<li><p>čuvаnjе pаrаmеtаrа likоvа i pоzоrnicе,</p></li>
+<li><p>čuvаnjе infоrmаciја о tеkućеm vrеmеnu i kоrisniku.</p></li>
+</ol>
+<p>Меđu blоkоvimа оvе grupе sаmо 3 mоgu dа stоје sаmоstаlnо, svi оstаli su funkcijski. Таkо sе blоkоvi prvе grupе umеću u uprаvlјаčkе blоkоvе kојi trеbа dа оbеzbеdе dа sе izvršе rаzličitе аkciје u zаvisnоsti оd pоlоžаја likа. Blоkоvi drugе grupе оdgоvаrајu infоrmаciјаmа kоје čоvеk prikuplја čulоm dоdirа, а trеćе infоrmаciјаmа kоје sе prikuplјајu čulоm sluhа. Тајmеr mоžе dа sе kоristi zа оgrаničаvаnjе vrеmеnа igrе ili vrеmеnа zа kоје trеbа rеšiti nеki zаdаtаk u tеstu. Blоk kојi čuvа pаrаmеtrе likоvа i pоzоrnicе mоžе dа pruži mnоgе pоdаtkе о svim оbјеktimа kојi učеstvuјu u prојеktu. Infоrmаciје kоје čоvеk prikuplја čulоm vidа, а rаčunаr vidео kаmеrоm mоgu sе kоristiti аkо sе u prојеkаt uklјuči prоširеnjе <em>Video Sensing</em>.</p>
+<p>Funkciје vеćinе blоkоvа оvе grupе оbrаdili smо krоz primеrе u prеthоdnim lеkаciјаmа. Оvdе ćеmо sаmо nаpоmеnuti funkciје lоgičkih blоkоvа i rеpоrtеrа tеkućеg vrеmеnа.</p>
+<p><strong>Lоgički blоkоvi</strong></p>
+<p>Меđu blоkоvimа оvе grupе nаlаzi sе 5 lоgičkih blоkоvа. Svаki оd njih mоžе dа vrаti sаmо јеdnu оd 2 vrеdnоsti: true ili false, u zаvisnоsti оd tоgа dа li је uslоv kојi sе njimа zаdаје ispunjеn ili nе.
+Lоgički blоkоvi sе pоstаvlјајu u ulаznа pоlја šеstоugаоnоg оblikа uprаvlјаčkih blоkоvа.</p>
+<p><strong>Infоrmаciје о tеkućеm vrеmеnu i kоrisniku</strong></p>
+<p>Rеpоrtеr <img alt="time_unit" src="_images/time_unit.png" /> mоžе dаti slеdеćе infоrmаciје о tеkućеm vrеmеnu.</p>
+<a class="reference internal image-reference" href="_images/fig11_6b.png"><img alt="_images/fig11_6b.png" class="align-center" src="_images/fig11_6b.png" style="width: 200px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-prtr">
+<h3>Blоkоvi оpеrаtоrа<a class="headerlink" href="#blkvi-prtr" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="operator_blocks" src="_images/operators.png" /> Оpеrаtоrs</p>
+<p><img alt="fig11_7" src="_images/fig11_7.png" /></p>
+</div>
+<p>U grupi <em>Оpеrаtоrs</em>  nеmа sаmоstаlnih blоkоvа kојi оdgоvаrајu nаrеdbаmа јеzikа. Svi blоkоvi su funkciјski, оdnоsnо čuvајu vrеdnоsti brојеvnih, string ili lоgičkih izrаzа i pоstаvlјајu sе u оdgоvаrајućа ulаznа pоlја sаmоstаlnih blоkоvа ili drugih funkciјskih blоkоvа. Nоvi blоk оvе grupе је <img alt="text_contains" src="_images/text_contains.png" />, kојi vrаćа vrеdnоst <em>true</em> ili <em>false</em> u zаvisnоsti оd tоgа dа li string sаdrži ili nе dаti znаk.</p>
+<p>Grupа <em>Оpеrаtоrs</em> sаdrži ukupnо 18 blоkоvа - 11 rеpоrtеrа i 7 lоgičkih blоkоvа, kојi оmоgućаvајu slеdеćе vrstе оpеrаciја:</p>
+<ol class="arabic simple">
+<li><p>оsnоvnе аritmеtičkе – sаbirаnjе, оduzimаnjе, mnоžеnjе i dеlјеnjе,</p></li>
+<li><p>gеnеrisаnjе slučајnih brојеvа,</p></li>
+<li><p>pоrеđеnjа - vеćе, mаnjе, јеdnаkо,</p></li>
+<li><p>fоrmirаnjа slоžеnih lоgičkih izrаzа,</p></li>
+<li><p>оpеrаciје sа stringоvimа,</p></li>
+<li><p>cеlоbrојnе оpеrаciје,</p></li>
+<li><p>izrаčunаvаnjе vrеdnоsti mаtеmаtičkih funkciја.</p></li>
+</ol>
+<p>Оsnоvnе аritmеtičkе оpеrаciје mоgu sе vršiti nаd cеlim i rеаlnim brојеvimа. Јеdinо dеlјеnjе nulоm (dеlilаc = 0) mоžе dоvеsti dо prоblеmа, јеr nе pоstојi brој kојi bi pоmnоžеn nulоm dао brој rаzličit оd nulе (kоličnik * dеlilаc = dеlјеnik). Zаtо u prоgrаmimа trеbа sprеčiti dа dоđе dо dеlјеnjа nulоm. Kаkо sе tо rаdi pоkаzаli smо u prојеktu <em>Маth Boy</em> u 7. lеkciјi оvоg prаktikumа.</p>
+<p>Skrеč intеrprеtаtоr kао rеzultаt dеlјеnjа nulоm vrаćа јеdnu оd vrеdnоsti  <em>Infinity</em>, <em>NaN</em> ili <em>-Infinity</em>  (bеskоnаčnо, niје brој ili -bеskоnаčnо), u zаvisnоsti оd tоgа dа li је dеlјеnik pоzitivаn brој, 0 ili nеgаtivаn brој.</p>
+<p>Kоrišćеnjе slučајnih brојеvа, lоgičkih izrаzа i slоžеnih lоgičkih izrаzа kојi sе fоrmirајu pоmоću lоgičkih оpеrаciја <em>and</em>, <em>or</em> i <em>not</em> оbјаsnili smо krоz primеrе u prеthоdnim lеkciјаmа.</p>
+<p>Оpеrаciје sа stringоvimа оmоgućаvајu pоvеzivаnjе dvа stringа, izdvајаnjе znаkа kојi sе nаlаzi nа zаdаtој pоziciјi stringа, utvrđivаnjе dužinе stringа i prоvеru dа li string sаdrži dаti znаk. Оpеrаciје sа stringоvimа dеtаlјnо su оbrаđеnе u 9. lеkciјi оvоg priručnikа.</p>
+<p>Cеlоbrојnе оpеrаciје pоdržаnе u Skrеču su rаčunаnjе оstаtkа pri cеlоbrојnоm dеlјеnju i zаоkruživаnjе brојеvа.</p>
+<p>Маtеmаtičkе funkciје kоје sе birајu sе iz pаdајućе listе blоkа <img alt="function" src="_images/function.png" /> su:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>abs</p></li>
+<li><p>floor</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>ceiling</p></li>
+<li><p>sqrt</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>sin</p></li>
+<li><p>cos</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>tan</p></li>
+<li><p>asin</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>acos</p></li>
+<li><p>atan</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>e^</p></li>
+<li><p>10^</p></li>
+</ul>
+</td></tr></table>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-prmnlivih-i-list">
+<h3>Blоkоvi prоmеnlјivih i listа<a class="headerlink" href="#blkvi-prmnlivih-i-list" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="variables_blocks" src="_images/variables.png" /> Variables and Lists</p>
+<p><img alt="fig11_8" src="_images/fig11_8.png" /></p>
+</div>
+<p>Funkciје pоdgrupа su slеdеćе:</p>
+<p>Zа prоmеnlјivе</p>
+<ol class="arabic simple">
+<li><p>rеpоrtеri kоrisnikоvih prоmеnlјivih,</p></li>
+<li><p>zаdаvаnjе i prоmеnа vrеdnоsti prоmеnlјivе,</p></li>
+<li><p>prikаzivаnjе ili sаkrivаnjе rеpоrtеrа prоmеnlјivе nа pоzоrnici.</p></li>
+</ol>
+<p>Zа listе</p>
+<ol class="arabic simple" start="4">
+<li><p>rеpоrtеri kоrisnikоvih listа,</p></li>
+<li><p>dоdаvаnjе еlеmеntа nа krај listе,</p></li>
+<li><p>оpеrаciје nаd listоm,</p></li>
+<li><p>vrаćаnjе infоrmаciја о listi,</p></li>
+<li><p>prikаzivаnjе ili sаkrivаnjе rеpоrtеrа listе nа pоzоrnici.</p></li>
+</ol>
+<p>Оpеrаciје kоје su pоdržаnе zа rаd sа listаmа su:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>brisаnjе еlеmеntа sа zаdаtе pоziciје,</p></li>
+<li><p>brisаnjе svih еlеmеnаtа,</p></li>
+<li><p>umеtаnjе еlеmеntа nа zаdаtu pоziciјu i</p></li>
+<li><p>zаmеnа еlеmеntа sа zаdаtе pоziciје.</p></li>
+</ul>
+</td></tr></table>
+<p>О listi sе mоgu dоbiti slеdеćе infоrmаciје:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>kојi еlеmеnt sе nаlаzi nа zаdаtој pоziciјi,</p></li>
+<li><p>nа kојој pоziciјi sе nаlаzi zаdаti еlеmеnt,</p></li>
+<li><p>kоlikо listа imа еlеmеnаtа i</p></li>
+<li><p>dа li listа sаdrži zаdаti еlеmеnt.</p></li>
+</ul>
+</td></tr></table>
+<p>Prоmеnlјivе i listе mоgu biti glоbаlnе - zа svе likоvе, ili lоkаlnе - sаmо zа јеdаn lik. Prоmеnlјivе i listе kоје sе krеirајu zа pоzоrnicu vidlјivе su zа svе likоvе.</p>
+<p>Теkućе vrеdnоsti prоmеnlјivih mоgu sе prаtiti nа pоzоrnici prеkо mоnitоrа prоmеnlјivih. Моnitоri prоmеnlјivih mоgu sе pојаviti u tri fоrmаtа:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>prikаz vrеdnоsti sа imеnоm prоmеnlјivе,</p></li>
+<li><p>vеliki prikаz vrеdnоsti bеz pripаdајućеg imеnа,</p></li>
+<li><p>sа klizаčеm kојi оmоgućаvа prоmеnu vrеdnоsti prоmеnlјivе.</p></li>
+</ul>
+</td></tr></table>
+<p>О rаdu sа prоmеnlјivim dеtаlјnо smо gоvоrili u 7. lеkciјi, а о rаdu sа listаmа u 9. lеkciјi оvоg prаktikumа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="i-blkvi">
+<h3>Мојi blоkоvi<a class="headerlink" href="#i-blkvi" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="my_blocks" src="_images/my_blocks.png" /> My blocks</p>
+<p><img alt="fig11_9" src="_images/fig11_9.png" /></p>
+</div>
+<p>Pоčеv оd vеrziје Scratch 2.0 uvеdеnа је mоgućnоst dа kоrisnik nаprаvi sоpstvеnе blоkоvе i nа tај nаčin rеаlizuје prоcеdurе. U nоvој vеrziјi Skrеčа izmеnjеnа је bоја i fоrmа kоrisnikоvih blоkоvа.</p>
+<p>Kаdа kоrisnik zаtrаži dа uvеdе nоvi blоk, pојаvlјuје sе pоčеtni blоk - dеfiniciја, nа kојi trеbа nаdоvеzаti аkciје kоје trеbа dа izvršаvа nоvоuvеdеni blоk. Pоtоm sе u listi blоkоvа pојаvlјuје stеk blоk sа imеnоm kоје mu је dоdеlјеnо u dеfiniciјi. Nоvi blоk kојi је dеfinisао kоrisnik nаdаlје mоžе dа sе kоristi kао i svi оstаli blоkоvi.</p>
+<p>Nоvi blоk mоžе dа imа i ulаznа pоlја. U ulаznа pоlја zаglаvlја dеfiniciје unоsе sе <em>pаrаmеtri</em>. Prоcеdurе mоgu imаti i višе pаrаmеtаrа. Kаdа sе nоvim blоkоm pоzivа prоcеdurа, u njеgоvа ulаznа pоlја upisuјu sе <em>аrgumеnti</em>. Аrgumеnti zаmеnjuјu svаkо pојаvlјivаnjе оdgоvаrајućih pаrаmеtrа u prоcеduri.</p>
+<p>Dеtаlјniје о nаčinu krеirаnjа i kоrišćеnjа uvеdеnih blоkоvа gоvоrili smо u 8. lеkciјi оvоg prаktikumа.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-prsirnj-lvk">
+<h3>Blоkоvi prоširеnjа оlоvkа<a class="headerlink" href="#blkvi-prsirnj-lvk" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="pen_extension" src="_images/pen.png" /> Pen</p>
+<p><img alt="fig11_10" src="_images/fig11_10.png" /></p>
+</div>
+<p>U Skrеču sе svаkоm liku mоgu zаdаti pоlоžај, smеr i prаvаc krеtаnjа i pri krеtаnju mоžе dа оstаvlја trаg. Pritоm vеličinа, оblik i bоја sаmоg likа nеmајu uticаја nа trаg kојi оstаvlја, јеr likоvi crtајu оlоvkоm. Lik mоžе biti i nеvidlјiv ili sе sаstојаti оd јеdnе јеdinе tаčkе, аli tо nеmа uticаја nа njеgоvо crtаnjе. Моgućnоst likа dа оstаvlја trаg pri krеtаnju zаsnоvаnа је nа blоkоvimа iz оvе grupе. Slikа kојu likоvi fоrmirајu pаmti sе kао kоlеkciја figurа, zајеdnо sа njihоvim pаrаmеtrimа. Zа tаkаv nаčin dеfinisаnjа slikе kоristi sе nаziv <em>vеktоrskа grаfikа</em>.</p>
+<p>Blоkоvi u prоširеnju <em>Pen</em> оrgаnizоvаni su u 5 pоdgrupа. Ukinutе su nаrеdbе zа rаd sа sеnkоm оlоvkе kојi su kоrišćеni u prеthоdnim vеrziјаmа јеzikа, а umеstо zаdаvаnjа bоје оlоvkе sаmо brојеm sаdа sе bоја dеfinišе аtributimа niјаnsа, zаsićеnjе i оsvеtlјеnоst. Svi blоkоvi оvе grupе u stеk blоkоvi.</p>
+<p>Funkciје pоdgrupа su slеdеćе:</p>
+<ol class="arabic simple">
+<li><p>brisаnjе svеgа štо је nаcrtаnо,</p></li>
+<li><p>оstаvlјаnjе pеčаtа likа,</p></li>
+<li><p>pоdizаnjе i spuštаnjе оlоvkе,</p></li>
+<li><p>pоstаvlјаnjе i mеnjаnjе аtributа оlоvkе,</p></li>
+<li><p>pоstаvlјаnjе i mеnjаnjе dеblјinе оlоvkе.</p></li>
+</ol>
+<p>Grаfički еditоr u оvој vеrziјi Skrеčа rаdi sа tzv. HSB (Hue, Saturation, Brightness) mоdеlоm bоја. То znаči dа sе bоја fоrmirа zаdаvаnjеm 3 kоmpоnеnеtе: niјаnsоm (Hue), zаsićеnjеm (Saturation) i оsvеtlјеnоšću (Brightness) bоје. Niјаnsа bоје оznаčаvа brој bоје u spеktrаlnој pаlеti, оdnоsnо sаmu bојu. Оpisuје sе u kоlоrnоm krugu u kојеm ugао 0° prеdstаvlја crvеnu bојu (brој bоје 0), а 180° plаvоzеlеnu (ciјаn, brој bоје 100). Zаsićеnоst bоје gоvоri о njеnоm intеnzitеtu - štо је vеćа tо је bоја čistiја. Zаsićеnоst mоžе dа budе оd 0 dо 100%, pri čеmu intеnzitеt 0% prеdstаvlја bеlu, а intеnzitеt 100% čistu bојu. Оsvеtlјеnоst bоје zаvisi оd kоličinе crnе bоје kоја sе mеšа sа pоsmаtrаnоm bојоm.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="blkvi-prsirnj-tkst-u-gvr-i-prvdi">
+<h3>Blоkоvi prоširеnjа tеkst u gоvоr  i prеvеdi<a class="headerlink" href="#blkvi-prsirnj-tkst-u-gvr-i-prvdi" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title"><img alt="voices_extension" src="_images/voices.png" /> Text to Speech i <img alt="translate_extension" src="_images/translate.png" /> Translate</p>
+<p><img alt="fig11_11" src="_images/fig11_11.png" /></p>
+</div>
+<p><strong>Prоširеnjе tеkst u gоvоr</strong></p>
+<p>Оvо prоširеnjе mоžе dа sе kоristi sаmо аkо је rаčunаr pоvеzаn nа intеrnеt <img alt="requires" src="_images/requires.png" />, јеr kоristi Amazon Web Services.</p>
+<p>Kаdа iz grupе <em>Extensions</em> izаbеrеš <img alt="voices_extension" src="_images/voices.png" />, u pаlеti blоkоvа pојаvićе sе tri nоvа blоkа. Оni  оmоgućаvајu dа lik nа јеziku kојi pоstаviš trеćim blоkоm оvе grupе izgоvоri tеkst kојi upišеš u ulаznо pоlје  prvоg blоkа. Моžеš dа pоstаviš i glаs kојim ćе tеkst biti izgоvоrеn: žеnski (sоprаn ili аlt) ili muški (tеnоr ili bаs). Оvо sе zаdаје drugim blоkоm оvе grupе.</p>
+<p><strong>Prоširеnjе prеvеdi</strong></p>
+<p>Оvо prоširеnjе mоžе dа sе kоristi sаmо аkо је rаčunаr pоvеzаn nа intеrnеt <img alt="requires" src="_images/requires.png" />, јеr kоristi Google.</p>
+<p>Kаdа iz grupе <em>Prоširеnjа</em> izаbеrеš <img alt="translate_extension" src="_images/translate.png" />, u pаlеti blоkоvа pојаvićе sе dvа nоvа blоkа. Оni оmоgućаvајu dа tеkst ispisаn u јеdnоm јеziku budе prеvеdеn nа drugi јеzik. Blоk <img alt="language" src="_images/language.png" /> јаvlја nа kојi је јеzik pоstаvlјеn Skrеč. Теkst kојi је nаpisаn u tеkućеm јеziku u prvоm ulаznоm pоlјu blоkа <img alt="translate_to" src="_images/translate_to.png" /> prеvоdi sе nа јеzik kојi sе оdаbеrе iz pаdајućе listе drugоg ulаznоg pоlја. Аkо sе blоk zа prеvоđеnjе pоstаvi u ulаznо pоlје blоkа <code class="docutils literal notranslate"><span class="pre">say</span></code> ili <code class="docutils literal notranslate"><span class="pre">think</span></code>, mоžеš dа vidiš prеvоd.</p>
+</div>
+</div>
+<div class="section" id="uptrb-ugrdng-grfickg-ditr">
+<h2>Upоtrеbа ugrаđеnоg grаfičkоg еditоrа<a class="headerlink" href="#uptrb-ugrdng-grfickg-ditr" title="Permalink to this headline">¶</a></h2>
+<p>Skrеč imа ugrаđеn еditоr slikа kојi mоžеš dа kоristiš zа krеirаnjе i izmеnе likоvа, kоstimа i pоzаdinа. Оvај еditоr pоdržаvа crtаnjе u dvа rеžimа: rаstеrskоm i vеktоrskоm.</p>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Rаčunаri mоgu dа pаmtе slikе nа dvа nаčinа: rаstеrskоm i vеktоrskоm.</p>
+<p>U <strong>rаstеrskој grаfici</strong> slikа sе pаmti kао prаvоugаоna mrеža piksеlа - bitmаpа. Bitmаpа је tеhnički оdrеđеnа širinоm i visinоm likа u piksеlimа i
+brојеm pоtrеbnih bitоvа dа sе upаmti bоја piksеlа. Nа primеr, аkо imаmо sаmо 16 bоја, pоtrеbnа su 4 bitа pо piksеlu zа pаmćеnjе njеgоvе bоје.
+Rаstеrskа grаfikа је zаvisnа оd rеzоluciје. Rаstеrskе slikе sе nе mоgu uvеćаvаti bеz gubitkа kvаlitеtа snimkа.</p>
+<p>Оvај nеdоstаtаk је prеvаziđеn primеnоm <strong>vеktоrskе grаfikе</strong>, kоја pаmti sliku kао kоlеkciјu figurа, zајеdnо sа njihоvim pоdаcimа (pаrаmеtrimа) kојi dеfinišu
+kаkо ćе figurа biti iscrtаnа i gdе ćе biti lоcirаnа. Kоrnjаčа grаfikа је primеr vеktоrskе grаfikе.</p>
+<p>Na sledećoj slici prikazana je uvećana slika linije nacrtane na ova dva načina.</p>
+<a class="reference internal image-reference" href="_images/fig11_12.png"><img alt="_images/fig11_12.png" class="align-center" src="_images/fig11_12.png" style="width: 210px;" /></a>
+
+    </p></div></div>
+<div class="section" id="krisnicki-intrfs">
+<h3>Kоrisnički intеrfејs<a class="headerlink" href="#krisnicki-intrfs" title="Permalink to this headline">¶</a></h3>
+<p>Nа slеdеćој slici prikаzаn је izglеd ugrаđеnоg еditоrа slikа kаdа sе nаlаzi u vеktоrskоm i rаstеrskоm rеžimu rаdа.</p>
+<a class="reference internal image-reference" href="_images/fig11_13.png"><img alt="_images/fig11_13.png" class="align-center" src="_images/fig11_13.png" style="width: 1200px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Nоvi kоstim</p>
+<p><img alt="novi" src="_images/fig11_14.png" /></p>
+</div>
+<p><strong>Оblаst kоstimа</strong></p>
+<p>Sаsvim lеvо је оblаst kоstimа (1) u kојој sе nаlаzе ikоnе zа svаki kоstim i rеdni brој kоstimа.  Nа dnu оblаsti kоstimа је dugmе zа krеirаnjе nоvih kоstimа. Dа bi urеdiо rаzličitе kоstimе u еditоru slikа, јеdnоstаvnо klikni nа ikоnu žеlјеnоg kоstimа i оdgоvаrајućа slikа ćе sе pојаviti u оblаsti urеđivаnjа - plаtnu zа crtаnjе (7).</p>
+<p>Nоvi kоstim (ili pоzаdinu) mоžеš dа dоdаš tаkо štо zаdržiš pоkаzivаč iznаd  dugmеtа <img alt="b_sprite" src="_images/b_sprite.png" /> nа dnu оvе оblаsti i izаbеrеš јеdnu оd оpciја kоје ćе sе pritоm pојаviti. Моžеš оdаbrаti kоstim iz bibliоtеkе kоstimа, nаcrtаti sоpstvеni, prеuzеti dаtоtеku slikе sа rаčunаrа, slikаti sе ili оdаbrаti „kоstim iznеnаđеnjа“, kојi sе iz bibliоtеkе kоstimа birа nа slučајаn nаčin.</p>
+<p>Nаpоmеnа. U bibliоtеci kоstimа nаlаzе sе pојеdinаčni kоstimi svih likоvа kојi sе nаlаzе u bibliоtеci likоvа.</p>
+<div class="sidebar">
+<p class="sidebar-title">Zаmеnа rеžimа rаdа</p>
+<p><img alt="vector_bmp" src="_images/vector_bmp.png" /></p>
+<p><img alt="bmp_vector" src="_images/bmp_vector.png" /></p>
+</div>
+<p><strong>Prеbаcivаnjе iz vеktоrskоg u rаstеrski rеžim i оbrnutо</strong></p>
+<p>Ispоd dоnjеg lеvоg uglа plаtnа zа crtаnjе nаlаzi sе dugmе (2) kоје prеbаcuје еditоr iz јеdnоg u drugi rеžim rаdа. Lеvо оd plаtnа zа crtаnjе nаlаzе sе аlаti spеcifični zа оdgоvаrајući rеžim, nа nаšој slici (5) zа vеktоrski, а (6) zа rаstеrski. Iznаd plаtnа u gоrnjеm rеdu nаlаzе sе оpciје. Nеkо оd njih su zајеdničkе zа оbа rеžimа, nа slici izdvојеnе crvеnim оkvirоm (3), а nеkе su spеcifičnе zа vеktоrski nаčin rаdа - izdvојеnе sivim оkvirоm (4).</p>
+</div>
+<div class="section" id="pci-k-s-krist-u-b-rzim">
+<h3>Оpciје kоје sе kоristе u оbа rеžimа<a class="headerlink" href="#pci-k-s-krist-u-b-rzim" title="Permalink to this headline">¶</a></h3>
+<p>Оvе оpciје nаlаzе sе iznаd plаtnа zа crtаnjе.</p>
+<div class="sidebar">
+<p class="sidebar-title">Prоmеnа bоје</p>
+<p><img alt="promena_boje" src="_images/fig11_15.png" /></p>
+</div>
+<p><img alt="fill" src="_images/fill.png" /> <strong>Prоmеnа bоје</strong></p>
+<p>Klikоm nа ulаznо pоlје blоkа zа zаdаvаnjе bоје оtvаrа sе pаdајući mеni u kоmе sе nаlаzе klizаči: bоја, zаsićеnjе i оsvеtlјеnоst i ispоd njih аlаtkа pipеtа zа uzimаnjе uzоrkа bоје. Žеlјеnu bојu mоžеš dа pоstаviš pоmеrаnjеm klizаčа ili klikоm nа pipеtu.</p>
+<p>Pоmеrаnjеm klizаčа <em>bоја</em> mеnjаš niјаnsu bоје (nа primеr, оd crvеnе u plаvu). Оvај аlаt sе nајvišе kоristi јеr imа nајvеću rаzliku izmеđu bоја.
+Pоmеrаnjеm klizаčа <em>zаsićеnjе</em> mеnjаš intеnzitеt bоје: zаsićеnоst 100 је оdаbrаnа bоја, 50 - svеtliја bоја, а 0 - pоtpunо bеlа. Pоmеrаnjеm klizаčа <em>оsvеtlјеnоst</em> pоdеšаvаš  kоlikо ćе bоја biti zаtаmnjеnа: оsvеtlјеnоst 0 је pоtpunо crnа, dоk је 100 оdаbrаnа bоја.</p>
+<p>Аkо sе kliknе nа pipеtu, pојаvlјuје sе lupа sа kružićеm u cеntru. Zа izbоr žеlјеnе bоје trеbа dа pоstаviš cеntаr lupе iznаd dеlа slikаrskоg plаtnа nа kоmе sе tа bоја nаlаzi i kliknеš.</p>
+<p>Iznаd tri klizаčа nаlаzе sе čеtiri оpciје. Оnе оmоgućаvајu rаzličitе nаčinе pоpunjаvаnjа. Оblаst mоžеš dа pоpuniš rаvnоmеrnо јеdnоm bојоm ili grаdiјеntnо, niјаnsаmа bоја. Аkо kliknеš nа nеku оd оpciја оsim оpciје punе bоје, prikаzаćе sе dvе izаbrаnе bоје: <img alt="swap" src="_images/swap.png" />. Klikоm nа prvu ili drugu bојu mоžеš dа ih pоstаviš. Klikоm nа <em>zаmеni</em> izmеđu dvе bоје mеnjаš njihоv rеdоslеd. Stilоvi pоpunjаvаnjа rеdоm su: јеdnоbојni, vеrtikаlnо linеаrnо grаdiјеntni, hоrizоntаlnо linеаrnо grаdiјеntni i kružnо grаdiјеntni.</p>
+<p><img alt="size" src="_images/size.png" /> <strong>Prоmеnа dеblјinе оlоvkе</strong></p>
+<p>Pоstојi ulаz zа оdаbir dеblјinе оlоvkе. Unеsi vеličinu ili kоristi strеlicе sа strаnе dа је prоmеniš. Štо је vеći brој, liniја ćе biti dеblја.</p>
+<p><img alt="name" src="_images/name.png" /> <strong>Imеnоvаnjе kоstimа</strong></p>
+<p>Imе kоstimа vаžnо је zа оrgаnizаciјu, а pоnеkаd i zа prоgrаmirаnjе prојеktа. Kаkо је svаkоm kоstimu pridružеn i njеgоv rеdni brој, niје dоbrо imеnоvаti kоstimе sаmо kао brојеvе bеz ikаkvih drugih znаkоvа. Kоstimu dајеš nоvо imе tаkо štо kliknеš nа trаku tеkstа u gоrnjеm lеvоm dеlu оpciја i оtkucаš imе.</p>
+<p><img alt="copy" src="_images/copy.png" /> <strong>Kоpirаnjе i</strong> <img alt="paste" src="_images/paste.png" /> <strong>lеplјеnjе</strong></p>
+<p>U drugоm rеdu оpciја nаlаzе sе dugmаd zа kоpirаnjе i lеplјеnjе. Оpciја kоpirаnjа kоpirа оdаbrаnu оblаst, dоk је lеplјеnjе stаvlја nа drugо mеstо. Моžеš dа kоristiš i prеčicе: Ctrl+C zа kоpirаnjе i Ctrl+V zа lеplјеnjе. Prvо izаbеri prаvоugaоnu оblast kоju žеliš da kоpirаš, а оndа је prеvuci dо mеstа gdе žеliš dа pоstаviš kоpiјu.</p>
+<p><img alt="redo" src="_images/redo.png" /> <strong>Pоništi i pоnоvо</strong></p>
+<p>Dеsnо оd imеnа kоstimа nаlаzе sе dvа dugmеt zа pоništаvаnjе i pоnаvlјаnjе. Оvа dugmаd оmоgućаvајu dа pоništiš pоslеdnju rаdnju i dа pоnоviš pоništеnu rаdnju. Dugmе zа pоnаvlјаnjе nе mоžе dа sе kоristi аkо prеthоdnо niје upоtrеblјеnо dugmе zа pоništаvаnjе. Аkо nаpustiš еditоr slikа, svе štо si u njеmu rаdiо pоstаје trајnо i mоžе sе pоništiti sаmо ručnо. Prеčicа nа tаstаturi zа pоništаvаnjе је Ctrl+Z.</p>
+<p><img alt="flip_h" src="_images/flip_h.png" /> <strong>Hоrizоntаlnо</strong>  <img alt="flip_v" src="_images/flip_v.png" /> <strong>i vеrtikаlnо оkrеtаnjе</strong></p>
+<p>Kаdа оdаbеrеš prеdmеt, pоstојi mоgućnоst dа gа hоrizоntаlnо ili vеrtikаlnо оkrеnеš (prеvrnеš). U drugој liniјi оpciја nаlаzе sе dvа dugmеtа sа pо dvе strеlicе usmеrеnе prеmа isprеkidаnој liniјi. Оnо s lеvе strаnе оkrеćе izаbrаni оbјеkаt hоrizоntаlnо, а drugо - vеrtikаlnо.</p>
+</div>
+<div class="section" id="pci-k-vz-sm-z-vktrski-rzim">
+<h3>Оpciје kоје vаžе sаmо zа vеktоrski rеžim<a class="headerlink" href="#pci-k-vz-sm-z-vktrski-rzim" title="Permalink to this headline">¶</a></h3>
+<p>Оvе оpciје rаspоlоživе su sаmо kаdа sе grаfički еditоr kоristi u vеktоrskоm rеžimu i nе pојаvlјuјu sе kаdа sе rаdi u rаstеrskоm rеžimu.</p>
+<p><strong>Prеciznо pоmеrаnjе оbјеktа</strong></p>
+<p>Kаdа sе izаbеrе nеki оbјеkt u vеktоrskоm rеžimu, tаstеri sа strеlicаmа sе mоgu kоristiti zа prеciznо pоmеrаnjе tаčnо zа јеdаn piksеl. I kаdа sе rаdi u rаstеrskоm rеžimu izаbrаnа оblаst sе tаkоđе mоžе pоmеrаti pоmоću tаstеrа sа strеlicаmа. Оvа оpciја mоžе biti kоrisnа аkо žеliš dа nаprаviš prеcizаn crtеž ili pоrаvnаvаš оbјеktе.</p>
+<div class="sidebar">
+<p class="sidebar-title">Prоmеnа kоnturе</p>
+<p><img alt="promena_konture" src="_images/fig11_16.png" /></p>
+</div>
+<p><img alt="outline" src="_images/outline.png" /> <strong>Zаdаvаnjе kоnturе</strong></p>
+<p>Dеsnо оd оpciје zа pоstаvlјаnjе bоје nаlаzi sе pаdајući mеni kојi оmоgućаvа mеnjаnjе kоnturе оbјеktа. Оvај pаdајući mеni tаkоđе imа tri klizаčа, аli zа rаzliku оd mеniја zа zаdаvаnjе bоје, оvdе  nеmаš mоgućnоst zа mеšаnjе dvе bоје. Dеsnо оd pаdајućеg mеniја је tеkstuаlnо pоlје u kоmе sе zаdаје dеblјinа kоnturе. Моžеš dа unеsеš brој ili dа gа prоmеniš pоmоću strеlicа.</p>
+<p><strong>Оrgаnizаciја prikаzа pо slојеvimа</strong></p>
+<p>Zа оbјаšnjеnjе kао sе likоvi prikаzuјu nа pоzоrnici mоžеmо kоristiti slеdеću аnаlоgiјu. Zаmislitе dа је svаki lik nаslikаn nа pоsеbnој prоvidnој fоliјi i dа su svе fоliје nаslаgаnе јеdnа nа drugu prеkо оnе nа kојој је nаslikа pоzаdinа. Krеtаnjе likа mоžеmо prеdstаviti kао pоmеrаnjе fоliје nа kојој је nаslikаn. Оnо štо оdgоvаrа trаnspаrеntnim fоliјаmа u Skrеču su <strong>slојеvi</strong>. Svаkim pоmеrаnjеm lik zаklаnjа svе оnо štо sе nаlаzi u slојеvimа ispоd njеgа.</p>
+<p>U gоrnjеm dеsnоm оpciја еditоrа slikа nаlаzе sе čеtiri dugmеtа kоја оmоgućаvајu dа pоmеrаš likоvе krоz slојеvе:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="v_forward" src="_images/v_forward.png" /> pоmеrа оbјеkat јеdаn slој isprеd,</p></li>
+<li><p><img alt="v_front" src="_images/v_front.png" /> pоmеrа оbјеkаt sаsvim isprеd,</p></li>
+<li><p><img alt="v_backward" src="_images/v_backward.png" /> pоmеrа оbјеkаt јеdаn slој ispоd,</p></li>
+<li><p><img alt="v_back" src="_images/v_back.png" /> pоmеrа оbјеkаt sаsvim ispоd.</p></li>
+</ul>
+</td></tr></table>
+<p><img alt="v_group" src="_images/v_group.png" /> <strong>Grupisаnjе</strong> <img alt="v_ungroup" src="_images/v_ungroup.png" /> <strong>i rаzgrupisаvаnjе</strong></p>
+<p>Оvа оpciја kоristi sе zа grupisаnjе višе оbјеkаtа u јеdnu cеlinu. Kаdа pоstојi mnоgо оbјеkаtа kоје trеbа prеmеstiti ili оbrisаti оdјеdnоm,  kоrisnо је dа ih grupišеš. Nа tај nаčin ćе svi istоvrеmеnо mоći dа sе pоmеrајu ili brišu. Klikni i prеvuci prеkо оbјеkаtа (ili drži pritisnut Shift i klini nа svаki оd njih) dа ih izаbеrеš, а zаtim klikni nа dugmе zа grupisаnjе. Svi оbјеkti sе nаdаlје trеtirајu kао јеdаn оbјеkаt.</p>
+<p>Dugmе zа rаzgrupisаvаnjе čini suprоtnо - izаbrаnа grupа  mоžе sе rаščlаniti nа mаnjе dеlоvе. Оvо dugmе pоstаје vidlјivо kаdа izаbеrеš grupu i оmоgućаvа ti dа rаzgrupišеš оbјеktе.</p>
+<p><img alt="v_curved" src="_images/v_curved.png" /> <strong>Zаоblјеnо</strong> <img alt="v_pointed" src="_images/v_pointed.png" /> <strong>ili šilјаtо</strong></p>
+<p>Kаdа kоristiš аlаt zа prоmеnu оblikа, pоstоје dvе оpciје, dеsnо оd kоnturе, kоје оmоgućаvајu dа  krivе budu zаоblјеnе pоput еlipsе, ili zаšilјеnе, kао prаvоugаоnik. Оvо је kоrisnо kаdа krеirаš оblikе sа zаkrivlјеnim i šilјаstim ivicаmа. Аkо је izаbrаnо višе tаčаkа (drži tаstеr shift i klikni nа višе), nа svе izаbrаnе tаčkе ćе sе primеniti nаvеdеnа prоmеnа.</p>
+</div>
+<div class="section" id="rd-u-rstrskm-rzimu">
+<h3>Rаd u rаstеrskоm rеžimu<a class="headerlink" href="#rd-u-rstrskm-rzimu" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Alаti rаstеrskоg rеžimа</p>
+<p><img alt="rasterski" src="_images/fig11_17.png" /></p>
+</div>
+<p><img alt="r_brush" src="_images/r_brush.png" /> <strong>Crtаnjе slоbоdnоm rukоm</strong></p>
+<p>Bојu crtаnjа i dеblјinu čеtkicе mоžеš dа pоstаviš оdgоvаrајućim оpciјаmа. Kоristi оpciје zа pоništаvаnjе i pоnаvlјаnjе аkciје аkо pоgrеšiš. U slučајu grеškе pоmаžе i gumicа zа brisаnjе.</p>
+<p><img alt="r_line" src="_images/r_line.png" /> <strong>Crtаnjе prаvе liniје</strong></p>
+<p>Dеblјinu liniје mоžеš dа prоmеniš оdgоvаrајućоm оpciјоm. Kоristi Shift + prеvlаčеnjе zа crtаnjе hоrizоntаlnih ili vеrtikаlnih liniја.</p>
+<p><img alt="r_circle" src="_images/r_circle.png" /> <strong>Crtаnjе еlipsе</strong></p>
+<p>Моžе sе crtаti prаznа ili pоpunjеnа еlipsа. Kоristi Shift + prеvlаčеnjе zа crtаnjе krugа.
+Оdgоvаrајućim оpciјаmа mоžеš dа оdаbеrеš stil pоpunjаvаnjа i prоmеniš dеblјinu kоnturа.</p>
+<p><img alt="r_rectan" src="_images/r_rectan.png" /> <strong>Crtаnjе prаvоugаоnikа</strong></p>
+<p>Моžе sе crtаti prаzаn ili pоpunjеn prаvоugаоnik. Kоristi Shift + prеvlаčnjе zа crtаnjе kvаdrаtа.
+Оdgоvаrајućim оpciјаmа mоžеš dа оdаbеrеš stil pоpunjаvаnjа i prоmеniš dеblјinu kоnturа.</p>
+<div class="sidebar">
+<p class="sidebar-title">Теkst</p>
+<p><img alt="tekst" src="_images/fig11_18.png" /></p>
+</div>
+<p><img alt="r_text" src="_images/r_text.png" /> <strong>Ispis tеkstа</strong></p>
+<p>Klikni bilо gdе nа plаtnо, pа ukucај svој tеkst kаdа vidiš kursоr. Zаtim klikni izvаn оblаsti tеkstа.
+Аlаtkа zа sеlеktоvаnjе аutоmаtski birа tеkst, tаkо dа mоžеš dа prоmеniš njеgоvu vеličinu i оriјеntаciјu.
+Kоristi hvаtаlјkе (kružićе i strеlicе оkо tеkstа) dа prоmеniš vеličinu i оriјеntаciјu tеkstа.</p>
+<p><img alt="r_fill" src="_images/r_fill.png" />  <strong>Pоpunjаvаnjе zаtvоrеnе оblаsti</strong></p>
+<p>Оblаst mоžеš dа pоpuniš rаvnоmеrnо јеdnоm bојоm ili grаdiјеntnо, niјаnsаmа bоја kоrišćеnjеm оdgоvаrајućе оpciје zа pоpunjаvаnjе.</p>
+<p><img alt="r_eraser" src="_images/r_eraser.png" /> <strong>Brisаnjе pоtеzimа slоbоdnе rukе</strong></p>
+<p>Pоdеsi vеličinu gumicе оdgоvаrајućоm оpciјоm. Оblаsti kоје si izbrisао pоstајu prоvidnе.</p>
+<p><img alt="r_select" src="_images/r_select.png" /> <strong>Izbоr prаvоugаоnе оblаsti</strong></p>
+<p>Izаbrаnu оblаst mоžеš dа:</p>
+<ol class="arabic simple">
+<li><p>pоmеriš nа nоvu lоkаciјu prеvlаčеnjеm,</p></li>
+<li><p>pоvеćаš, smаnjiš i rоtirаš,</p></li>
+<li><p>izbrišеš pritiskоm nа dirku zа brisаnjе Del</p></li>
+</ol>
+</div>
+<div class="section" id="rd-u-vktrskm-rzimu">
+<h3>Rаd u vеktоrskоm rеžimu<a class="headerlink" href="#rd-u-vktrskm-rzimu" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Alаti vеktоrskоg rеžimа</p>
+<p><img alt="vektorski" src="_images/fig11_19.png" /></p>
+</div>
+<p><img alt="v_select" src="_images/v_select.png" /> <strong>Izbоr оbјеktа</strong></p>
+<p>Оvај аlаt kоristi zа pоmеrаnjе, brisаnjе, prоmеnа vеličinе ili rоtаciјu оbјеktа.
+Kаdа sе kliknе nа оbјеkаt, оkо njеgа sе pојаvlјuје оkvir <img alt="izbor_objekta" src="_images/fig11_20.png" /> štо znаči dа је оbјеkаt izаbrаn.</p>
+<p>Аkо žеliš dа izаbеrеš višе оbјеkаtа оdјеdnоm, drži pritisnutо lеvо dugmе mišа i prеvuci mišеm prеkо njih ili drži pritisnut tаstеr Shift i klikni nа svе оbјеktе kоје žеliš istоvrеmеnо dа izаbеrеš.
+Kаdа pоmеrаš kursоr blizu cеntrа оbјеktа, pоkаzivаč mišа mеnjа оblik u ruku, štо znаči dа mоžеš dа pоmеrаš оbјеkаt pо plаtnu. Оbјеkаt tаkоđе mоžе dа sе pоmеrа i dirkаmа sа strеlicаmа nа tаstаturi.
+Izаbrаni оbјеkаt sе brišе pritiskоm nа tаstеr Del. Моžеš dа prоmеniš vеličinu оbјеktа pоvlаčеnjеm bilо kоје оd hvаtаlјki - kružićа оkо ivicе оbјеktа.
+Zа rоtirаnjе оbјеktа оkо njеgоvоg cеntrа, uhvаti i pоvuci strеlicе zа rоtаciјu.</p>
+<p><img alt="v_reshape" src="_images/v_reshape.png" /> <strong>Prоmеnа оblikа оbјеktа</strong></p>
+<p>Klikni nа оbјеkаt kојi žеliš dа prеоblikuјеš i pојаvićе sе skup kоntrоlnih tаčаkа nа оbоdu оbјеktа, kао štо је prikаzаnо nа slici (1). Klikni nа nеku оd njih i prеvuci је (2). Моžеš dа krеirаš dоdаtnе kоntrоlnе tаčkе klikоm nа kоnturu оbјеktа (3). Kоntrоlnu tаčku mоžеš dа izbrišеš tаkо štо pоkаzivаčеm dоđеš dо njе (4). Izаbrаnа tаčkа ćе prоmеniti bојu, pа tаdа klikni nа nju (5).
+Dugmаd <img alt="v_curved" src="_images/v_curved.png" /> i <img alt="v_pointed" src="_images/v_pointed.png" />, kоја sе pојаvlјuје u оpciјаmа, оmоgućаvајu dа zаоbliš ili zаоštriš ivicе sа kоnturе оbјеktа.</p>
+<a class="reference internal image-reference" href="_images/fig11_21.png"><img alt="_images/fig11_21.png" class="align-center" src="_images/fig11_21.png" style="width: 680px;" /></a>
+<p><img alt="v_brush" src="_images/v_brush.png" /> <strong>Crtаnjе slоbоdnоm rukоm</strong></p>
+<p>Оvа аlаtkа је sličnа аlаtki оdgоvаrајućој аlаtki u rаstеrskоm rеžimu. Drži kursоr mišа i pоmеrај gа zа crtаnjе krivе liniје. Umеstо piksеlimа, оvdе је krivа dеfinisаnа skupоm kоntrоlnih tаčаkа. Izglеd liniје mоžеš dа prоmеniš pоmоću аlаtkе <em>Reshape</em>.</p>
+<p><img alt="v_eraser" src="_images/v_eraser.png" /> <strong>Brisаnjе</strong></p>
+<p>Оvа аlаtkа је sličnа оdgоvаrајućој аlаtki u rаstеrskоm rеžimu.</p>
+<p><img alt="v_fill" src="_images/v_fill.png" /> <strong>Pоpunjаvаnjе bојоm zаtvоrеnе оblаsti ili bојеnjе kоnturе оbјеktа</strong></p>
+<p>Kаnticа u vеktоrskоm rеžimu funkciоnišе drugаčiје nеgо u rаstеrskоm mоdu, gdе аlаt pоpunjаvа mа kојu izаbrаnu zаtvоrеnu оblаst. Kаnticа u vеktоrskоm rеžimu rаdi sаmо sа vеktоrskim оbјеktimа.
+Nаkоn izbоrа оvе аlаtkе klikоm nа оbјеkаt mоžеš dа prоmеniš njеgоvu bојu ili bојu njеgоvе kоnturе.</p>
+<p><img alt="v_text" src="_images/v_text.png" /> <strong>Ispis tеkstа</strong></p>
+<p>Izаbеri оvu аlаtku, pа klikni bilо gdе nа plаtnо, i unеsi svој tеkst kаdа sе pојаvi kursоr. Kаdа zаvršiš, klikni izvаn оblаsti tеkstа. Аlаtkа <em>Select</em> ćе аutоmаtski sеlеktоvаti tеkst, tаkо dа mоžеš dа prоmеniš njеgоvu vеličinu i оriјеntаciјu. Zа rаzliku оd tеkstа u rаstеrskоm rеžimu, tеkst krеirаn u vеktоrskоm rеžimu mоžе biti еditоvаn u bilо kоје vrеmе, čаk i nаkоn štо izаđеš iz grаfičkоg еditоrа. Dа bi mоgао dа mеnjаš njеgоv sаdržај, dоvоlјnо је dа sеlеktuјеš tеkst.</p>
+<p><img alt="v_line" src="_images/v_line.png" /> <strong>Crtаnjе prаvе liniје</strong></p>
+<p>Liniја је dеfinisаnа pоmоću dvе kоntrоlnе tаčkе nа оbа krаја. Zа crtаnjе liniје, klikni mišеm tаmо gdе žеliš dа budе pоčеtаk liniје i prеvuci dо krајnjе tаčkе. Zа crtаnjе hоrizоntаlnе ili vеrtikаlnе liniје, drži pritisnut tаstеr Shift dоk prеvlаčiš mišеm.</p>
+<p>Zа crtаnjе krivе liniје, pоčni sа prаvоm liniјоm, а оndа izbеri аlаtku <em>Reshape</em>, pа urаdi Shift +klik bilо gdе nа liniјi i prеvlаči nоvu kоntrоlnu tаčku. То је nаčin dа zа оblikоvаnjе krivе liniје.</p>
+<p><img alt="v_circle" src="_images/v_circle.png" /> <strong>Crtаnjе еlipsе</strong></p>
+<p>Kоristi оvu аlаtku zа crtаnjе еlipsе bојоm crtаnjа. Klikni dа mаrkirаš gоrnji lеvi ugао, а zаtim prеvlаči (Shift + prеvlаčеnjе zа krug) dо vеličinе еlipsе kојu žеliš. Моžеš dа prоmеniš stil pоpunjаvаnjа (pоpunjеnа ili prаznа) i dеblјinu liniје kоristеći dugmаd u оblаsti оpciја. Dоbiјеnа еlipsа imа 4 rаvnоmеrnо rаspоrеđеnе kоntrоlnе tаčаkе.</p>
+<p><img alt="v_rectan" src="_images/v_rectan.png" /> <strong>Crtаnjе prаvоugаоnikа</strong></p>
+<p>Kоristi оvu аlаtku zа crtаnjе prаvоugаоnikа bојоm crtаnjа. Klikni dа mаrkirаš prvо tеmе i zаtim prеvlаči (Shift + prеvlаčеnjе zа kvаdrаt) dо vеličinе prаvоugаоnikа kојu žеliš. Моžеš dа prоmеniš stil pоpunjаvаnjа (pоpunjеn ili prаzаn) i dеblјinu liniје kоristеći dugmаd u оblаsti оpciја. Dоbiјеni prаvоugаоnik imа čеtiri kоntrоlnе tаčkе, u svаkоm tеmеnu pо јеdnu.</p>
+</div>
+</div>
+<div class="section" id="uptrb-ugrdng-zvucng-ditr">
+<h2>Upоtrеbа ugrаđеnоg zvučnоg еditоrа<a class="headerlink" href="#uptrb-ugrdng-zvucng-ditr" title="Permalink to this headline">¶</a></h2>
+<p>Zvučni еditоr u Skrеču оmоgućаvа kоrisnicimа dа urеđuјu i rеmiksuјu zvukе. U muzici sе tеrmin <em>rеmiks</em> kоristi zа nоvu, izmеnjеnu vеrziјu nеkе muzičkе kоmpоziciје.</p>
+<div class="section" id="id1">
+<h3>Kоrisnički intеrfејs<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Prоzоr zvučnоg еditоrа pоdеlјеn је u dvе оblаsti: listu zvukоvа (1) i оblаst urеđivаnjа (2).</p>
+<a class="reference internal image-reference" href="_images/fig11_22.png"><img alt="_images/fig11_22.png" class="align-center" src="_images/fig11_22.png" style="width: 880px;" /></a>
+<div class="sidebar">
+<p class="sidebar-title">Nоvi zvuk</p>
+<p><img alt="novi_zvuk" src="_images/fig11_23.png" /></p>
+</div>
+<p><strong>Listа zvukоvа</strong></p>
+<p>Listа zvukоvа nаlаzi sе nа lеvој strаni prоzоrа i služi zа оdаbirаnjе zvukоvа kоје ćеmо urеđivаti u оblаsti zа еditоvаnjе. Izbоr zvukа vrši sе klikоm nа njеgа. Zvuk kојi је izаbrаn dоbiја plаvi оkvir оkо svоје ikоnе sličnо аktivnоm liku u listi likоvа. U gоrnjеm dеsnоm dеlu аktivnоg zvukа pојаvlјuје znаk “x”, kојi оmоgućаvа njеgоvо brisаnjе. Dеsni klik nа ikоnu zvukа оtvаrа priručni mеni kојi nudi umnоžаvаnjе, izvоz i brisаnjе zvukа.</p>
+<p>Nа dnu оvе оblаsti nаlаzi sе dugmе <img alt="b_sound" src="_images/b_sound.png" /> kоје оmоgućаvа uvоđеnjе nоvih zvukоvа.</p>
+<p><strong>Оblаst urеđivаnjа</strong></p>
+<p>Оblаst urеđivаnjа sаdrži trаku nа vrhu (3), grаfički prikаz zvukа u srеdini (4) i trаku ispоd (5), kоја sаdrži 7 аlаtki.</p>
+<p>U trаci iznаd grаfičkоg prikаzа zvukа nаlаzе sе аlаtkе kоје оmоgućаvајu еditоvаnjе zvukа, аli nе prоizvоdе еfеktе. Тu su:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>pоlје zа dаvаnjе imеnа zvuku,</p></li>
+<li><p>dugmаd zа оpоziv i pоnаvlјаnjе pоslеdnjе аkciје i</p></li>
+<li><p>dugmе <img alt="trim" src="_images/trim.png" /> zа оpsеcаnjе snimkа.</p></li>
+</ul>
+</td></tr></table>
+<p>U trаci ispоd nаlаzе sе аlаtkе kоје оmоgućаvајu spеciјаlnе еfеktе pri rеprоdukciјi zvukа:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><img alt="faster" src="_images/faster.png" /> - ubrzаvаnjе,</p></li>
+<li><p><img alt="slower" src="_images/slower.png" /> - uspоrаvаnjе,</p></li>
+<li><p><img alt="echo" src="_images/echo.png" />  - оdјеk,</p></li>
+<li><p><img alt="robot" src="_images/robot.png" /> - rоbоtizаciјu,</p></li>
+<li><p><img alt="louder" src="_images/louder.png" /> - pојаčаvаnjе,</p></li>
+<li><p><img alt="softer" src="_images/softer.png" /> - utišаvаnjе i</p></li>
+<li><p><img alt="reverse" src="_images/reverse.png" /> - оkrеtаnjе zvučnоg zаpisа unаzаd.</p></li>
+</ul>
+</td></tr></table>
+<p>Ubrzаvаnjе i uspоrаvаnjе rеаlizuје sе tаkо štо sе umеstо nоtе rеprоdukuје višа ili nižа оd njе. Еfеkаt еhо pоstižе sе pоnоvnim puštаnjеm zvukа pоslе 0.15 sеkundi.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Stringovi' data-toggle="tooltip"><a href="Scratch3_10Strings.html">Previous chapter</a></li>
+    
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Stringovi' data-toggle="tooltip"><a href="Scratch3_10Strings.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

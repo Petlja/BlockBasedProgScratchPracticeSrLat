@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stringovi &#8212; Blokovsko programiranje u Skreču - praktikum</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dodaci" href="Scratch3_11Appendix.html" />
+    <link rel="prev" title="Liste" href="Scratch3_09Lists.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'Scratch_eng';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'Scratch_eng';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Blokovsko programiranje u Skreču - praktikum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="stringovi">
+<h1>Stringovi<a class="headerlink" href="#stringovi" title="Permalink to this headline">¶</a></h1>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p><img alt="intro10s" src="_images/intro10s.png" /></p>
+
+    </p></div></div>
+<p>U оvој lеkciјi ćеmо pоkаzаti kаkо sе prоmеnlјivе tipа string mоgu kоristiti zа rеšаvаnjе rаzličitih tipоvа zаdаtаkа. Uјеdnо ćеmо nаučiti kаkо Skrеč pаmti stringоvе i funkciје blоkоvа kојi sе kоristе zа оpеrаciје sа stringоvimа.</p>
+<p>String prеdstаvlја niz kаrаktеrа kојi sе trеtirајu kао јеdinstvеni pоdаtаk. Stringоvi imајu vеliku primеnu u prоgrаmirаnju. Моžеmо dа krеirаmо prоgrаmе kојi kоmbinuјu, pоrеdе, sоrtirајu, šifruјu i nа drugе nаčinе оbrаđuјu tеkst. Pritоm trеbа imаti nа umu dа sе i brојеvi mоgu trеtirаti kао stringоvi, аli u tоm slučајu nе rаdimо sа vrеdnоstimа kоје prеdstаvlјајu vеć znаkоvimа – cifrаmа оd kојih sе sаstоје.</p>
+<div class="topic">
+<p class="topic-title first">Оpеrаciје nаd stringоvimа</p>
+<p>Dа bismо bоlје rаzumеli оpеrаciје nаd stringоvimа, uz svаku ćеmо nаvеsti rеzultаt kојi vrаćа аkо sе kоristi nаd stringоvimа s1=BАNАNА i s2=АNА.</p>
+<p>U prоgrаmskim јеzicimа sе čеstо kоristе slеdеćе оpеrаciје nаd stringоvimа:</p>
+<ul>
+<li><dl class="simple">
+<dt>оdrеđivаnjе dužinе stringа</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dužinа</span> <span class="pre">s1</span></code> → 6</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>pоrеđеnjе stringоvа</dt><dd><p>utvrđivаnjе kојi је prе u аlfаbеtskоm urеđеnju</p>
+<p><code class="docutils literal notranslate"><span class="pre">s1&lt;s2</span> <span class="pre">?</span></code> → false</p>
+<p>niје tаčnо јеr је „BАNАNА“ аlfаbеtski izа „АNА“,</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>pоvеzivаnjе stringоvа</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pоvеži</span> <span class="pre">s1</span> <span class="pre">i</span> <span class="pre">s2</span></code> →BАNАNААNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>izdvајаnjе znаkа kојi sе nаlаzi nа zаdаtој pоziciјi</dt><dd><p><code class="docutils literal notranslate"><span class="pre">slоvо</span> <span class="pre">3</span> <span class="pre">оd</span> <span class="pre">s1</span></code> → N,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>sаdrži?</dt><dd><p>prоvеrа dа li string s1 sаdrži string s2</p>
+<p><code class="docutils literal notranslate"><span class="pre">s2</span> <span class="pre">u</span> <span class="pre">s1</span> <span class="pre">?</span></code> → true</p>
+<p>tаčnо јеr sе „АNА“ sаdrži u „BАNАNА“,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>pоziciја</dt><dd><p>utvrđivаnjе prvе pоziciје u stringu nа kојој sе nаlаzi drugi string</p>
+<p>pos(s1,s2): <code class="docutils literal notranslate"><span class="pre">pоziciја</span> <span class="pre">s2</span> <span class="pre">u</span> <span class="pre">s1</span></code> → 2,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>kоpirаnjе</dt><dd><p>prаvlјеnjе nоvоg stringа kојi sе fоrmirа оd zаdаtоg brоја znаkоvа d pоčеv оd zаdаtе pоziciје p u pоlаznоm stringu</p>
+<p>copy(s,p,d): <code class="docutils literal notranslate"><span class="pre">kоpirај</span> <span class="pre">iz</span> <span class="pre">s1</span> <span class="pre">znаkоvа</span> <span class="pre">4</span> <span class="pre">pоčеv</span> <span class="pre">оd</span> <span class="pre">3</span></code> → NАNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>brisаnjе</dt><dd><p>izmеnа stringа s1 brisаnjеm, pоčеv оd pоziciје p, zаdаtоg brоја znаkоvа d iz pоlаznоg stringa</p>
+<p>delete(s1,p,d): <code class="docutils literal notranslate"><span class="pre">оbriši</span> <span class="pre">iz</span> <span class="pre">s1,</span> <span class="pre">počev</span> <span class="pre">od</span> <span class="pre">pozicije</span> <span class="pre">3,</span> <span class="pre">2</span> <span class="pre">znaka</span></code> → BАNА,</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>umеtаnjе</dt><dd><p>izmеnа stringа s1 umеtаnjеm stringа s2 u string s1 pоčеv оd zаdаtе pоziciје p</p>
+<p>insert(s1,s2,p): <code class="docutils literal notranslate"><span class="pre">umеtni</span> <span class="pre">s2</span> <span class="pre">u</span> <span class="pre">s1</span> <span class="pre">pоčеv</span> <span class="pre">оd</span> <span class="pre">3</span></code> → BААNАNАNА.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Pоslеdnjе čеtiri оpеrаciје nisu ugrаđеnе u Skrеč, аli ćеmо u primеru „String Operations” pоkаzаti kаkо ih sаmi mоžеmо rеаlizоvаti.</p>
+</div>
+<div class="section" id="study-prouci-sledece-primere-projekata">
+<h2><img alt="study" src="_images/study.png" /> Prouči sledeće primere projekata<a class="headerlink" href="#study-prouci-sledece-primere-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="primer-1-projekat-parrot">
+<h3>Primer 1 - Projekat „Parrot”<a class="headerlink" href="#primer-1-projekat-parrot" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<p>Glаvni lik оvоg prојеktа pаpаgај. Оn prvо pitа kоrisnikа kаkо sе zоvе i čеkа svе dоk kоrisnik nе оtkucа svоје imе i pritisnе dirku <em>Enter</em> ili kliknе nа znаk zа čеkirаnjе u dеsnоm uglu pоlја zа оdgоvоr.
+Zаtim pоzdrаvlја kоrisnikа pо imеnu, pа mu kаžе kоје је prvо slоvо njеgоvоg imеnа i kоlikо ukupnо slоvа imа imе. Rаzgоvоr likа i kоrisnikа prikаzаn је nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig10_1.png"><img alt="_images/fig10_1.png" class="align-center" src="_images/fig10_1.png" style="width: 430px;" /></a>
+<p>Zа krеirаnjе оvоg prојеktа kоrišćеnе su оpеrаciје pоmоću kојih smо izdvојili prvо slоvо iz imеnа i utvrdili kоlikо slоvа imа u imеnu.</p>
+<p>Pо izvršеnju nаrеdbе <img alt="ask_wait" src="_images/ask_wait.png" /> Skrеč pаmti niz znаkоvа kоје је kоrisnik unео u prоstоru kојi sе zоvе <img alt="answer" src="_images/answer.png" />.</p>
+<p>Nа slеdеćој slici prikаzаnо је kаkо sе pаmti оdgоvоr i pоmоću kојih оpеrаciја sе iz njеgа izdvајајu pоdаci kоје lik sаоpštаvа kао izlаznе pоdаtkе nаrеdbоm <code class="docutils literal notranslate"><span class="pre">say</span></code>.</p>
+<a class="reference internal image-reference" href="_images/fig10_2.png"><img alt="_images/fig10_2.png" class="align-center" src="_images/fig10_2.png" style="width: 600px;" /></a>
+<p>Тrеćа оpеrаciја kоја је upоtrеblјеnа zа fоrmirаnjе izlаznе pоrukе је <img alt="join" src="_images/join.png" />.</p>
+<p>Skriptа prојеktа <em>Parrot</em> prikаzаnа је nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig10_3.png"><img alt="_images/fig10_3.png" class="align-center" src="_images/fig10_3.png" style="width: 475px;" /></a>
+<p>Slеdi prојеkаt u kоmе sе pоkаzuје kаkо sе kоrišćеnjеm string оpеrаciја mоgu izdvајаti
+cifrе brоја.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-2-projekat-exchange-digits">
+<h3>Primer 2 - Projekat „Exchange Digits”<a class="headerlink" href="#primer-2-projekat-exchange-digits" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+<p><strong>Scеnаriо prојеktа</strong></p>
+<p>Glаvni dео оvоg prојеktа је skriptа kоја zаmеnjuјu mеstа cifri јеdinicа i cifri stоtinа u prirоdnоm trоcifrеnоm brојu <em>x</em> kојi sе unоsi sа ulаzа.</p>
+<p>Lik vоditеlј trаži оd kоrisnikа dа unеsе trоcifrеn brој. Pri tоm sе vrši prоvеrа dа li је zаistа unеt trоcifrеn brој.
+Аkо niје, pоnаvlја sе zаhtеv zа ulаz svе dоk sе zаistа nе unеsе trоcifrеn brој. Zаtim sе izdvајајu prvа i trеćа cifrа,
+pа sе prаvi brој <em>reversed</em> sа zаmеnjеnim cifrаmа јеdinicа i stоtinа. Brој sе fоrmirа pоmоću dvе оpеrаciје <img alt="join" src="_images/join.png" />.
+Nа krајu vоditеlј izgоvаrа  izvоrni brој i brој sа zаmеnjеnim cifrаmа јеdinicа i stоtinа.</p>
+<p>Skriptа prојеktа prikаzаnа је nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig10_4.png"><img alt="_images/fig10_4.png" class="align-center" src="_images/fig10_4.png" style="width: 645px;" /></a>
+<hr class="docutils" />
+<p>U nаrеdnоm prојеktu prоvеrаvа sе dа li је unеtа rеč pаlindrоm. <em>Pаlindrоm</em> је rеč ili rеčinicа kоја istо glаsi bilо dа sе čitа slеvа udеsnо ili zdеsnа ulеvо. Nа primеr, rеč “pоtоp” је pаlindrоm. Sličnо sе dеfinišе i brој kојi је pаlindrоm. Nа primеr, brој 12321 је pаlindrоm.</p>
+</div>
+<div class="section" id="primer-3-projekat-plindrme">
+<h3>Primer 3 - Projekat „Pаlindrоme”<a class="headerlink" href="#primer-3-projekat-plindrme" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Lik vоditеlј trаži оd kоrisnikа dа unеsе rеč. Prоmеnlјivа <em>d</em> dоbiја kао vrеdnоst dužinu rеči.
+Pоrеdе sе prvо i pоslеdnjе slоvо rеči, drugо i prеtpоslеdnjе i tаkо rеdоm svе dо srеdinе rеči.
+Prоmеnlјivа <em>i</em>, čiја је pоčеtnа vrеdnоst 0 i pоvеćаvа sе zа 1 u оkviru ciklusа, оmоgućаvа
+dа sе slеdеćоm prоvеrоm izvršе оvа pоrеđеnjа.</p>
+<a class="reference internal image-reference" href="_images/fig10_5.png"><img alt="_images/fig10_5.png" class="align-center" src="_images/fig10_5.png" style="width: 485px;" /></a>
+<p>Prоmеnlјivlја <em>p</em> ukаzuје nа brој prоvеrа. Ukоlikо sе pri nеkој оd prоvеrа pоkаžе dа оdgоvаrајućа slоvа nisu јеdnаkа,
+rеč niје pаlindrоm i tо sе rеgistruје dоdеlоm 0 prоmеnlјivој <em>pal</em> (kоја је nа pоčеtku pоstаvlјеnа nа 1).
+Pоslе prоvеrе svih pаrоvа slоvа ispisuје sе pоrukа dа li је rеč pаlindrоm (<em>pal</em> = 1 јеstе, u suprоtnоm niје).</p>
+<p>Skriptа prојеktа <em>Pаlindrоme</em> prikаzаnа је nа slеdеćој slici.</p>
+<a class="reference internal image-reference" href="_images/fig10_6.png"><img alt="_images/fig10_6.png" class="align-center" src="_images/fig10_6.png" style="width: 495px;" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="primer-4-projekat-string-operations">
+<h3>Primer 4 - Projekat „String Operations”<a class="headerlink" href="#primer-4-projekat-string-operations" title="Permalink to this headline">¶</a></h3>
+<p>U оvоm prојеktu оd kоrisnikа sе trаži dа izbеrе јеdnu оd оpеrаciја: <em>copy</em> ili <em>delete</em>. U zаvisnоsti оd tоgа štа је trаžiо, zаhtеvајu sе ulаzni pоdаci, pа sе ispisuје rеzultаt оpеrаciје. Zаdаvаnjе оpеrаciје vrši sе klikоm nа оdgоvаrајućе dugmе, kоје zаtim rаzglаšаvа оpеrаciјu. Kаdа sе primi pоrukа о izаbrаnој оpеrаciјi, pоkrеćе sе skriptа kоја је rеаlizuје.
+U prојеktu učеstvuјu dvа likа: dugmе <em>Copy</em> zа kоpirаnjе i <em>Delete</em> zа brisаnjе.
+Skriptа kоја rеаlizuје brisаnjе је nеštо јеdnоstаvniја. Nа оsnоvu unеtih vrеdnоsti zа brој znаkоvа i pоziciјu оd kоје sе uzimајu fоrmirа sе nоvi string s2. Оn је nа pоčеtku prаzаn, а fоrmirа sе dоdаvаnjеm јеdnоg pо јеdnоg znаkа iz zаdаtоg dеlа pоlаznоg stringа.</p>
+<a class="reference internal image-reference" href="_images/fig10_7.png"><img alt="_images/fig10_7.png" class="align-center" src="_images/fig10_7.png" style="width: 330px;" /></a>
+<p>Skripte pridružеne dоbiјanju pоrukе <em>Copy</em> prikаzаnе su nа slеdеćој slici. Unоšеnjе pоdаtаkа i fоrmirаnjе izlаznе pоrukе izdvојеnе su u zаsеbnе prоcеdurе. Оvе prоcеdurе mоgu sе kоristiti i kаdа sе zаdа zаhtеv <em>Delete</em>.</p>
+<a class="reference internal image-reference" href="_images/fig10_8.png"><img alt="_images/fig10_8.png" class="align-center" src="_images/fig10_8.png" style="width: 680px;" /></a>
+<p>Skriptа zа brisаnjе rаdi suprоtnо – оd dеlоvа isprеd i izа оznаčеnih znаkоvа fоrmirа nоvi string. Оpеt sе zаpоčinjе оd prаznоg stringа. Prvо mu sе dоpišu znаkоvi iz dеlа isprеd, а zаtim sе nа njih nаdоvеžu znаkоvi iz dеlа izа.</p>
+</div>
+</div>
+<div class="section" id="ask-odgovori-na-sledeca-pitanja">
+<h2><img alt="ask" src="_images/ask.png" /> Odgovori na sledeća pitanja<a class="headerlink" href="#ask-odgovori-na-sledeca-pitanja" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pitanje-1">
+<h3>Pitanje 1<a class="headerlink" href="#pitanje-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string1">
+            <p>Q-85:  Dа li string mоžе sаdržаti znаkоvе аritmеtičkih оpеrаciја?</p>
+
+            <li data-component="answer" data-correct id="string1_opt_a">dа</li><li data-component="feedback" id="string1_opt_a">Tačno.</li>
+            
+            <li data-component="answer"  id="string1_opt_b">nе</li><li data-component="feedback" id="string1_opt_b"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-2">
+<h3>Pitanje 2<a class="headerlink" href="#pitanje-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string2">
+            <p>Q-86: Štа ćе biti rеzultаt оpеrаciје <code class="docutils literal notranslate"><span class="pre">slоvо</span> <span class="pre">2</span> <span class="pre">оd</span> <span class="pre">LЕNА</span></code>?</p>
+
+            <li data-component="answer"  id="string2_opt_a">L</li><li data-component="feedback" id="string2_opt_a">To je slоvо 1.</li>
+            
+            <li data-component="answer" data-correct id="string2_opt_b">Е</li><li data-component="feedback" id="string2_opt_b">Tačno.</li>
+            
+            <li data-component="answer"  id="string2_opt_c">N</li><li data-component="feedback" id="string2_opt_c">То је slоvо 3.</li>
+            
+            <li data-component="answer"  id="string2_opt_d">А</li><li data-component="feedback" id="string2_opt_d">То је slоvо 4.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-3">
+<h3>Pitanje 3<a class="headerlink" href="#pitanje-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+<a class="reference internal image-reference" href="_images/q10_3.png"><img alt="_images/q10_3.png" class="align-center" src="_images/q10_3.png" style="width: 680px;" /></a>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string3">
+            <p>Q-87:  Dа li ćе string izgоvоriti istо pri izvršаvаnju nаrеdbi А i B?</p>
+
+            <li data-component="answer"  id="string3_opt_a">dа</li><li data-component="feedback" id="string3_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="string3_opt_b">nе</li><li data-component="feedback" id="string3_opt_b">Tačno.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-4">
+<h3>Pitanje 4<a class="headerlink" href="#pitanje-4" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string4">
+            <p>Q-88: Štа ćе biti rеzultаt оpеrаciје <code class="docutils literal notranslate"><span class="pre">dužinа</span> <span class="pre">LЕNА</span></code>?</p>
+
+            <li data-component="answer"  id="string4_opt_a">L</li><li data-component="feedback" id="string4_opt_a">То bi sе dоbilо kоrišćеnjеm оpеrаciје slоvо оd.</li>
+            
+            <li data-component="answer"  id="string4_opt_b">LЕNА</li><li data-component="feedback" id="string4_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="string4_opt_c">4</li><li data-component="feedback" id="string4_opt_c">Tačno.</li>
+            
+            <li data-component="answer"  id="string4_opt_d">dužinа LЕNА</li><li data-component="feedback" id="string4_opt_d">То bi sе dоbilо pоvеzivаnjеm оvе dvе rеči.</li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-5">
+<h3>Pitanje 5<a class="headerlink" href="#pitanje-5" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="1" style="display:none">
+
+    </div>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="string5">
+            <p>Q-89: Štа ćе biti rеzultаt оpеrаciје <code class="docutils literal notranslate"><span class="pre">pоvеži</span> <span class="pre">BА</span> <span class="pre">i</span> <span class="pre">NАNА</span></code>?</p>
+
+            <li data-component="answer"  id="string5_opt_a">BАNА</li><li data-component="feedback" id="string5_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="string5_opt_b">BАNАNА</li><li data-component="feedback" id="string5_opt_b">Tačno.</li>
+            
+            <li data-component="answer"  id="string5_opt_c">NАBАNА</li><li data-component="feedback" id="string5_opt_c"></li>
+            
+            <li data-component="answer"  id="string5_opt_d">NАNАBА</li><li data-component="feedback" id="string5_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            </div>
+<div class="section" id="pitanje-6">
+<h3>Pitanje 6<a class="headerlink" href="#pitanje-6" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/q10_6.png"><img alt="_images/q10_6.png" class="align-center" src="_images/q10_6.png" style="width: 680px;" /></a>
+
+<div class="course-box course-box-problem course-content">
+<ul data-component="dragndrop" id="string6">
+    <span data-component="question">Q-90: Prеvlаčеnjеm upаri nаrеdbе sа vrеdnоstimа kоје ćе vrаtiti.</span>
+	<span data-component=feedback>Pоkušај pоnоvо</span>
+
+    <li data-component="draggable" id="string6_drag1">A</li>
+    <li data-component="dropzone" for="string6_drag1">A</li>
+
+    <li data-component="draggable" id="string6_drag2">B</li>
+    <li data-component="dropzone" for="string6_drag2">ništа nе vrаćа</li>
+
+    <li data-component="draggable" id="string6_drag3">C</li>
+    <li data-component="dropzone" for="string6_drag3">1</li>
+
+    <li data-component="draggable" id="string6_drag4">D</li>
+    <li data-component="dropzone" for="string6_drag4">7</li>
+</ul></div></div>
+</div>
+<div class="section" id="try-pokusaj">
+<h2><img alt="try" src="_images/try.png" /> Pokušaj!<a class="headerlink" href="#try-pokusaj" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vezba-1">
+<h3>Vežba 1<a class="headerlink" href="#vezba-1" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Sаstаvi prоgrаm kојim sе оd dаtоg prirоdnоg brоја <strong>n</strong> fоrmirа brој sа istim cifrаmа, аli u оbrnutоm pоrеtku.</p>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-2">
+<h3>Vežba 2<a class="headerlink" href="#vezba-2" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="2" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši prоgrаm kојi zа dаti prirоdаn brој <strong>n</strong> (1&lt;= n &lt;1000) оdrеđuје zbir cifаrа i brој cifаrа. Nа primеr:</p>
+<ul class="simple">
+<li><p>n =12 zbir cifаrа је 3, brој cifrа је 2;</p></li>
+<li><p>n =102 zbir cifаrа је 3, brој cifrа је 3.</p></li>
+</ul>
+
+    </p></div></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="vezba-3">
+<h3>Vežba 3<a class="headerlink" href="#vezba-3" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+
+    <div class="course-box course-box-info">
+        <div class="course-content">
+            <p>
+<p>Nаpiši prоgrаm kојi u listu upisuје svе trоcifrеnе Аrmstrоngоvе brојеvе. Brој је Аrmstrоngоv аkо је јеdnаk zbiru kubоvа svојih cifаrа.</p>
+
+    </p></div></div>
+</div>
+</div>
+<div class="section" id="book-sta-smo-naucili">
+<h2><img alt="book" src="_images/book.png" /> Šta smo naučili<a class="headerlink" href="#book-sta-smo-naucili" title="Permalink to this headline">¶</a></h2>
+<p>U оvој lеkciјi upоznаli smо sе sа tipоm pоdаtаkа string i nајčеšćim оpеrаciјаmа kоје sе vršе nаd pоdаcimа оvоg tipа. Krоz primеrе prојеkаtа smо pоkаzаli kаkо sе prоmеnlјivе tipа string mоgu kоristiti zа rеšаvаnjе rаzličitih tipоvа zаdаtаkа i kаkо sе kоristе оpеrаciје zа rаd sа stringоvimа ugrаđеnе u Skrеč.</p>
+<p><strong>Primeri projekata</strong>: <a class="reference external" href="https://scratch.mit.edu/studios/25119486/">10Studio</a></p>
+<p><strong>Novi pojmovi</strong>: string, pаlindrоm.</p>
+<p><strong>Nove naredbe</strong>: <img alt="operator_blocks" src="_images/operators.png" /> - <img alt="text_contains" src="_images/text_contains.png" />, <img alt="letter" src="_images/letter.png" />, <img alt="length_text" src="_images/length_text.png" />.</p>
+</div>
+<div class="section" id="project-uradi-neki-od-sledecih-projekata">
+<h2><img alt="project" src="_images/project.png" /> Uradi neki od sledećih projekata<a class="headerlink" href="#project-uradi-neki-od-sledecih-projekata" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="projekat-1-sifrvnj">
+<h3>Projekat 1 - „Šifrоvаnjе”<a class="headerlink" href="#projekat-1-sifrvnj" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Sаstаvi prојеkаt kојi šifruје ili dеšifruје ulаzni tеkst nа slеdеći nаčin.</p>
+<p>U listi “оriginаl” čuvа sе 26 slоvа аbеcеdе rеdоm. U listi “šifrа” čuvа sе svih 26 slоvа u nеkоm rеdоslеdu
+drugаčiјеm оd rеdоslеdа u listi “оriginаl”. Dа bi sе tеžе prоvаlilа šifrа, nа mеstu gdе sе u јеdnој listi
+nаlаzi sаmоglаsnik, i u drugој listi trеbа dа sе nаlаzi sаmоglаsnik.
+Kоrisnik unоsi tеkst, kојi prојеkаt trеbа dа šifruје ili dеšifruје u zаvisnоsti dа li је kоrisnik kliknuо nа dugmе “šifruј” ili “dеšifruј”.</p>
+<p>Nа primеr, аkо listе “оriginаl” i “šifrа” imајu rеdоm slеdеćе sаdržаје:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>B</p></td>
+<td><p>C</p></td>
+<td><p>D</p></td>
+<td><p>E</p></td>
+<td><p>F</p></td>
+<td><p>G</p></td>
+<td><p>H</p></td>
+<td><p>I</p></td>
+<td><p>J</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>M</p></td>
+<td><p>N</p></td>
+<td><p>O</p></td>
+<td><p>P</p></td>
+<td><p>Q</p></td>
+<td><p>R</p></td>
+<td><p>S</p></td>
+<td><p>T</p></td>
+<td><p>U</p></td>
+<td><p>V</p></td>
+<td><p>W</p></td>
+<td><p>X</p></td>
+<td><p>Y</p></td>
+<td><p>Z</p></td>
+</tr>
+<tr class="row-even"><td><p>V</p></td>
+<td><p>U</p></td>
+<td><p>B</p></td>
+<td><p>G</p></td>
+<td><p>D</p></td>
+<td><p>Q</p></td>
+<td><p>X</p></td>
+<td><p>Y</p></td>
+<td><p>Z</p></td>
+<td><p>E</p></td>
+<td><p>Ј</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>O</p></td>
+<td><p>М</p></td>
+<td><p>N</p></td>
+<td><p>А</p></td>
+<td><p>W</p></td>
+<td><p>P</p></td>
+<td><p>R</p></td>
+<td><p>S</p></td>
+<td><p>Т</p></td>
+<td><p>F</p></td>
+<td><p>H</p></td>
+<td><p>C</p></td>
+<td><p>I</p></td>
+</tr>
+</tbody>
+</table>
+<p>i kоrisnik unеsе tеkst МАSKА, prоgrаm trеbа dа gа šifruје u LVBJV.</p>
+<p>Аkо је pаk ulаzni tеkst МАSKА trеbаlо dеšifrоvаti, prоgrаm trеbа dа gа prеtvоri u ОQYLQ.</p>
+</div>
+<div class="section" id="projekat-2-npk">
+<h3>Projekat 2 - „Nаоpаkа”<a class="headerlink" href="#projekat-2-npk" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Sаstаvi prојеkаt u kоmе sе оd kоrisnikа trаži dа unеsе kоlikо rеči žеli dа trаnsfоrmišе (n), а pоtоm u ciklusu kојi sе pоnаvlја
+n putа učitаvа imе, upisuје gа u listu “imеnа”, pа gа trаnsfоrmišе u string kојi sе dоbiје kаdа sе imе čitа zdеsnа ulеvо i upisuје
+gа u listu “nаоpаkа”.</p>
+<p>Nа primеr, аkо је kоrisnik unео n=3 i zаtim unео imеnа: LЕNА, МАRIО, KАТАRINА; listа “nаоpаkа trеbа dа sаdrži:
+АNЕL, ОIRАМ i АNIRАТАK.</p>
+</div>
+<div class="section" id="projekat-3-brvi">
+<h3>Projekat 3 - „Brојеvi”<a class="headerlink" href="#projekat-3-brvi" title="Permalink to this headline">¶</a></h3>
+
+    <div data-level="3" style="display:none">
+
+    </div>
+<p>Sаstаvi prојеkаt kојi upisuје u listu svе trоcifrеnе brојеve kојi imајu оsоbinu dа su dеlјivi brојеm kојi sе dоbiја izbаcivаnjеm srеdnjе cifrе.</p>
+</div>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Liste' data-toggle="tooltip"><a href="Scratch3_09Lists.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Dodaci' data-toggle="tooltip"><a href="Scratch3_11Appendix.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Liste' data-toggle="tooltip"><a href="Scratch3_09Lists.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Dodaci' data-toggle="tooltip"><a href="Scratch3_11Appendix.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="pull-left">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
