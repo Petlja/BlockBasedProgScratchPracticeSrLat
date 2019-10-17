@@ -119,10 +119,10 @@ html_theme = 'custom_theme'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Scratch_eng",
+    'navbar_title': "Blokovsko programiranje u Skreču - praktikum",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Chapters",
+    'navbar_site_name': "Blokovsko programiranje u Skreču - praktikum - poglavlja",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
@@ -165,10 +165,10 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Runestone Interactive Overview'
+html_title = 'Blokovsko programiranje u Skreču - praktikum'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='Runestone Interactive Overview'
+html_short_title ='Blokovsko programiranje u Skreču - praktikum'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
